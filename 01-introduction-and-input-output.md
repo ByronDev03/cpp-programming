@@ -1,3 +1,26 @@
+<h1 align="center">1. Introducción y Entrada/Salida</h1>
+
+<p align="center">
+En este bloque se presentan los fundamentos de un programa en C++, desde su estructura básica hasta la interacción con el usuario mediante la entrada y salida estándar. Se aprenderá a declarar variables, utilizar tipos de datos básicos y realizar operaciones sencillas con la información proporcionada durante la ejecución.
+</p>
+
+## 📚 Conceptos principales
+
+- **Estructura de un programa en C++:** función `main()`, directivas del preprocesador y sentencias.
+- **Entrada estándar:** lectura de datos mediante `cin`.
+- **Salida estándar:** visualización de información mediante `cout`.
+- **Variables y tipos de datos:** uso de tipos como `int`, `char` y `double`.
+- **Operadores aritméticos:** suma, resta, multiplicación y división.
+- **Conversión de tipos y operaciones básicas:** aplicación de expresiones aritméticas y cálculo de resultados.
+
+## 🎯 Objetivo
+
+Desarrollar programas sencillos que reciban datos desde la entrada estándar, realicen operaciones básicas y muestren resultados en la salida estándar, comprendiendo cómo se procesan los datos dentro de un programa.
+
+---
+
+## 📝 Ejercicios
+
 ##### 1. Escribe un programa que lea de la entrada estándar dos números y muestre en la salida estándar su suma, resta, multiplicación y división.
 
 <details>
@@ -51,7 +74,7 @@ int main(){
 ```
 </details>
 
-##### 3. Realice un programa que lea de la entrada est�ndar los siguientes datos de una persona:
+##### 3. Realice un programa que lea de la entrada estándar los siguientes datos de una persona:
 - **Edad: dato de tipo entero.**
 - **Sexo: dato de tipo carácter.**
 - **Altura en metros: dato de tipo real.**
