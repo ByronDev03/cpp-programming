@@ -1,3 +1,24 @@
+<h1 align="center">3. Estructuras Condicionales</h1>
+
+<p align="justify">
+En esta unidad se estudian las estructuras condicionales de C++, que permiten controlar el flujo de ejecución de un programa mediante la evaluación de condiciones. Estas estructuras hacen posible tomar decisiones y ejecutar diferentes instrucciones dependiendo de si una condición se cumple o no. A través de los ejercicios, se utilizarán comparaciones, operadores lógicos y estructuras de selección para resolver problemas como comparar números, identificar valores pares e impares, clasificar caracteres, validar rangos de edad y desarrollar programas interactivos con menús de opciones.
+</p>
+
+## Conceptos principales
+- **Estructura `if`:** ejecución de instrucciones cuando una condición es verdadera.
+- **Estructuras `if-else` y `else if`:** selección entre diferentes alternativas según las condiciones evaluadas.
+- **Operadores relacionales:** comparación de valores mediante operadores como `==`, `!=`, `<`, `>`, `<=` y `>=`.
+- **Operadores lógicos:** combinación de condiciones utilizando `&&` (AND), `||` (OR) y `!` (NOT).
+- **Estructura `switch`:** selección de una alternativa entre varios casos posibles.
+- **Condiciones anidadas:** utilización de estructuras condicionales dentro de otras para evaluar situaciones más específicas.
+- **Validación de datos:** comprobación de rangos, valores y condiciones antes de ejecutar determinadas operaciones.
+- **Toma de decisiones en programas:** aplicación de estructuras condicionales para resolver problemas matemáticos y desarrollar menús interactivos.
+
+## Objetivo
+Comprender y aplicar las estructuras condicionales de C++ para controlar el flujo de ejecución de los programas, evaluar expresiones lógicas y desarrollar soluciones que respondan de manera adecuada a diferentes valores y situaciones.
+
+## Ejercicios
+
 ##### 1. Escriba un programa que lea dos números y determine cuál de ellos es el mayor.
 <details>
 <summary>Solución</summary>
