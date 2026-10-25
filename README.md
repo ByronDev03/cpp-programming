@@ -18,7 +18,7 @@
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 - [01. Introduction and Input/Output](01-introduction-and-input-output.md)
 - [02. Expressions and Operators](02-expressions-and-operators.md)
 - [03. Conditional Statements](03-conditional-statements.md)
@@ -43,19 +43,19 @@
 - [22. Recursive Algorithms](22-recursive-algorithms.md)
 - [23. Standard Template Library (STL)](23-standard-template-library.md)
 
-## 🎯 Objectives
+## Objectives
 - Practice C++ programming through exercises.
 - Strengthen problem-solving and logical thinking skills.
 - Understand fundamental data structures and algorithms.
 - Learn object-oriented programming principles.
 - Explore generic programming and the C++ Standard Template Library.
 
-## 🛠️ Technologies
+## Technologies
 - **Language:** C++
 - **Paradigms:** Procedural, structured, object-oriented, and generic programming.
 - **Tools:** Any C++ compiler, such as GCC or Clang, or an IDE that supports C++.
 
-## 📂 Repository Structure
+## Repository Structure
 Each Markdown file corresponds to a course block and contains its exercises and solutions.
 
 ```text
@@ -86,7 +86,7 @@ cpp-programming/
 └── README.md
 ```
 
-## ▶️ How to Run the Exercises
+## How to Run the Exercises
 1. Open the exercise you want to practice.
 2. Copy the C++ solution into a `.cpp` file.
 3. Compile the program using a C++ compiler.
@@ -110,7 +110,7 @@ Run on Windows:
 .\main.exe
 ```
 
-## 📖 Learning Approach
+## Learning Approach
 The exercises are organized in the same order as the course, progressing from basic input/output operations to more advanced topics such as data structures, algorithms, inheritance, polymorphism, templates, and the STL.
 
 Solutions are included to help review the implementation and understand different approaches to solving programming problems.
