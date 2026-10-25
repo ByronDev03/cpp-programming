@@ -1,3 +1,24 @@
+<h1 align="center">5. Arreglos (Arrays)</h1>
+
+<p align="justify">
+En esta unidad se estudian los arreglos en C++, una estructura de datos que permite almacenar múltiples elementos del mismo tipo bajo un único nombre. Se aprenderá cómo acceder a sus elementos mediante índices, recorrerlos utilizando estructuras repetitivas y realizar operaciones que permitan procesar y modificar sus valores. A través de los ejercicios, se trabajará con arreglos numéricos y de caracteres para resolver problemas como calcular sumas y productos, encontrar valores máximos, invertir el orden de los elementos, combinar arreglos y generar nuevas colecciones de datos a partir de otras existentes.
+</p>
+
+## Conceptos principales
+- **Declaración e inicialización de arreglos:** almacenamiento de varios elementos del mismo tipo en una estructura.
+- **Índices y acceso a elementos:** identificación y manipulación de cada posición del arreglo, comenzando desde el índice `0`.
+- **Recorrido de arreglos:** utilización de ciclos como `for` para acceder secuencialmente a sus elementos.
+- **Operaciones acumulativas:** cálculo de sumas y productos a partir de los valores almacenados.
+- **Búsqueda de elementos:** identificación del valor máximo y comprobación de condiciones específicas dentro del arreglo.
+- **Recorrido inverso:** acceso a los elementos desde la última posición hasta la primera.
+- **Combinación de arreglos:** unión de los elementos de dos arreglos en una nueva estructura.
+- **Transformación de datos:** creación de un nuevo arreglo a partir de los valores de otro mediante operaciones aritméticas.
+
+## Objetivo
+Comprender cómo funcionan los arreglos en C++ y desarrollar programas que permitan almacenar, recorrer, consultar y modificar conjuntos de datos, aplicando ciclos, índices y operaciones sobre sus elementos para resolver problemas de programación.
+
+## Ejercicios
+
 ##### 1. Escribe un programa que defina un vector de números y calcule la suma de sus elementos.
 <details>
 <summary>Solución</summary>
