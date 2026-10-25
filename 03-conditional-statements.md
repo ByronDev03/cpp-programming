@@ -238,9 +238,7 @@ int main(){
 
 ```c++
 #include<iostream>
-
 using namespace std;
-
 int main(){
 	int numero,unidades,decenas,centenas,millar; 
 	
@@ -387,7 +385,6 @@ int main(){
 #include<iostream>
 #include<math.h>
 using namespace std;
-
 int main(){
 	int opc,numero,cubo;
 	
