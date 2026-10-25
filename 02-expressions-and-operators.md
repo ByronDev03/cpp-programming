@@ -1,3 +1,24 @@
+<h1 align="center">2. Expresiones y Operadores</h1>
+
+<p align="justify">
+En esta unidad se estudia cómo construir y evaluar expresiones en C++ mediante operadores aritméticos, el uso de paréntesis y las reglas de precedencia y asociatividad. Estos conceptos permiten traducir expresiones matemáticas a instrucciones que el compilador pueda interpretar y ejecutar correctamente. 
+A través de los ejercicios, se aplicarán estos conocimientos para realizar cálculos, intercambiar valores entre variables, calcular promedios y resolver problemas matemáticos utilizando expresiones y funciones de la biblioteca estándar.
+</p>
+
+## Conceptos principales
+- **Expresiones aritméticas:** representación de operaciones matemáticas mediante código C++.
+- **Operadores aritméticos:** suma (`+`), resta (`-`), multiplicación (`*`), división (`/`) y módulo (`%`).
+- **Precedencia y asociatividad:** reglas que determinan el orden de evaluación de las operaciones.
+- **Uso de paréntesis:** agrupación de operaciones para controlar el orden de evaluación.
+- **Intercambio de valores:** utilización de variables auxiliares para intercambiar el contenido de dos variables.
+- **Cálculos matemáticos:** operaciones con promedios, porcentajes, raíces cuadradas y potencias mediante funciones como `sqrt()` y `pow()` de la biblioteca `<cmath>`.
+- **Expresiones con números reales:** uso de tipos de datos adecuados para obtener resultados decimales y evitar divisiones enteras no deseadas.
+
+## Objetivo
+Construir expresiones aritméticas correctas en C++, comprender cómo se evalúan los operadores y utilizarlos para desarrollar programas que resuelvan problemas matemáticos, calculen resultados numéricos y manipulen valores almacenados en variables.
+
+## Ejercicios
+
 ##### 1. Escribe la siguiente expresión como expresión en C++: (a/b) + 1
 <details>
 <summary>Solución</summary>
