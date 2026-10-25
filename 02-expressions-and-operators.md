@@ -1,5 +1,4 @@
 ##### 1. Escribe la siguiente expresión como expresión en C++: (a/b) + 1
-
 <details>
 <summary>Solución</summary>
 
@@ -26,7 +25,6 @@ int main(){
 </details>
 
 ##### 2. Escribe la siguiente expresión como expresión en C++: (a+b)/(c+d)   
-
 <details>
 <summary>Solución</summary>
 
@@ -53,7 +51,6 @@ int main(){
 </details>
 
 ##### 3. Escribe la siguiente expresión como expresión en C++: (a+(b/c))/(d+(e/f))  
-
 <details>
 <summary>Solución</summary>
 
@@ -82,7 +79,6 @@ int main(){
 </details>
 
 ##### 4. Escribe la siguiente expresión como expresión en C++: a + (b/(c-d))
-
 <details>
 <summary>Solución</summary>
 
@@ -109,7 +105,6 @@ int main(){
 </details>
 
 ##### 5. Escriba un fragmento de programa que intercambie los valores de dos variables. 
-
 <details>
 <summary>Solución</summary>
 
@@ -135,7 +130,6 @@ int main(){
 </details>
 
 ##### 6. Escriba un programa que lea las tres notas de un alumno y calcule la nota final media de dicho alumno 
-
 <details>
 <summary>Solución</summary>
 
@@ -164,7 +158,6 @@ int main(){
 </details>
 
 ##### 7. La calificación final de un estudiante es el promedio de tres notas: la nota de prácticas que cuenta un 30% del total, la nota teórica que cuenta un 60% y la nota de participación que cuenta el 10% restante. Escriba un programa que lea las tres notas del alumno y escriba su nota final. 
-
 <details>
 <summary>Solución</summary>
 
@@ -195,7 +188,6 @@ int main(){
 </details>
 
 ##### 8. Escriba un programa que lea de la entrada estándar los dos catetos de un triángulo rectángulo y escriba en la salida estándar su hipotenusa. 
-
 <details>
 <summary>Solución</summary>
 
@@ -219,7 +211,6 @@ int main(){
 </details>
 
 ##### 9. Realice un programa que calcule el valor que toma la siguiente función para unos valores dados de x e y: f(x,y) = sqrt(x) / (pow(y,2)-1) 
-
 <details>
 <summary>Solución</summary>
 
@@ -244,7 +235,6 @@ int main(){
 </details>
 
 ##### 10. Escriba un programa que calcule las soluciones de una ecuación de segundo grado de la forma ax^2 + bx + c = 0, teniendo en cuenta que: (-b+sqrt(pow(b,2)-4*a*c))/(2*a) y (-b-sqrt(pow(b,2)-4*a*c))/(2*a) 
-
 <details>
 <summary>Solución</summary>
 

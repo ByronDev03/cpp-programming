@@ -22,7 +22,6 @@ Desarrollar programas sencillos que reciban datos desde la entrada estándar, re
 ## 📝 Ejercicios
 
 ##### 1. Escribe un programa que lea de la entrada estándar dos números y muestre en la salida estándar su suma, resta, multiplicación y división.
-
 <details>
 <summary>Solución</summary>
 
@@ -51,7 +50,6 @@ int main(){
 </details>
 
 ##### 2. Escribir un programa que de la entrada estándar el precio de un producto y muestre en la salida estándar el precio del producto al aplicarle el IVA. 
-
 <details>
 <summary>Solución</summary>
 
