@@ -17,7 +17,7 @@ En esta unidad se estudian los arreglos en C++, una estructura de datos que perm
 ## Objetivo
 Comprender cómo funcionan los arreglos en C++ y desarrollar programas que permitan almacenar, recorrer, consultar y modificar conjuntos de datos, aplicando ciclos, índices y operaciones sobre sus elementos para resolver problemas de programación.
 
-**¿Qué es un arreglo?** → [Ver apunte](/notes/arrays.md) <br>
+**Arrays** → [Ver apunte](/notes/arrays.md) <br>
 
 ## Ejercicios
 

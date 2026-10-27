@@ -20,6 +20,8 @@ En esta unidad se estudian las matrices en C++, estructuras de datos que permite
 
 Comprender cómo se representan y manipulan las matrices en C++, desarrollar programas que recorran y transformen sus elementos, y aplicar ciclos anidados para resolver problemas relacionados con operaciones matriciales y procesamiento de datos bidimensionales.
 
+**Arrays Bidimensionales** → [Ver apunte](/notes/matrices-and-multidimensional-arrays.md) <br>
+
 ## Ejercicios
 
 ##### 1. Hacer un programa para rellenar una matriz pidiendo al usuario el número de filas y columnas, Posteriormente mostrar la matriz en pantalla.
