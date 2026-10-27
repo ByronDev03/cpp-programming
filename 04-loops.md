@@ -1,3 +1,28 @@
+<h1 align="center">4. Bucles</h1>
+
+<p align="justify">
+En esta unidad se estudian las estructuras repetitivas de C++, también conocidas como bucles o ciclos, que permiten ejecutar un conjunto de instrucciones varias veces mientras se cumpla una condición o durante un número determinado de iteraciones. Estas estructuras son fundamentales para automatizar tareas y resolver problemas que requieren procesar datos de forma repetitiva. A través de los ejercicios, se utilizarán bucles para generar tablas de multiplicar, calcular sumas y productos, trabajar con factoriales, construir series numéricas y resolver problemas que requieren la lectura y el análisis de múltiples datos.
+</p>
+
+## Conceptos principales
+
+- **Bucle `for`:** repetición de instrucciones durante un número determinado de iteraciones.
+- **Bucle `while`:** ejecución repetitiva mientras una condición sea verdadera.
+- **Bucle `do-while`:** ejecución de un bloque de instrucciones al menos una vez, evaluando la condición al final.
+- **Contadores y acumuladores:** variables utilizadas para contar iteraciones, sumar valores y acumular resultados.
+- **Condiciones de terminación:** criterios que determinan cuándo debe finalizar un ciclo, incluyendo valores centinela.
+- **Sumatorias y productorias:** cálculo de expresiones numéricas mediante operaciones repetitivas.
+- **Factoriales y potencias:** aplicación de ciclos para realizar multiplicaciones sucesivas.
+- **Series numéricas:** generación de secuencias como Fibonacci y otras sucesiones aritméticas.
+- **Bucles anidados:** utilización de ciclos dentro de otros para procesar conjuntos de datos y realizar cálculos más complejos.
+- **Procesamiento de datos y estadísticas:** lectura repetida de valores para calcular promedios, máximos, mínimos y cantidades que cumplen determinadas condiciones.
+
+## Objetivo
+
+Comprender y aplicar las estructuras repetitivas de C++ para automatizar operaciones, procesar conjuntos de datos y resolver problemas matemáticos mediante ciclos, contadores, acumuladores y condiciones de terminación.
+
+## Ejercicios
+
 ##### 1. Realice un programa que solicite de la entrada estándar un entero del 1 al 10 y muestre en la salida estándar su tabla de multiplicar.
 <details>
 <summary>Solución</summary>
