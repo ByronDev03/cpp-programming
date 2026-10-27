@@ -1,4 +1,4 @@
-<h1 align="center">6. Matrices y Arreglos Multidimensionales (Matrices and Multidimensional Arrays)</h1>
+<h1 align="center">6. Matrices y Arreglos Multidimensionales</h1>
 
 <p align="justify">
 En esta unidad se estudian las matrices en C++, estructuras de datos que permiten organizar elementos del mismo tipo en filas y columnas. Las matrices son una extensión de los arreglos unidimensionales y resultan útiles para representar y procesar información tabular, realizar cálculos matemáticos y trabajar con datos organizados en dos o más dimensiones.A través de los ejercicios, se aprenderá a declarar, llenar y recorrer matrices utilizando ciclos anidados, así como a copiar sus elementos y realizar operaciones como la transposición, la suma y la multiplicación de matrices.

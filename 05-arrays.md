@@ -1,4 +1,4 @@
-<h1 align="center">5. Arreglos (Arrays)</h1>
+<h1 align="center">5. Arreglos</h1>
 
 <p align="justify">
 En esta unidad se estudian los arreglos en C++, una estructura de datos que permite almacenar múltiples elementos del mismo tipo bajo un único nombre. Se aprenderá cómo acceder a sus elementos mediante índices, recorrerlos utilizando estructuras repetitivas y realizar operaciones que permitan procesar y modificar sus valores. A través de los ejercicios, se trabajará con arreglos numéricos y de caracteres para resolver problemas como calcular sumas y productos, encontrar valores máximos, invertir el orden de los elementos, combinar arreglos y generar nuevas colecciones de datos a partir de otras existentes.
