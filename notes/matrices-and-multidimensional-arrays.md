@@ -1,11 +1,11 @@
 <h1 align="center">Arrays Bidimensionales (Matrices o Tablas) en C++</h1>
 
-## 1. ¿Qué es una matriz o tabla?
+## ¿Qué es una matriz o tabla?
 Una **matriz** es un arreglo de arreglos, también conocido como *array bidimensional*. Permite almacenar datos del mismo tipo organizados en filas y columnas.
 
 En C++, la forma de declarar una matriz es similar a la de un vector, pero se utilizan dos dimensiones: una para las filas y otra para las columnas.
 
-## 2. Declarando una matriz en C++
+## Declarando una matriz en C++
 Para declarar una matriz se utiliza la siguiente sintaxis:
 
 ```cpp
@@ -41,7 +41,7 @@ Una matriz de \(n\) filas y \(m\) columnas se organiza de la siguiente manera:
 
 Los índices de las filas y las columnas comienzan en `0`.
 
-## 3. Agregar elementos a una matriz
+## Agregar elementos a una matriz
 Podemos inicializar una matriz al momento de declararla, asignando los valores entre llaves `{}`.
 
 ### Primera forma: inicialización sin separar las filas
@@ -74,7 +74,7 @@ La matriz resultante es la misma:
 | **Fila 0**               | 1         | 2         | 3         |
 | **Fila 1**               | 4         | 5         | 6         |
 
-## 4. Acceder a los elementos de una matriz
+## Acceder a los elementos de una matriz
 Para acceder a un elemento específico se utilizan dos índices:
 
 ```cpp
@@ -114,7 +114,7 @@ Por lo tanto:
 
 **Importante:** para acceder a un elemento, ambos índices deben estar dentro de los límites de la matriz. En `numeros[2][3]`, las filas válidas son `0` y `1`, mientras que las columnas válidas son `0`, `1` y `2`.
 
-## 5. Ejemplo completo
+## Ejemplo completo
 ```cpp
 #include <iostream>
 using namespace std;
@@ -142,16 +142,16 @@ Elemento en [1][2]: 6
 Elemento en [0][1]: 2
 ```
 
-## 6. Resumen
-| Concepto                     | Descripción |
-| ---                          | ---         |
+## Resumen
+| Concepto                     | Descripción                                         |
+| ---                          | ---                                                 |
 | Matriz o array bidimensional | Estructura de datos organizada en filas y columnas. |
-| Fila | Primera dimensión de la matriz. |
-| Columna | Segunda dimensión de la matriz. |
-| Declaración | `tipo nombre[filas][columnas];` |
-| Acceso a un elemento | `nombre[fila][columna]` |
-| Primer elemento | `nombre[0][0]` |
-| Índice de la última fila | `filas - 1` |
-| Índice de la última columna | `columnas - 1` |
+| Fila                         | Primera dimensión de la matriz.                     |
+| Columna                      | Segunda dimensión de la matriz.                     |
+| Declaración                  | `tipo nombre[filas][columnas];`                     |
+| Acceso a un elemento         | `nombre[fila][columna]`                             |
+| Primer elemento              | `nombre[0][0]`                                      |
+| Índice de la última fila     | `filas - 1`                                         |
+| Índice de la última columna  | `columnas - 1`                                      |
 
 **Recuerda:** en una matriz de C++, primero se indica la fila y después la columna. Por ejemplo, `numeros[1][2]` hace referencia al elemento situado en la segunda fila y la tercera columna.
