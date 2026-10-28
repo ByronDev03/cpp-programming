@@ -20,11 +20,12 @@ En esta unidad se estudian los algoritmos de ordenamiento en C++, utilizados par
 ## Objetivo
 Comprender e implementar diferentes algoritmos de ordenamiento en C++, aprender cómo reorganizan los elementos de un arreglo y comparar sus estrategias de funcionamiento, aplicando ciclos, comparaciones, intercambios, funciones y recursividad para obtener resultados ordenados.
 
-**Ordenación de Burbuja (Bubble Sort)** → [Ver apunte](/notes/bubblesort.md) 
-**Ordenamiento por Selección** → [Ver apunte](/notes/seleccion.md) 
-**Ordenamiento por Inserción** → [Ver apunte](/notes/insercion.md) 
-**Ordenación Shell** → [Ver apunte](/notes/shell.md) 
-**Ordenación Rápida (QuickSort)** → [Ver apunte](/notes/quicksort.md)
+## Apuntes
+- **Ordenación de Burbuja (Bubble Sort)** → [Ver apunte](/notes/bubblesort.md) 
+- **Ordenamiento por Selección** → [Ver apunte](/notes/seleccion.md) 
+- **Ordenamiento por Inserción** → [Ver apunte](/notes/insercion.md) 
+- **Ordenación Shell** → [Ver apunte](/notes/shell.md) 
+- **Ordenación Rápida (QuickSort)** → [Ver apunte](/notes/quicksort.md)
 
 ## Ejercicios
 
