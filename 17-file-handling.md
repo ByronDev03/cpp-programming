@@ -19,9 +19,7 @@ En esta unidad se estudia el manejo de archivos en C++, una herramienta que perm
 ## Objetivo
 Aprender a crear, leer, escribir y actualizar archivos en C++, comprendiendo las diferencias entre los archivos de texto y los binarios, para almacenar y recuperar información de forma permanente mediante flujos de archivos, estructuras y menús de opciones.
 
----
-
-## 📝 Ejercicios
+## Ejercicios
 
 ##### 1. Realice un programa que pida al usuario el nombre de un fichero de texto y, a continuación permita almacenar al usuario tantas frases como el usuario desee.
 <details>
