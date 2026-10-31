@@ -1,10 +1,7 @@
 <h1 align="center">Método Burbuja (Bubble Sort) en C++</h1>
 
 ## ¿Qué es?
-
-Es un sencillo algoritmo de ordenamiento que funciona revisando cada elemento de una lista y comparándolo con el siguiente. Si ambos elementos están en el orden equivocado, se intercambian de posición.
-
-Es necesario revisar la lista varias veces hasta que ya no se necesiten más intercambios, lo cual significa que la lista está ordenada.
+<p align="justify">Es un sencillo algoritmo de ordenamiento que funciona revisando cada elemento de una lista y comparándolo con el siguiente. Si ambos elementos están en el orden equivocado, se intercambian de posición. Es necesario revisar la lista varias veces hasta que ya no se necesiten más intercambios, lo cual significa que la lista está ordenada.</p>
 
 ## Ejemplo
 Partimos de la siguiente lista desordenada:

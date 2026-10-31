@@ -1,11 +1,7 @@
 <h1 align="center">Ordenamiento por Inserción (Insertion Sort) en C++</h1>
 
 ## ¿Qué es el ordenamiento por inserción?
-Es una manera muy natural de ordenar para un ser humano. Puede utilizarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria.
-
-El algoritmo recorre una lista y va insertando cada elemento en su posición correcta dentro de la parte que ya está ordenada.
-
-Su complejidad temporal promedio y en el peor caso es **\(O(n^2)\)** para ordenar una lista de \(n\) elementos. Sin embargo, si la lista ya está ordenada, su complejidad es **\(O(n)\)**.
+Es una manera muy natural de ordenar para un ser humano. Puede utilizarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. El algoritmo recorre una lista y va insertando cada elemento en su posición correcta dentro de la parte que ya está ordenada. Su complejidad temporal promedio y en el peor caso es **\(O(n^2)\)** para ordenar una lista de \(n\) elementos. Sin embargo, si la lista ya está ordenada, su complejidad es **\(O(n)\)**.
 
 ## Ejemplo
 Partimos de la siguiente lista desordenada:
@@ -113,7 +109,7 @@ La lista ya está ordenada.
 | Caso promedio                      | \(O(n^2)\)  |
 | Peor caso (lista en orden inverso) | \(O(n^2)\)  |
 
-**Características:**
+## Características:
 - Es un algoritmo sencillo de implementar.
 - Es eficiente para listas pequeñas o casi ordenadas.
 - Es un algoritmo de ordenamiento estable.

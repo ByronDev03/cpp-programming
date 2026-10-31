@@ -76,7 +76,6 @@ int main(){
 </details>
 
 ##### 3. Pedir al usuario que digite 2 cadenas de caracteres, e indicar si ambas cadenas son iguales, en caso de no serlo, indicar cual es mayor alfabeticamente.
-
 <details>
 <summary>Solución</summary>
 

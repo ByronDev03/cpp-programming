@@ -1,11 +1,7 @@
 <h1 align="center">Ordenación Rápida (QuickSort) en C++</h1>
 
-## ¿Qué es QuickSort?
-El algoritmo **QuickSort** es un método de ordenación basado en la técnica *divide y vencerás*. Su funcionamiento consiste en dividir una lista de elementos en particiones más pequeñas para ordenarlas de manera independiente.
-
-Es un algoritmo conocido por su eficiencia en la práctica, su implementación relativamente compacta y su uso de la recursividad.
-
-El algoritmo divide los \(n\) elementos de la lista en dos particiones separadas por un elemento denominado **pivote**:
+## ¿Qué es?
+<p align="justify">Es un método de ordenación basado en la técnica divide y vencerás. Su funcionamiento consiste en dividir una lista de elementos en particiones más pequeñas para ordenarlas de manera independiente. Es un algoritmo conocido por su eficiencia en la práctica, su implementación relativamente compacta y su uso de la recursividad. El algoritmo divide los \(n\) elementos de la lista en dos particiones separadas por un elemento denominado pivote:</p>
 
 - **Partición izquierda:** contiene los elementos menores o iguales que el pivote.
 - **Pivote:** elemento que se utiliza como referencia para dividir la lista.
@@ -17,7 +13,7 @@ Una vez realizada la partición, las dos sublistas se ordenan de manera independ
 Los pasos que sigue el algoritmo QuickSort son:
 
 1. Seleccionar un elemento de la lista como **pivote**.
-2. Dividir los elementos restantes en particiones izquierda y derecha, colocando los menores a la izquierda y los mayores a la derecha del pivote.
+2. Dividir los elementos restantes en particiones izquierda y derecha, de modo que ningún elemento de la izquierda tenga una clave mayor que el pivote y que ningún elemento a la derecha tenga una clave más pequeña que la del pivote.
 3. Ordenar la partición izquierda utilizando QuickSort recursivamente.
 4. Ordenar la partición derecha utilizando QuickSort recursivamente.
 5. Obtener la lista ordenada mediante la combinación de la partición izquierda, el pivote y la partición derecha.

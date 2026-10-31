@@ -1,10 +1,7 @@
 <h1 align="center">Ordenamiento por Selección (Selection Sort) en C++</h1>
 
 ## ¿Qué es?
-
-Es un algoritmo de ordenamiento que requiere \(O(n^2)\) operaciones para ordenar una lista de \(n\) números.
-
-Su funcionamiento consiste en buscar el elemento mínimo de la parte no ordenada de la lista e intercambiarlo con el primer elemento de esa parte. Este proceso se repite hasta que todos los elementos quedan ordenados.
+<p align="justify">Es un algoritmo de ordenamiento que requiere \(O(n^2)\) operaciones para ordenar una lista de \(n\) números. Su funcionamiento consiste en buscar el elemento mínimo de la parte no ordenada de la lista e intercambiarlo con el primer elemento de esa parte. Este proceso se repite hasta que todos los elementos quedan ordenados.</p>
 
 ### Funcionamiento
 1. Buscar el elemento mínimo de la lista.
