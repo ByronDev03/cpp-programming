@@ -300,6 +300,5 @@ void eliminarNodo(Nodo *nodoEliminar){
 		destruirNodo(nodoEliminar);
 	}
 }
-
 ```
 </details>

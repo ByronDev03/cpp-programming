@@ -28,7 +28,6 @@ Comprender cómo definir y utilizar estructuras en C++ para representar informac
 - **Juvenil <= 18 años**
 - **Señor <= 40 años**
 - **Veterano > 40 años**
-
 ##### Posteriormente imprimir todos los datos del corredor, incluida su categoría de competición.
 <details>
 <summary>Solución</summary>

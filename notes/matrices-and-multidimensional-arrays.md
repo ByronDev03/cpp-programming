@@ -1,6 +1,6 @@
 <h1 align="center">Arrays Bidimensionales (Matrices o Tablas) en C++</h1>
 
-## ¿Qué es una matriz o tabla?
+## ¿Qué es?
 Una **matriz** es un arreglo de arreglos, también conocido como *array bidimensional*. Permite almacenar datos del mismo tipo organizados en filas y columnas.
 
 En C++, la forma de declarar una matriz es similar a la de un vector, pero se utilizan dos dimensiones: una para las filas y otra para las columnas.

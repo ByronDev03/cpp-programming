@@ -1,7 +1,7 @@
 <h1 align="center">13. Pilas</h1>
 
 <p align="justify">
-En esta unidad se estudian las pilas en C++, una estructura de datos lineal que organiza sus elementos siguiendo el principio LIFO (*Last In, First Out*), es decir, el último elemento que ingresa es el primero en salir. Esta estructura permite insertar y extraer elementos desde un mismo extremo, conocido como la cima de la pila. A través de los ejercicios, se aprenderá a implementar pilas mediante nodos enlazados y punteros, insertar elementos de diferentes tipos, extraer los elementos almacenados y desarrollar menús interactivos para administrar las operaciones de la estructura.
+En esta unidad se estudian las pilas en C++, una estructura de datos lineal que organiza sus elementos siguiendo el principio LIFO (Last In, First Out), es decir, el último elemento que ingresa es el primero en salir. Esta estructura permite insertar y extraer elementos desde un mismo extremo, conocido como la cima de la pila. A través de los ejercicios, se aprenderá a implementar pilas mediante nodos enlazados y punteros, insertar elementos de diferentes tipos, extraer los elementos almacenados y desarrollar menús interactivos para administrar las operaciones de la estructura.
 </p>
 
 ## Conceptos principales

@@ -1,6 +1,6 @@
 <h1 align="center">Ordenamiento por Selección (Selection Sort) en C++</h1>
 
-## ¿Qué es el ordenamiento por selección?
+## ¿Qué es?
 
 Es un algoritmo de ordenamiento que requiere \(O(n^2)\) operaciones para ordenar una lista de \(n\) números.
 

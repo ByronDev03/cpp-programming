@@ -357,5 +357,3 @@ int main(){
 }
 ```
 </details>
-
----

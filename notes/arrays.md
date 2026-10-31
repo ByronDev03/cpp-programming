@@ -1,6 +1,6 @@
 <h1 align="center">Vectores (arreglos unidimensionales) en C++</h1>
 
-##¿Qué es un vector o arreglo?
+## ¿Qué es un vector o arreglo?
 Un **vector** o *array unidimensional* es un tipo de dato que permite almacenar una secuencia de elementos del mismo tipo. Los elementos se almacenan en posiciones contiguas de memoria y se puede acceder a cada uno de ellos de manera directa mediante un **índice o posición**.
 
 Por ejemplo, el siguiente vector contiene cinco números:
@@ -25,7 +25,7 @@ tipo nombre[tamaño];
 - `nombre`: es el identificador del vector.
 - `tamaño`: indica la cantidad de elementos que puede almacenar.
 
-### Ejemplos
+**Ejemplos**
 
 ```cpp
 int numeros[10];
@@ -42,7 +42,7 @@ En estos ejemplos:
 ## Inicialización de un vector
 Un vector puede inicializarse al momento de declararlo, asignando sus valores entre llaves `{}` y separados por comas.
 
-### Ejemplo 1: vector de números enteros
+## Ejemplo 1: vector de números enteros
 
 ```cpp
 int numero[] = {1, 4, 6, 7, 3};
@@ -70,7 +70,7 @@ numero[4] = 3;
 
 **Importante:** los índices permiten consultar o modificar los elementos del vector. Por ejemplo, `numero[2]` hace referencia al tercer elemento, cuyo valor es `6`.
 
-### Ejemplo 2: vector de caracteres
+## Ejemplo 2: vector de caracteres
 
 ```cpp
 char letra[] = {'a', 'e', 'i', 'o', 'u'};
@@ -109,8 +109,7 @@ letra[4] = 'u';
 | Primer índice  | `0`                                               |
 | Último índice  | `tamaño - 1`                                      |
 
-### Ejemplo completo
-
+## Ejemplo completo
 ```cpp
 #include <iostream>
 using namespace std;
@@ -127,7 +126,6 @@ int main() {
 ```
 
 **Salida esperada:**
-
 ```text
 Primer elemento: 1
 Tercer elemento: 6
