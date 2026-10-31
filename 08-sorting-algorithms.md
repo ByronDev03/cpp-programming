@@ -24,7 +24,7 @@ Comprender e implementar diferentes algoritmos de ordenamiento en C++, aprender 
 - **Método Burbuja (Bubble Sort)**  → [Ver apunte](/notes/bubble-sort.md) 
 - **Ordenamiento por Selección**    → [Ver apunte](/notes/selection-sort.md) 
 - **Ordenamiento por Inserción**    → [Ver apunte](/notes/insertion-sort.md) 
-- **Ordenación Shell**              → [Ver apunte](/notes/shell.md) 
+- **Ordenación Shell**              → [Ver apunte](/notes/shell-sort.md) 
 - **Ordenación Rápida (QuickSort)** → [Ver apunte](/notes/quicksort.md)
 
 ## Ejercicios
