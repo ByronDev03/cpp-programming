@@ -209,8 +209,7 @@ int a[] = {1, 2, 3, 4, 5, 6, 7, 8};
 **Resultado:** el arreglo está ordenado de forma ascendente.
 
 ### Resumen del proceso
-El funcionamiento de QuickSort puede resumirse en los siguientes pasos:
-
+El funcionamiento de QuickSort puede resumirse en los siguientes pasos:yy
 1. Seleccionar un pivote.
 2. Recorrer el arreglo mediante los índices `i` y `j`.
 3. Intercambiar los elementos que se encuentran en la partición incorrecta.
@@ -219,8 +218,7 @@ El funcionamiento de QuickSort puede resumirse en los siguientes pasos:
 
 La principal ventaja de QuickSort es que ordena los elementos mediante particiones sucesivas, sin necesitar combinar explícitamente las sublistas al finalizar cada llamada recursiva.
 
-**Complejidad temporal:**
-
+## Complejidad temporal:
 | Caso          | Complejidad     |
 | ---           |---              |
 | Mejor caso    | \(O(n \log n)\) |
