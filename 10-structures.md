@@ -19,6 +19,7 @@ En esta unidad se estudian las estructuras en C++, un mecanismo que permite agru
 ## Objetivo
 Comprender cómo definir y utilizar estructuras en C++ para representar información relacionada, almacenar múltiples registros y procesar sus campos mediante arreglos, ciclos y condiciones, desarrollando programas que permitan comparar datos, realizar cálculos y organizar información de manera estructurada.
 
+## Apuntes
 - **Estructuras** → [Ver apunte](/notes/structures.md) 
 - **Estructuras Anidadas** → [Ver apunte](/notes/nested-structures.md)
 

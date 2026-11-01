@@ -5,7 +5,6 @@ En esta unidad se estudian las matrices en C++, estructuras de datos que permite
 </p>
 
 ## Conceptos principales
-
 - **Declaración e inicialización de matrices:** creación de arreglos bidimensionales para almacenar datos organizados en filas y columnas.
 - **Acceso mediante índices:** consulta y modificación de elementos utilizando los índices de fila y columna.
 - **Recorrido de matrices:** utilización de ciclos anidados para procesar todos los elementos de una matriz.
@@ -17,9 +16,9 @@ En esta unidad se estudian las matrices en C++, estructuras de datos que permite
 - **Operaciones con matrices:** realización de sumas y productos entre matrices, respetando las condiciones necesarias para cada operación.
 
 ## Objetivo
-
 Comprender cómo se representan y manipulan las matrices en C++, desarrollar programas que recorran y transformen sus elementos, y aplicar ciclos anidados para resolver problemas relacionados con operaciones matriciales y procesamiento de datos bidimensionales.
 
+## Apuntes
 **Arrays Bidimensionales** → [Ver apunte](/notes/matrices-and-multidimensional-arrays.md) <br>
 
 ## Ejercicios

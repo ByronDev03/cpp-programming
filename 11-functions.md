@@ -19,6 +19,7 @@ En esta unidad se estudian las funciones en C++, una herramienta que permite div
 ## Objetivo
 Comprender cómo diseñar, declarar, definir y utilizar funciones en C++, aplicando el paso de parámetros por valor y referencia, el procesamiento de arreglos, matrices y estructuras, las plantillas de funciones y la recursividad para desarrollar programas modulares, reutilizables y organizados.
 
+## Apuntes
 **Funciones** → [Ver apunte](/notes/functions.md) <br>
 
 ## Ejercicios
