@@ -1,3 +1,26 @@
+<h1 align="center">11. Funciones</h1>
+
+<p align="justify">
+En esta unidad se estudian las funciones en C++, una herramienta que permite dividir un programa en bloques de código independientes, facilitando su organización, reutilización y mantenimiento. A través de los ejercicios, se aprenderá a declarar funciones, definirlas, establecer sus parámetros y utilizarlas para realizar operaciones específicas, así como a devolver resultados mediante valores de retorno. También se trabajará con el paso de parámetros por valor y por referencia, el envío de arreglos, matrices y estructuras a funciones, y la creación de plantillas que permiten trabajar con diferentes tipos de datos. Finalmente, se abordará la recursividad, mediante funciones que se llaman a sí mismas para resolver problemas como el cálculo de factoriales, potencias, sumas y la serie de Fibonacci. </p>
+
+## Conceptos principales
+- **Declaración y definición de funciones:** creación de prototipos y desarrollo del bloque de instrucciones de una función.
+- **Llamada a funciones:** ejecución de funciones desde `main()` u otras partes del programa.
+- **Parámetros y argumentos:** transmisión de datos a una función para realizar operaciones específicas.
+- **Valores de retorno:** utilización de `return` para devolver resultados desde una función.
+- **Funciones de tipo `void`:** creación de funciones que realizan operaciones sin devolver un valor.
+- **Paso de parámetros por valor:** transmisión de copias de los datos a una función.
+- **Paso de parámetros por referencia:** utilización de referencias (`&`) para modificar directamente las variables originales y devolver varios resultados.
+- **Funciones con arreglos y matrices:** envío y procesamiento de vectores y matrices como parámetros.
+- **Funciones con estructuras:** transmisión y devolución de datos definidos mediante `struct`.
+- **Plantillas de funciones (Function Templates):** utilización de `template` para crear funciones que trabajan con diferentes tipos de datos.
+- **Recursividad:** creación de funciones que se llaman a sí mismas, utilizando casos base y casos generales para resolver problemas.
+
+## Objetivo
+Comprender cómo diseñar, declarar, definir y utilizar funciones en C++, aplicando el paso de parámetros por valor y referencia, el procesamiento de arreglos, matrices y estructuras, las plantillas de funciones y la recursividad para desarrollar programas modulares, reutilizables y organizados.
+
+## Ejercicios
+
 ##### 1. Escriba una función llamada mult() que acepte dos números en punto flotante como parámetros, multiplique estos dos números y despliegue el resultado.
 <details>
 <summary>Solución</summary>
@@ -491,7 +514,6 @@ void pedirDatos();
 void cambiarSigno(int vec[],int);
 void mostrarVector(int vec[],int);
 
-
 int tam,vec[100];
 
 int main(){
@@ -584,9 +606,9 @@ void impares(int vec[],int tam){
 - **La matriz debe ser cuadrada. _--**
 - **Aij = Aji**
 ```text
-|2   5   9|		  |2  5   9|
-|5   8  -1|   ->  |5  8  -1|
-|9  -1  10|	      |9 -1  10|
+|  2   5   9  |       |  2   5   9  |
+|  5   8  -1  |  -->  |  5   8  -1  |
+|  9  -1  10  |       |  9  -1  10  |
 ```
 <details>
 <summary>Solución</summary>
@@ -836,7 +858,6 @@ Fecha mayor(Fecha f1,Fecha f2){
 		mayorFecha = f2;
 	}
 	
-	
 	return mayorFecha;
 }
 
@@ -878,7 +899,7 @@ int main(){
 	return 0;
 }
 
-//Definici�n de Funci�n
+//Definición de Función
 int sumar(int n){
 	int suma=0;
 	
@@ -896,7 +917,7 @@ int sumar(int n){
 
 ##### 20. Realice una función recursiva para la serie Fibonacci Nota: La serie de Fibonacci está formada por la secuencia de números: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34... 
 ```text
-fibonacci(n) = n                              , si n<2
+fibonacci(n) = n                   , si n<2
 	fibonacci(n-1)+fibonacci(n-2)  , si n>=2
 ```
 <details>
@@ -941,7 +962,7 @@ int fibonacci(int n){
 
 ##### 21. Escriba una función recursiva que calcule un número elevado a una potencia entera mayor o igual que cero: x^y. 
 ```text
-potencia(x,y) = x                  , y=1
+potencia(x,y) = x      , y=1
 	x*potencia(x,y-1)  , y>1
 ```
 <details>
@@ -985,7 +1006,7 @@ int potencia(int x,int y){
 
 ##### 22. Escriba una función escribeNumeros(int ini, int fin) que devuelva en la salida estándar los números del ini al fin. Escriba una versión que escriba los números en orden ascendente.
 ```text
-escribeNumeros(ini,fin) = ini                             , si ini=fin
+escribeNumeros(ini,fin) = ini       , si ini=fin
 	escribeNumeros(ini,fin-1)       , si fin>ini
 ```
 <details>
@@ -1028,11 +1049,285 @@ int escribeNumeros(int ini,int fin){
 ```
 </details>
 
-##### 23.
+##### 23. Ejemplo encontrar el mayor de 2 numeros
+##### Directivas de Preprocesador
 <details>
 <summary>Solución</summary>
 
 ```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
 
+//Prototipo de Funcion
+int encontrarMax(int x,int y);
+
+int main(){
+	int n1,n2;
+	cout<<"Digite 2 numeros: ";
+	cin>>n1>>n2;	
+	
+	cout<<"El numero mayor es: "<<encontrarMax(n1,n2);
+	
+	getch();
+	return 0;
+}
+
+//Definicion de Funcion
+int encontrarMax(int x,int y){
+	int numMax;
+	
+	if(x>y){
+		numMax = x;
+	}
+	else{
+		numMax = y;
+	}
+	
+	return numMax;
+}
+```
+</details>
+
+##### 24. Paso de parametros de tipo estructura
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+struct Persona{
+	char nombre[30];
+	int edad;
+}p1;
+
+void pedirDatos();
+void mostrarDatos(Persona);
+
+int main(){
+	pedirDatos();
+	mostrarDatos(p1);
+	
+	getch();
+	return 0;
+}
+
+void pedirDatos(){
+	cout<<"Digite su nombre: ";;
+	cin.getline(p1.nombre,30,'\n');
+	cout<<"Digite su edad: ";
+	cin>>p1.edad;
+}
+
+void mostrarDatos(Persona p){
+	cout<<"\n\nSu nombre es: "<<p.nombre<<endl;
+	cout<<"Su edad es: "<<p.edad<<endl;
+}
+```
+</details>
+
+##### 25. Paso de parámetros de tipo vector
+```text
+Parametros de la función:
+	void nombreDeFuncion(tipo nombreArreglo[],int tamañoArreglo)
+	
+Llamada a la función
+	nombreDeFuncion(nombreArreglo, tamañoArreglo)
+```
+##### Cuadrados de los elementos del vector
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+void cuadrado(int v[],int);
+void muestra(int v[],int);
+
+int main(){
+	const int TAM = 5;
+	int vec[TAM] = {1,2,3,4,5};
+	cuadrado(vec,TAM);
+	muestra(vec,TAM);
+	
+	getch();
+	return 0;
+}
+
+void cuadrado(int v[],int tam){
+	for(int i=0;i<tam;i++){
+		v[i] *= v[i];
+	}
+}
+
+void muestra(int v[],int tam){
+	for(int i=0;i<tam;i++){
+		cout<<v[i]<<endl;
+	}
+}
+```
+</details>
+
+##### 26. Paso de parametros tipo matriz
+##### Elevar al cuadrado todos los elementos de una matriz
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+void mostrarMatriz(int m[][3],int,int);
+void calcularCuadrado(int m[][3],int,int);
+void mostrarMatrizElevada(int m[][3],int,int);
+
+int main(){
+	const int NFILAS = 2;
+	const int NCOL = 3;
+	int matriz[NFILAS][NCOL] = {{1,2,3},{4,5,6}};
+	 
+	mostrarMatriz(matriz,NFILAS,NCOL);
+	calcularCuadrado(matriz,NFILAS,NCOL);
+	mostrarMatrizElevada(matriz,NFILAS,NCOL);
+	
+	getch();
+	return 0;
+}
+
+void mostrarMatriz(int m[][3],int filas,int col){
+	cout<<"Mostrando Matriz: \n";
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<col;j++){
+			cout<<m[i][j]<<" ";
+		}
+		cout<<"\n";
+	}
+}
+
+void calcularCuadrado(int m[][3],int filas,int col){
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<col;j++){
+			m[i][j] *= m[i][j];
+		}
+	}
+}
+
+void mostrarMatrizElevada(int m[][3],int filas,int col){
+	cout<<"\n\nMostrando matriz elevada al cuadrado: \n";
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<col;j++){
+			cout<<m[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+}
+```
+</details>
+
+##### 27. Plantillas de Función
+##### Ejemplo: Sacar el valor absoluto de un número
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+template <class TIPOD>
+void mostrarAbs(TIPOD numero);
+
+int main(){
+	int num1 = -4;
+	float num2 = -5.67;
+	double num3 = -67.3456;
+	
+	mostrarAbs(num1);
+	mostrarAbs(num2);
+	mostrarAbs(num3);	
+	
+	getch();
+	return 0;
+}
+
+template <class TIPOD>
+void mostrarAbs(TIPOD numero){
+	if(numero<0){
+		numero = numero*-1;
+	}
+	
+	cout<<"El valor absoluto es "<<numero<<endl;
+}
+```
+</details>
+
+##### 28. Recursividad
+##### Factorial de un número
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+//Prototipo de Funcion
+int factorial(int);
+
+int main(){
+	cout<<factorial(5)<<endl;
+	
+	getch();
+	return 0;
+}
+
+int factorial(int n){	
+	if(n==0){
+		n = 1;
+	}	
+	else{
+		n = n * factorial(n-1);
+	}
+	
+	return n;
+}
+```
+</details>
+
+##### 29. Devolver valores múltiples
+<details>
+<summary>Solución</summary>
+
+```c++
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+void calcular(int,int,int&,int&);
+
+int main(){
+	int num1,num2,suma,producto;
+	
+	cout<<"Digite 2 numeros: ";
+	cin>>num1>>num2;
+	
+	calcular(num1,num2,suma,producto);
+	
+	cout<<"La suma es: "<<suma<<endl;
+	cout<<"El producto es: "<<producto<<endl;
+		
+	getch();
+	return 0;
+}
+
+void calcular(int num1,int num2, int& suma, int& producto){
+	suma = num1+num2;
+	producto = num1*num2;
+}
 ```
 </details>

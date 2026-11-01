@@ -11,7 +11,7 @@ A través de los ejercicios, se aplicarán estos conocimientos para realizar cá
 - **Precedencia y asociatividad:** reglas que determinan el orden de evaluación de las operaciones.
 - **Uso de paréntesis:** agrupación de operaciones para controlar el orden de evaluación.
 - **Intercambio de valores:** utilización de variables auxiliares para intercambiar el contenido de dos variables.
-- **Cálculos matemáticos:** operaciones con promedios, porcentajes, raíces cuadradas y potencias mediante funciones como `sqrt()` y `pow()` de la biblioteca `<cmath>`.
+- **Cálculos matemáticos:** operaciones con promedios, porcentajes, raíces cuadradas y potencias mediante funciones como `sqrt()` y `pow()` de la biblioteca `<math.h>`.
 - **Expresiones con números reales:** uso de tipos de datos adecuados para obtener resultados decimales y evitar divisiones enteras no deseadas.
 
 ## Objetivo
