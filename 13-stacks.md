@@ -20,6 +20,9 @@ En esta unidad se estudian las pilas en C++, una estructura de datos lineal que 
 ## Objetivo
 Comprender e implementar pilas en C++ mediante estructuras, punteros y memoria dinámica, desarrollando operaciones para insertar y extraer elementos y aplicando el principio LIFO para administrar datos de manera ordenada.
 
+## Apuntes
+**Pilas** → [Ver apunte](/notes/stacks.md) <br>
+
 ## Ejercicios
 
 ##### 1. Hacer un programa para agregar números enteros a una pila, hasta que el usuario lo decida, después mostrar todos los números introducidos en la pila.

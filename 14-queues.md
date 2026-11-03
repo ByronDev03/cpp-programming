@@ -1,4 +1,4 @@
-<h1 align="center">14. Colas</h1>
+<h1 align="center">14. Colas</h1> 
 
 <p align="justify">
 En esta unidad se estudian las colas en C++, una estructura de datos lineal que permite almacenar y procesar elementos siguiendo el principio FIFO (First In, First Out), es decir, el primer elemento que ingresa es el primero en salir. Esta estructura resulta útil para representar situaciones en las que se debe respetar el orden de llegada, como la atención de clientes en un banco. A través de los ejercicios, se aprenderá a implementar colas mediante nodos enlazados y punteros, realizar operaciones de inserción y extracción, comprobar si una cola está vacía y administrar elementos de distintos tipos, como caracteres, números enteros y registros de clientes.
@@ -19,6 +19,9 @@ En esta unidad se estudian las colas en C++, una estructura de datos lineal que 
 
 ## Objetivo
 Comprender e implementar colas en C++ mediante estructuras, punteros y memoria dinámica, desarrollando operaciones para insertar, consultar y extraer elementos, y aplicando el principio FIFO para procesar datos y registros en el orden correcto.
+
+## Apuntes
+**Colas** → [Ver apunte](/notes/queues.md) <br>
 
 ## Ejercicios
 

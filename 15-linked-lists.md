@@ -20,6 +20,9 @@ En esta unidad se estudian las listas enlazadas en C++, una estructura de datos 
 ## Objetivo
 Comprender cómo funcionan las listas enlazadas en C++ y desarrollar operaciones para crear, recorrer, buscar, insertar y eliminar nodos mediante punteros y memoria dinámica, aplicando estas operaciones al procesamiento y análisis de conjuntos de datos.
 
+## Apuntes
+**Listas Enlazadas** → [Ver apunte](/notes/linked-lists.md) <br>
+
 ## Ejercicios
 
 ##### 1. Crear una lista que almacene "n" números enteros y calcular el menor y mayor de ellos.
