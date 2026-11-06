@@ -15,6 +15,10 @@
     - [Estructura del nodo]()
     - [Componentes]()
     - [Representación de la estructura]()
+6. [Árbol binario de búsqueda](#6-arbol-binario-de-busqueda)
+   - [Concepto de árbol binario de búsqueda](#61-concepto-de-arbol-binario-de-busqueda)
+   - [Ejemplo de construcción de un árbol binario de búsqueda](#62-ejemplo-de-construccion-de-un-arbol-binario-de-busqueda)
+   - [Operaciones en árboles binarios de búsqueda](#63-operaciones-en-arboles-binarios-de-busqueda)
 ---
 
 # 1. Concepto de árbol
@@ -336,3 +340,189 @@ Los punteros pueden contener la dirección de otro nodo o `NULL` cuando no exist
 ```
 
 Cada nodo almacena su dato y las direcciones de sus respectivos hijos. Los nodos que no tienen hijos apuntan a `NULL`.
+
+---
+
+# 6. Árbol binario de búsqueda
+
+Un **árbol binario de búsqueda (ABB)** es un tipo de árbol binario que organiza sus elementos siguiendo una regla de ordenamiento:
+
+- Todos los valores del subárbol izquierdo de un nodo son menores que el valor de dicho nodo.
+- Todos los valores del subárbol derecho de un nodo son mayores que el valor de dicho nodo.
+
+Esta propiedad se cumple para cada nodo del árbol, por lo que ambos subárboles también deben respetar las mismas reglas.
+
+## 6.1. Concepto de árbol binario de búsqueda
+
+Para comprender su funcionamiento, consideremos un árbol cuya raíz contiene el valor `10`.
+
+### Ejemplo de inserción de elementos
+
+**1. Insertar el valor 10**
+
+El primer elemento se convierte en la raíz del árbol.
+
+```text
+    10
+```
+
+**2. Insertar el valor 5**
+
+Como `5` es menor que `10`, se coloca en el subárbol izquierdo.
+
+```text
+       10
+      /
+     5
+```
+
+**3. Insertar el valor 15**
+
+Como `15` es mayor que `10`, se coloca en el subárbol derecho.
+
+```text
+       10
+      /  \
+     5    15
+```
+
+**4. Insertar el valor 4**
+
+Se compara con la raíz y después con el nodo `5`:
+
+- `4 < 10`: ir a la izquierda.
+- `4 < 5`: ir a la izquierda.
+
+```text
+         10
+        /  \
+       5    15
+      /
+     4
+```
+
+**5. Insertar el valor 8**
+
+Se compara con los nodos existentes:
+
+- `8 < 10`: ir a la izquierda.
+- `8 > 5`: ir a la derecha.
+
+```text
+         10
+        /  \
+       5    15
+      / \
+     4   8
+```
+
+**6. Insertar el valor 20**
+
+Se compara con los nodos existentes:
+
+- `20 > 10`: ir a la derecha.
+- `20 > 15`: ir a la derecha.
+
+```text
+         10
+        /  \
+       5    15
+      / \     \
+     4   8     20
+```
+
+De esta manera, todos los elementos quedan organizados respetando las propiedades del árbol binario de búsqueda.
+
+### Reglas de inserción
+
+| Condición | Acción |
+|---|---|
+| Nuevo valor menor que el nodo actual | Avanzar al subárbol izquierdo. |
+| Nuevo valor mayor que el nodo actual | Avanzar al subárbol derecho. |
+| Encontrar una posición vacía (`NULL`) | Insertar el nuevo nodo. |
+
+> **Nota:** En estos apuntes se consideran valores distintos. El tratamiento de valores duplicados depende de la implementación del árbol.
+
+## 6.2. Ejemplo de construcción de un árbol binario de búsqueda
+
+**Ejercicio:** Construir un árbol binario de búsqueda para almacenar los siguientes datos:
+
+```cpp
+12, 8, 7, 16, 14
+```
+
+### Solución paso a paso
+
+**1. Insertar 12**
+
+Es el primer elemento, por lo tanto, se convierte en la raíz.
+
+```text
+      12
+```
+
+**2. Insertar 8**
+
+Como `8 < 12`, se coloca a la izquierda.
+
+```text
+      12
+     /
+    8
+```
+
+**3. Insertar 7**
+
+Como `7 < 12` y `7 < 8`, se coloca a la izquierda de `8`.
+
+```text
+       12
+      /
+     8
+    /
+   7
+```
+
+**4. Insertar 16**
+
+Como `16 > 12`, se coloca a la derecha de `12`.
+
+```text
+       12
+      /  \
+     8    16
+    /
+   7
+```
+
+**5. Insertar 14**
+
+Como `14 > 12`, avanzamos a la derecha. Después, como `14 < 16`, se coloca a la izquierda de `16`.
+
+```text
+        12
+       /  \
+      8    16
+     /    /
+    7    14
+```
+
+**Resultado final:**
+
+El árbol binario de búsqueda queda organizado de la siguiente manera:
+
+- Raíz: `12`.
+- Subárbol izquierdo: `8`, con su hijo izquierdo `7`.
+- Subárbol derecho: `16`, con su hijo izquierdo `14`.
+
+## 6.3. Operaciones en árboles binarios de búsqueda
+
+Las principales operaciones que se pueden realizar sobre un árbol binario de búsqueda son:
+
+1. **Insertar:** agregar un nuevo nodo al árbol respetando las reglas de ordenamiento.
+2. **Mostrar:** visualizar todos los elementos que contiene el árbol.
+3. **Buscar:** localizar un nodo específico dentro del árbol.
+4. **Recorrer:** visitar los nodos siguiendo un orden determinado.
+5. **Borrar:** eliminar un nodo del árbol y reorganizar los enlaces necesarios para conservar sus propiedades.
+
+Estas operaciones permiten administrar los elementos almacenados en un árbol binario de búsqueda de manera organizada.
