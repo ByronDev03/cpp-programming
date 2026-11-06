@@ -18,13 +18,10 @@
 ---
 
 # 1. Concepto de árbol
-
 Un **árbol** es una estructura de datos no lineal que consta de un conjunto finito de elementos, denominados **nodos**, y un conjunto finito de líneas dirigidas, denominadas **ramas**, que conectan los nodos.
-
 Los árboles permiten representar relaciones jerárquicas entre sus elementos.
 
 ## 1.1. Elementos de un árbol
-
 Dentro de un árbol podemos identificar los siguientes elementos:
 
 - **Raíz:** es el nodo principal del árbol, del cual parten las demás ramas. No tiene un nodo padre.
