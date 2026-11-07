@@ -19,6 +19,14 @@
    - [Concepto de árbol binario de búsqueda](#61-concepto-de-arbol-binario-de-busqueda)
    - [Ejemplo de construcción de un árbol binario de búsqueda](#62-ejemplo-de-construccion-de-un-arbol-binario-de-busqueda)
    - [Operaciones en árboles binarios de búsqueda](#63-operaciones-en-arboles-binarios-de-busqueda)
+7. [Búsqueda de un nodo en el árbol](#64-busqueda-de-un-nodo-en-el-arbol)
+    - [Definición de la función](#641-definicion-de-la-funcion)
+    - [Condiciones de búsqueda](#642-condiciones-de-busqueda)
+    - [Ejemplo de búsqueda](#643-ejemplo-de-busqueda)
+- [Búsqueda de un nodo en el árbol](#64-busqueda-de-un-nodo-en-el-arbol)
+     - [Definición de la función](#641-definicion-de-la-funcion)
+     - [Condiciones de búsqueda](#642-condiciones-de-busqueda)
+     - [Ejemplo de búsqueda](#643-ejemplo-de-busqueda)
 ---
 
 # 1. Concepto de árbol
@@ -526,3 +534,333 @@ Las principales operaciones que se pueden realizar sobre un árbol binario de b�
 5. **Borrar:** eliminar un nodo del árbol y reorganizar los enlaces necesarios para conservar sus propiedades.
 
 Estas operaciones permiten administrar los elementos almacenados en un árbol binario de búsqueda de manera organizada.
+
+---
+
+## 6.4. Búsqueda de un nodo en el árbol
+
+La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
+
+Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho.
+
+La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
+
+### 6.4.1. Definición de la función
+
+Primero definimos una función llamada `busqueda()` que recibe dos parámetros:
+
+- `Nodo *arbol`: puntero al nodo actual del árbol.
+- `int n`: valor que queremos encontrar.
+
+La función devuelve un valor de tipo `bool`:
+
+- `true`: si el elemento se encuentra en el árbol.
+- `false`: si el elemento no existe en el árbol.
+
+**Código inicial:**
+
+```cpp
+bool busqueda(Nodo *arbol, int n) {
+    if (arbol == NULL) {
+        return false;
+    }
+}
+```
+
+**Explicación:**
+
+La primera condición comprueba si el puntero `arbol` es igual a `NULL`.
+
+Esto significa que se llegó a una posición vacía del árbol y, por lo tanto, el elemento buscado no existe en esa rama.
+
+En ese caso, la función devuelve `false`.
+
+### 6.4.2. Condiciones de búsqueda
+
+Una vez comprobado que el árbol no está vacío, se realizan las siguientes comparaciones:
+
+**1. El elemento fue encontrado**
+
+```cpp
+else if (arbol->dato == n) {
+    return true;
+}
+```
+
+Si el dato almacenado en el nodo actual es igual al valor que buscamos, significa que encontramos el elemento y la función devuelve `true`.
+
+**2. Buscar en el subárbol izquierdo**
+
+```cpp
+else if (n < arbol->dato) {
+    return busqueda(arbol->izq, n);
+}
+```
+
+Si el valor buscado es menor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol izquierdo.
+
+La función se llama nuevamente a sí misma, pero ahora recibe como primer parámetro el puntero `arbol->izq`.
+
+**3. Buscar en el subárbol derecho**
+
+```cpp
+else {
+    return busqueda(arbol->der, n);
+}
+```
+
+Si el valor buscado es mayor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol derecho.
+
+La función vuelve a llamarse, esta vez utilizando el puntero `arbol->der`.
+
+### 6.4.3. Ejemplo de búsqueda
+
+Consideremos el siguiente árbol binario de búsqueda:
+
+```text
+        5
+       / \
+      3   8
+```
+
+**Ejemplo 1: Buscar el valor 5**
+
+```cpp
+int n = 5;
+```
+
+1. Se recibe el árbol y se comprueba que no sea `NULL`.
+2. Se compara `arbol->dato` con `n`.
+3. Como `5 == 5`, el elemento fue encontrado.
+4. La función devuelve `true`.
+
+**Resultado:** `true`.
+
+**Ejemplo 2: Buscar el valor 3**
+
+```cpp
+int n = 3;
+```
+
+1. Se compara `3` con el nodo raíz `5`.
+2. Como `3 < 5`, se continúa por el subárbol izquierdo.
+3. Se llega al nodo `3`.
+4. Como `3 == 3`, la función devuelve `true`.
+
+**Resultado:** `true`.
+
+**Ejemplo 3: Buscar el valor 8**
+
+```cpp
+int n = 8;
+```
+
+1. Se compara `8` con el nodo raíz `5`.
+2. Como `8 > 5`, se continúa por el subárbol derecho.
+3. Se llega al nodo `8`.
+4. Como `8 == 8`, la función devuelve `true`.
+
+**Resultado:** `true`.
+
+### Código completo de la función
+
+```cpp
+bool busqueda(Nodo *arbol, int n) {
+
+    if (arbol == NULL) {
+        return false;
+    }
+    else if (arbol->dato == n) {
+        return true;
+    }
+    else if (n < arbol->dato) {
+        return busqueda(arbol->izq, n);
+    }
+    else {
+        return busqueda(arbol->der, n);
+    }
+
+}
+```
+
+### Resumen del funcionamiento
+
+| Condición | Acción | Resultado |
+|---|---|---|
+| `arbol == NULL` | No existe el elemento en esa rama. | `false` |
+| `arbol->dato == n` | Se encontró el elemento. | `true` |
+| `n < arbol->dato` | Buscar por la izquierda. | Llamada recursiva |
+| `n > arbol->dato` | Buscar por la derecha. | Llamada recursiva |
+
+**Complejidad temporal:**
+
+- Mejor caso: \(O(1)\), cuando el elemento está en la raíz.
+- Caso promedio: \(O(\log n)\), cuando el árbol está aproximadamente equilibrado.
+- Peor caso: \(O(n)\), cuando el árbol está degenerado.
+
+Donde `n` representa la cantidad de nodos del árbol.
+
+---
+
+## 6.4. Búsqueda de un nodo en el árbol
+
+La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
+
+Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho.
+
+La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
+
+### 6.4.1. Definición de la función
+
+Primero definimos una función llamada `busqueda()` que recibe dos parámetros:
+
+- `Nodo *arbol`: puntero al nodo actual del árbol.
+- `int n`: valor que queremos encontrar.
+
+La función devuelve un valor de tipo `bool`:
+
+- `true`: si el elemento se encuentra en el árbol.
+- `false`: si el elemento no existe en el árbol.
+
+**Código inicial:**
+
+```cpp
+bool busqueda(Nodo *arbol, int n) {
+    if (arbol == NULL) {
+        return false;
+    }
+}
+```
+
+**Explicación:**
+
+La primera condición comprueba si el puntero `arbol` es igual a `NULL`.
+
+Esto significa que se llegó a una posición vacía del árbol y, por lo tanto, el elemento buscado no existe en esa rama.
+
+En ese caso, la función devuelve `false`.
+
+### 6.4.2. Condiciones de búsqueda
+
+Una vez comprobado que el árbol no está vacío, se realizan las siguientes comparaciones:
+
+**1. El elemento fue encontrado**
+
+```cpp
+else if (arbol->dato == n) {
+    return true;
+}
+```
+
+Si el dato almacenado en el nodo actual es igual al valor que buscamos, significa que encontramos el elemento y la función devuelve `true`.
+
+**2. Buscar en el subárbol izquierdo**
+
+```cpp
+else if (n < arbol->dato) {
+    return busqueda(arbol->izq, n);
+}
+```
+
+Si el valor buscado es menor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol izquierdo.
+
+La función se llama nuevamente a sí misma, pero ahora recibe como primer parámetro el puntero `arbol->izq`.
+
+**3. Buscar en el subárbol derecho**
+
+```cpp
+else {
+    return busqueda(arbol->der, n);
+}
+```
+
+Si el valor buscado es mayor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol derecho.
+
+La función vuelve a llamarse, esta vez utilizando el puntero `arbol->der`.
+
+### 6.4.3. Ejemplo de búsqueda
+
+Consideremos el siguiente árbol binario de búsqueda:
+
+```text
+        5
+       / \
+      3   8
+```
+
+**Ejemplo 1: Buscar el valor 5**
+
+```cpp
+int n = 5;
+```
+
+1. Se recibe el árbol y se comprueba que no sea `NULL`.
+2. Se compara `arbol->dato` con `n`.
+3. Como `5 == 5`, el elemento fue encontrado.
+4. La función devuelve `true`.
+
+**Resultado:** `true`.
+
+**Ejemplo 2: Buscar el valor 3**
+
+```cpp
+int n = 3;
+```
+
+1. Se compara `3` con el nodo raíz `5`.
+2. Como `3 < 5`, se continúa por el subárbol izquierdo.
+3. Se llega al nodo `3`.
+4. Como `3 == 3`, la función devuelve `true`.
+
+**Resultado:** `true`.
+
+**Ejemplo 3: Buscar el valor 8**
+
+```cpp
+int n = 8;
+```
+
+1. Se compara `8` con el nodo raíz `5`.
+2. Como `8 > 5`, se continúa por el subárbol derecho.
+3. Se llega al nodo `8`.
+4. Como `8 == 8`, la función devuelve `true`.
+
+**Resultado:** `true`.
+
+### Código completo de la función
+
+```cpp
+bool busqueda(Nodo *arbol, int n) {
+
+    if (arbol == NULL) {
+        return false;
+    }
+    else if (arbol->dato == n) {
+        return true;
+    }
+    else if (n < arbol->dato) {
+        return busqueda(arbol->izq, n);
+    }
+    else {
+        return busqueda(arbol->der, n);
+    }
+
+}
+```
+
+### Resumen del funcionamiento
+
+| Condición | Acción | Resultado |
+|---|---|---|
+| `arbol == NULL` | No existe el elemento en esa rama. | `false` |
+| `arbol->dato == n` | Se encontró el elemento. | `true` |
+| `n < arbol->dato` | Buscar por la izquierda. | Llamada recursiva |
+| `n > arbol->dato` | Buscar por la derecha. | Llamada recursiva |
+
+**Complejidad temporal:**
+
+- Mejor caso: \(O(1)\), cuando el elemento está en la raíz.
+- Caso promedio: \(O(\log n)\), cuando el árbol está aproximadamente equilibrado.
+- Peor caso: \(O(n)\), cuando el árbol está degenerado.
+
+Donde `n` representa la cantidad de nodos del árbol.
