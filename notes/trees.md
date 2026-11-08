@@ -3,30 +3,39 @@
 ## Contenido
 
 1. [Concepto de árbol]()
-    - [¿Cómo definimos un nodo?]()
-    - [Propiedades del arbol]()
-1. [Concepto de árbol binario](#1.concepto-de-arbol-binario)
-   - [Estructura recursiva](#1.1.estructura-recursiva)
-2. [Tipos de árboles binarios](#2-tipos-de-arboles-binarios)
-   - [Árbol lleno](#2.1-arbol-lleno)
-   - [Árbol completo](#22-arbol-completo)
-   - [Árbol degenerado](#23-arbol-degenerado)
-3. [Estructura de un árbol binario en C++](#3-estructura-de-un-arbol-binario-en-c)
+    - [1.1. Elementos de un árbol]()
+    - [1.2. Ejemplo de un árbol]()
+    - [1.3. Propiedades de los árboles]()
+    - [1.4. Longitud de camino]()
+    - [1.5. Altura de un nodo]()
+    - [1.6. Profundidad y nivel de un nodo]()
+    - [1.7. Distribución de niveles]()
+    - [1.8. Nodos hermanos]()
+    - [1.9. Orden de un árbol]()
+        - [1.9.1. Ejemplos de orden de un árbol]()
+2. [Concepto de árbol binario]()
+    - [Estructura recursiva]()
+3. [Tipos de árboles binarios]()
+    - [Árbol lleno]()
+    - [Árbol completo]()
+    - [Árbol degenerado]()
+4. [Estructura de un árbol binario en C++]()
     - [Estructura del nodo]()
     - [Componentes]()
     - [Representación de la estructura]()
-6. [Árbol binario de búsqueda](#6-arbol-binario-de-busqueda)
-   - [Concepto de árbol binario de búsqueda](#61-concepto-de-arbol-binario-de-busqueda)
-   - [Ejemplo de construcción de un árbol binario de búsqueda](#62-ejemplo-de-construccion-de-un-arbol-binario-de-busqueda)
-   - [Operaciones en árboles binarios de búsqueda](#63-operaciones-en-arboles-binarios-de-busqueda)
-7. [Búsqueda de un nodo en el árbol](#64-busqueda-de-un-nodo-en-el-arbol)
-    - [Definición de la función](#641-definicion-de-la-funcion)
-    - [Condiciones de búsqueda](#642-condiciones-de-busqueda)
-    - [Ejemplo de búsqueda](#643-ejemplo-de-busqueda)
-- [Búsqueda de un nodo en el árbol](#64-busqueda-de-un-nodo-en-el-arbol)
-     - [Definición de la función](#641-definicion-de-la-funcion)
-     - [Condiciones de búsqueda](#642-condiciones-de-busqueda)
-     - [Ejemplo de búsqueda](#643-ejemplo-de-busqueda)
+5. [Árbol binario de búsqueda]()
+    - [Concepto de árbol binario de búsqueda]()
+    - [Ejemplo de construcción de un árbol binario de búsqueda]()
+    - [Operaciones en árboles binarios de búsqueda]()
+6. [Búsqueda de un nodo en el árbol]()
+    - [Definición de la función]()
+    - [Condiciones de búsqueda]()
+    - [Ejemplo de búsqueda]()
+7. [Búsqueda de un nodo en el árbol]()
+    - [Definición de la función]()
+    - [Condiciones de búsqueda]()
+    - [Ejemplo de búsqueda]()
+
 ---
 
 # 1. Concepto de árbol
@@ -41,30 +50,24 @@ Dentro de un árbol podemos identificar los siguientes elementos:
 - **Nodo hoja:** es un nodo que no tiene hijos, es decir, no tiene ramas que salgan de él.
 - **Rama:** es la conexión dirigida que existe entre dos nodos.
 
-### Ejemplo de un árbol
-
+## 1.2. Ejemplo de un árbol
 ```text
              A  ← Raíz
            /   \
-          B     C
+          B     C   ← Nodo hijo
          / \     \
         D   E     F  ← Hojas
 ```
 
 En este ejemplo:
-
 - `A` es la raíz del árbol.
 - `B` y `C` son hijos de `A`.
 - `D` y `E` son hijos de `B`.
 - `F` es hijo de `C`.
 - `D`, `E` y `F` son nodos hoja.
 
----
-
-# 5. Propiedades de los árboles
-
+## 1.3. Propiedades de los árboles
 Las propiedades de un árbol permiten analizar su estructura, las relaciones entre sus nodos y la distancia que existe entre ellos.
-
 Para explicar estas propiedades utilizaremos el siguiente árbol como ejemplo:
 
 ```text
@@ -77,10 +80,8 @@ Para explicar estas propiedades utilizaremos el siguiente árbol como ejemplo:
              7        21
 ```
 
-## 5.1. Longitud de camino
-
+## 1.4. Longitud de camino
 La **longitud de camino** de un nodo es la cantidad de ramas o aristas que se deben recorrer desde la raíz hasta llegar a dicho nodo.
-
 **Ejemplo:**
 
 Para llegar desde la raíz (`16`) hasta el nodo `7`, debemos recorrer las siguientes ramas:
@@ -97,10 +98,8 @@ Por lo tanto:
 
 **Longitud de camino del nodo 7 = 3.**
 
-## 5.2. Altura de un nodo
-
+## 1.5. Altura de un nodo
 La **altura de un nodo** es la cantidad de ramas que existen en el camino más largo desde ese nodo hasta una hoja descendiente.
-
 **Ejemplo:**
 
 Para calcular la altura del nodo `24`, observamos su camino más largo hasta una hoja:
@@ -118,14 +117,11 @@ Por lo tanto:
 
 La altura de un árbol es la altura de su raíz, es decir, la longitud del camino más largo desde la raíz hasta una hoja.
 
-## 5.3. Profundidad y nivel de un nodo
-
+## 1.6. Profundidad y nivel de un nodo
 La **profundidad de un nodo** es la cantidad de ramas que existen desde la raíz hasta dicho nodo.
-
 El **nivel** representa la posición jerárquica de un nodo dentro del árbol. En esta convención, el nivel coincide con la profundidad y la raíz comienza en el nivel 0.
 
-### Distribución de niveles
-
+## 1.7. Distribución de niveles
 ```text
 Nivel 0:              16
 
@@ -137,17 +133,13 @@ Nivel 3:          7       21
 ```
 
 **Ejemplos:**
-
 - La profundidad del nodo `19` es 2, porque desde la raíz hasta él existen dos ramas.
 - El nodo `19` se encuentra en el nivel 2.
 - La raíz `16` tiene profundidad y nivel 0.
 
-## 5.4. Nodos hermanos
-
+## 1.8. Nodos hermanos
 Los **nodos hermanos** son aquellos que comparten el mismo nodo padre.
-
 **Ejemplo:**
-
 En el siguiente árbol:
 
 ```text
@@ -168,18 +160,15 @@ Los nodos `3` y `13` son hermanos porque ambos tienen como padre al nodo `8`.
 - Pueden encontrarse en el mismo nivel.
 - No necesariamente tienen hijos.
 
-## 5.5. Orden de un árbol
-
+## 1.9. Orden de un árbol
 El **orden de un árbol** es la cantidad máxima de hijos que puede tener un nodo.
-
 En un árbol binario, el orden es 2, lo que significa que cada nodo puede tener:
 
 1. **Cero hijos:** no tiene hijos.
 2. **Un hijo:** puede tener únicamente un hijo izquierdo o derecho.
 3. **Dos hijos:** tiene un hijo izquierdo y uno derecho.
 
-### Ejemplos
-
+## 1.9.1. Ejemplos de orden de un árbol
 **Nodo sin hijos:**
 
 ```text
@@ -204,14 +193,16 @@ En un árbol binario, el orden es 2, lo que significa que cada nodo puede tener:
 
 Por lo tanto, en un árbol binario ningún nodo puede tener más de dos hijos.
 
-# 1. Concepto de árbol binario
+---
+
+# 2. Concepto de árbol binario
 Un **árbol binario** es un árbol de orden 2, es decir, cada nodo puede tener como máximo dos hijos:
 - **Hijo izquierdo:** nodo que se encuentra en la rama izquierda.
 - **Hijo derecho:** nodo que se encuentra en la rama derecha.
 
 Un árbol binario puede contener nodos con dos hijos, un solo hijo o ningún hijo.
 
-## 1.1. Estructura recursiva
+## 2.1. Estructura recursiva
 Un árbol binario es una **estructura de datos recursiva** que se divide en tres subconjuntos disjuntos:
 1. **Nodo raíz:** es el nodo principal del árbol, del cual parten los demás nodos.
 2. **Subárbol izquierdo:** es el árbol binario que se encuentra a la izquierda del nodo raíz.
