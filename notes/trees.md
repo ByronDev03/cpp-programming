@@ -14,27 +14,40 @@
     - [1.9. Orden de un árbol]()
         - [1.9.1. Ejemplos de orden de un árbol]()
 2. [Concepto de árbol binario]()
-    - [Estructura recursiva]()
-3. [Tipos de árboles binarios]()
-    - [Árbol lleno]()
-    - [Árbol completo]()
-    - [Árbol degenerado]()
-4. [Estructura de un árbol binario en C++]()
-    - [Estructura del nodo]()
-    - [Componentes]()
-    - [Representación de la estructura]()
-5. [Árbol binario de búsqueda]()
-    - [Concepto de árbol binario de búsqueda]()
-    - [Ejemplo de construcción de un árbol binario de búsqueda]()
-    - [Operaciones en árboles binarios de búsqueda]()
+    - [2.1. Estructura recursiva]()
+    - [2.2. Representación de un árbol binario]()
+    - [2.3. Tipos de árboles binarios]()
+        - [2.3.1. Árbol lleno]()
+        - [2.3.2. Árbol completo]()
+        - [2.3.3. Árbol degenerado]()
+    - [2.4. Estructura de un árbol binario en C++]()
+    - [2.5. Estructura del nodo]()
+    - [2.6. Componentes]()
+    - [2.7. Representación de la estructura]()
+3. [Árbol binario de búsqueda]()
+    - [3.1. Concepto de árbol binario de búsqueda]()
+    - [3.2. Ejemplo de inserción de elementos]()
+    - [3.3. Reglas de inserción]()
+    - [3.4. Ejemplo de construcción de un árbol binario de búsqueda]()
+    - [3.5. Operaciones en árboles binarios de búsqueda]()
+4. [Insertar un nodo en el árbol binario de búsqueda ABB]()
+    - []()
+    - []()
+    - []()
+5. [Mostrar el árbol completo]()
+    - []()
+    - []()
+    - []()
 6. [Búsqueda de un nodo en el árbol]()
-    - [Definición de la función]()
-    - [Condiciones de búsqueda]()
-    - [Ejemplo de búsqueda]()
-7. [Búsqueda de un nodo en el árbol]()
-    - [Definición de la función]()
-    - [Condiciones de búsqueda]()
-    - [Ejemplo de búsqueda]()
+    - [6.1. Definición de la función]()
+    - [6.2. Condiciones de búsqueda]()
+    - [6.3. Ejemplo de búsqueda]()
+    - [6.4. Código completo de la función]()
+    - [6.5. Resumen del funcionamiento]()
+[]()
+- []()
+- []()
+- []()
 
 ---
 
@@ -210,8 +223,7 @@ Un árbol binario es una **estructura de datos recursiva** que se divide en tres
 
 Cada subárbol también puede dividirse recursivamente en una raíz, un subárbol izquierdo y un subárbol derecho.
 
-### Representación de un árbol binario
-
+## 2.2. Representación de un árbol binario
 ```text
              R
            /   \
@@ -225,18 +237,12 @@ Cada subárbol también puede dividirse recursivamente en una raíz, un subárbo
 - **D:** subárbol derecho.
 - **A, B y C:** nodos pertenecientes a los respectivos subárboles.
 
----
-
-# 2. Tipos de árboles binarios
-
+## 2.3. Tipos de árboles binarios
 Los árboles binarios pueden clasificarse de diferentes maneras según la distribución y organización de sus nodos.
 
-## 2.1. Árbol lleno
-
+## 2.3.1. Árbol lleno
 Un árbol lleno (también conocido como árbol perfecto en la terminología habitual) es aquel en el que todos sus niveles están completamente ocupados.
-
 Cada nodo interno tiene exactamente dos hijos y todas las hojas se encuentran en el mismo nivel.
-
 **Representación:**
 
 ```text
@@ -252,13 +258,10 @@ Cada nodo interno tiene exactamente dos hijos y todas las hojas se encuentran en
 - Cada nodo interno tiene exactamente dos hijos.
 - Todas las hojas se encuentran en el mismo nivel.
 
-## 2.2. Árbol completo
+## 2.3.2. Árbol completo
 Un árbol binario completo es aquel en el que todos los niveles están completamente ocupados, excepto posiblemente el último.
-
 Los nodos del último nivel deben estar colocados de izquierda a derecha, sin dejar espacios entre ellos.
-
 **Representación:**
-
 ```text
               A
             /   \
@@ -274,14 +277,10 @@ Los nodos del último nivel deben estar colocados de izquierda a derecha, sin de
 - Los nodos del último nivel se colocan de izquierda a derecha.
 - No existen espacios vacíos entre los nodos del último nivel.
 
-## 2.3. Árbol degenerado
-
+## 2.3.3. Árbol degenerado
 Un árbol degenerado es aquel en el que cada nodo tiene como máximo un hijo.
-
 Su estructura se asemeja a una lista enlazada, ya que los nodos forman una única secuencia de elementos.
-
 **Representación:**
-
 ```text
        A
         \
@@ -300,12 +299,10 @@ Su estructura se asemeja a una lista enlazada, ya que los nodos forman una únic
 - Su estructura se asemeja a una lista enlazada.
 - Puede presentar una mayor profundidad que otros árboles con la misma cantidad de nodos.
 
----
-
-# 3. Estructura de un árbol binario en C++
+## 2.4. Estructura de un árbol binario en C++
 Para implementar un árbol binario en C++ se utiliza una estructura `struct` que permite almacenar el dato de cada nodo y dos punteros que apuntan a sus hijos.
 
-## 3.1. Estructura del nodo
+## 2.5. Estructura del nodo
 ```cpp
 struct Nodo {
     int dato;
@@ -314,7 +311,7 @@ struct Nodo {
 };
 ```
 
-## 3.2. Componentes
+## 2.6. Componentes
 | Atributo | Descripción                 |
 | ---      | ---                         |
 | `dato`   | Almacena el valor del nodo. |
@@ -329,7 +326,7 @@ Cada nodo contiene tres componentes:
 
 Los punteros pueden contener la dirección de otro nodo o `NULL` cuando no existe un hijo correspondiente.
 
-## 3.3. Representación de la estructura
+## 2.7. Representación de la estructura
 ```text
              A
            /   \
@@ -342,23 +339,18 @@ Cada nodo almacena su dato y las direcciones de sus respectivos hijos. Los nodos
 
 ---
 
-# 6. Árbol binario de búsqueda
-
+# 3. Árbol binario de búsqueda
 Un **árbol binario de búsqueda (ABB)** es un tipo de árbol binario que organiza sus elementos siguiendo una regla de ordenamiento:
-
 - Todos los valores del subárbol izquierdo de un nodo son menores que el valor de dicho nodo.
 - Todos los valores del subárbol derecho de un nodo son mayores que el valor de dicho nodo.
 
 Esta propiedad se cumple para cada nodo del árbol, por lo que ambos subárboles también deben respetar las mismas reglas.
 
-## 6.1. Concepto de árbol binario de búsqueda
-
+## 3.1. Concepto de árbol binario de búsqueda
 Para comprender su funcionamiento, consideremos un árbol cuya raíz contiene el valor `10`.
 
-### Ejemplo de inserción de elementos
-
+## 3.2. Ejemplo de inserción de elementos
 **1. Insertar el valor 10**
-
 El primer elemento se convierte en la raíz del árbol.
 
 ```text
@@ -366,7 +358,6 @@ El primer elemento se convierte en la raíz del árbol.
 ```
 
 **2. Insertar el valor 5**
-
 Como `5` es menor que `10`, se coloca en el subárbol izquierdo.
 
 ```text
@@ -376,7 +367,6 @@ Como `5` es menor que `10`, se coloca en el subárbol izquierdo.
 ```
 
 **3. Insertar el valor 15**
-
 Como `15` es mayor que `10`, se coloca en el subárbol derecho.
 
 ```text
@@ -386,7 +376,6 @@ Como `15` es mayor que `10`, se coloca en el subárbol derecho.
 ```
 
 **4. Insertar el valor 4**
-
 Se compara con la raíz y después con el nodo `5`:
 
 - `4 < 10`: ir a la izquierda.
@@ -401,7 +390,6 @@ Se compara con la raíz y después con el nodo `5`:
 ```
 
 **5. Insertar el valor 8**
-
 Se compara con los nodos existentes:
 
 - `8 < 10`: ir a la izquierda.
@@ -416,7 +404,6 @@ Se compara con los nodos existentes:
 ```
 
 **6. Insertar el valor 20**
-
 Se compara con los nodos existentes:
 
 - `20 > 10`: ir a la derecha.
@@ -432,28 +419,25 @@ Se compara con los nodos existentes:
 
 De esta manera, todos los elementos quedan organizados respetando las propiedades del árbol binario de búsqueda.
 
-### Reglas de inserción
+## 3.3. Reglas de inserción
+| Condición                             | Acción                         |
+| ---                                   | ---                            |
+| Nuevo valor menor que el nodo actual  | Avanzar al subárbol izquierdo. |
+| Nuevo valor mayor que el nodo actual  | Avanzar al subárbol derecho.   |
+| Encontrar una posición vacía (`NULL`) | Insertar el nuevo nodo.        |
 
-| Condición | Acción |
-|---|---|
-| Nuevo valor menor que el nodo actual | Avanzar al subárbol izquierdo. |
-| Nuevo valor mayor que el nodo actual | Avanzar al subárbol derecho. |
-| Encontrar una posición vacía (`NULL`) | Insertar el nuevo nodo. |
+> [!NOTE]
+> En estos apuntes se consideran valores distintos. El tratamiento de valores duplicados depende de la implementación del árbol.
 
-> **Nota:** En estos apuntes se consideran valores distintos. El tratamiento de valores duplicados depende de la implementación del árbol.
-
-## 6.2. Ejemplo de construcción de un árbol binario de búsqueda
-
+## 3.4. Ejemplo de construcción de un árbol binario de búsqueda
 **Ejercicio:** Construir un árbol binario de búsqueda para almacenar los siguientes datos:
 
 ```cpp
 12, 8, 7, 16, 14
 ```
 
-### Solución paso a paso
-
+**Solución paso a paso**
 **1. Insertar 12**
-
 Es el primer elemento, por lo tanto, se convierte en la raíz.
 
 ```text
@@ -461,7 +445,6 @@ Es el primer elemento, por lo tanto, se convierte en la raíz.
 ```
 
 **2. Insertar 8**
-
 Como `8 < 12`, se coloca a la izquierda.
 
 ```text
@@ -471,7 +454,6 @@ Como `8 < 12`, se coloca a la izquierda.
 ```
 
 **3. Insertar 7**
-
 Como `7 < 12` y `7 < 8`, se coloca a la izquierda de `8`.
 
 ```text
@@ -483,7 +465,6 @@ Como `7 < 12` y `7 < 8`, se coloca a la izquierda de `8`.
 ```
 
 **4. Insertar 16**
-
 Como `16 > 12`, se coloca a la derecha de `12`.
 
 ```text
@@ -495,7 +476,6 @@ Como `16 > 12`, se coloca a la derecha de `12`.
 ```
 
 **5. Insertar 14**
-
 Como `14 > 12`, avanzamos a la derecha. Después, como `14 < 16`, se coloca a la izquierda de `16`.
 
 ```text
@@ -507,17 +487,14 @@ Como `14 > 12`, avanzamos a la derecha. Después, como `14 < 16`, se coloca a la
 ```
 
 **Resultado final:**
-
 El árbol binario de búsqueda queda organizado de la siguiente manera:
 
 - Raíz: `12`.
 - Subárbol izquierdo: `8`, con su hijo izquierdo `7`.
 - Subárbol derecho: `16`, con su hijo izquierdo `14`.
 
-## 6.3. Operaciones en árboles binarios de búsqueda
-
+## 3.5. Operaciones en árboles binarios de búsqueda
 Las principales operaciones que se pueden realizar sobre un árbol binario de búsqueda son:
-
 1. **Insertar:** agregar un nuevo nodo al árbol respetando las reglas de ordenamiento.
 2. **Mostrar:** visualizar todos los elementos que contiene el árbol.
 3. **Buscar:** localizar un nodo específico dentro del árbol.
@@ -528,28 +505,21 @@ Estas operaciones permiten administrar los elementos almacenados en un árbol bi
 
 ---
 
-## 6.4. Búsqueda de un nodo en el árbol
-
+# 6. Búsqueda de un nodo en el árbol
 La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
-
 Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho.
-
 La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
 
-### 6.4.1. Definición de la función
-
+## 6.1. Definición de la función
 Primero definimos una función llamada `busqueda()` que recibe dos parámetros:
-
 - `Nodo *arbol`: puntero al nodo actual del árbol.
 - `int n`: valor que queremos encontrar.
 
 La función devuelve un valor de tipo `bool`:
-
 - `true`: si el elemento se encuentra en el árbol.
 - `false`: si el elemento no existe en el árbol.
 
 **Código inicial:**
-
 ```cpp
 bool busqueda(Nodo *arbol, int n) {
     if (arbol == NULL) {
@@ -559,19 +529,14 @@ bool busqueda(Nodo *arbol, int n) {
 ```
 
 **Explicación:**
+- La primera condición comprueba si el puntero `arbol` es igual a `NULL`.
+- Esto significa que se llegó a una posición vacía del árbol y, por lo tanto, el elemento buscado no existe en esa rama.
+- En ese caso, la función devuelve `false`.
 
-La primera condición comprueba si el puntero `arbol` es igual a `NULL`.
-
-Esto significa que se llegó a una posición vacía del árbol y, por lo tanto, el elemento buscado no existe en esa rama.
-
-En ese caso, la función devuelve `false`.
-
-### 6.4.2. Condiciones de búsqueda
-
+## 6.2. Condiciones de búsqueda
 Una vez comprobado que el árbol no está vacío, se realizan las siguientes comparaciones:
 
 **1. El elemento fue encontrado**
-
 ```cpp
 else if (arbol->dato == n) {
     return true;
@@ -581,7 +546,6 @@ else if (arbol->dato == n) {
 Si el dato almacenado en el nodo actual es igual al valor que buscamos, significa que encontramos el elemento y la función devuelve `true`.
 
 **2. Buscar en el subárbol izquierdo**
-
 ```cpp
 else if (n < arbol->dato) {
     return busqueda(arbol->izq, n);
@@ -593,7 +557,6 @@ Si el valor buscado es menor que el dato del nodo actual, debemos continuar la b
 La función se llama nuevamente a sí misma, pero ahora recibe como primer parámetro el puntero `arbol->izq`.
 
 **3. Buscar en el subárbol derecho**
-
 ```cpp
 else {
     return busqueda(arbol->der, n);
@@ -604,8 +567,7 @@ Si el valor buscado es mayor que el dato del nodo actual, debemos continuar la b
 
 La función vuelve a llamarse, esta vez utilizando el puntero `arbol->der`.
 
-### 6.4.3. Ejemplo de búsqueda
-
+## 6.3. Ejemplo de búsqueda
 Consideremos el siguiente árbol binario de búsqueda:
 
 ```text
@@ -615,7 +577,6 @@ Consideremos el siguiente árbol binario de búsqueda:
 ```
 
 **Ejemplo 1: Buscar el valor 5**
-
 ```cpp
 int n = 5;
 ```
@@ -628,7 +589,6 @@ int n = 5;
 **Resultado:** `true`.
 
 **Ejemplo 2: Buscar el valor 3**
-
 ```cpp
 int n = 3;
 ```
@@ -641,7 +601,6 @@ int n = 3;
 **Resultado:** `true`.
 
 **Ejemplo 3: Buscar el valor 8**
-
 ```cpp
 int n = 8;
 ```
@@ -653,8 +612,7 @@ int n = 8;
 
 **Resultado:** `true`.
 
-### Código completo de la función
-
+## 6.4. Código completo de la función
 ```cpp
 bool busqueda(Nodo *arbol, int n) {
 
@@ -674,17 +632,15 @@ bool busqueda(Nodo *arbol, int n) {
 }
 ```
 
-### Resumen del funcionamiento
-
-| Condición | Acción | Resultado |
-|---|---|---|
-| `arbol == NULL` | No existe el elemento en esa rama. | `false` |
-| `arbol->dato == n` | Se encontró el elemento. | `true` |
-| `n < arbol->dato` | Buscar por la izquierda. | Llamada recursiva |
-| `n > arbol->dato` | Buscar por la derecha. | Llamada recursiva |
+## 6.5. Resumen del funcionamiento
+| Condición          | Acción                             | Resultado         |
+| ---                | ---                                | ---               |
+| `arbol == NULL`    | No existe el elemento en esa rama. | `false`           |
+| `arbol->dato == n` | Se encontró el elemento.           | `true`            |
+| `n < arbol->dato`  | Buscar por la izquierda.           | Llamada recursiva |
+| `n > arbol->dato`  | Buscar por la derecha.             | Llamada recursiva |
 
 **Complejidad temporal:**
-
 - Mejor caso: \(O(1)\), cuando el elemento está en la raíz.
 - Caso promedio: \(O(\log n)\), cuando el árbol está aproximadamente equilibrado.
 - Peor caso: \(O(n)\), cuando el árbol está degenerado.
@@ -692,166 +648,3 @@ bool busqueda(Nodo *arbol, int n) {
 Donde `n` representa la cantidad de nodos del árbol.
 
 ---
-
-## 6.4. Búsqueda de un nodo en el árbol
-
-La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
-
-Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho.
-
-La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
-
-### 6.4.1. Definición de la función
-
-Primero definimos una función llamada `busqueda()` que recibe dos parámetros:
-
-- `Nodo *arbol`: puntero al nodo actual del árbol.
-- `int n`: valor que queremos encontrar.
-
-La función devuelve un valor de tipo `bool`:
-
-- `true`: si el elemento se encuentra en el árbol.
-- `false`: si el elemento no existe en el árbol.
-
-**Código inicial:**
-
-```cpp
-bool busqueda(Nodo *arbol, int n) {
-    if (arbol == NULL) {
-        return false;
-    }
-}
-```
-
-**Explicación:**
-
-La primera condición comprueba si el puntero `arbol` es igual a `NULL`.
-
-Esto significa que se llegó a una posición vacía del árbol y, por lo tanto, el elemento buscado no existe en esa rama.
-
-En ese caso, la función devuelve `false`.
-
-### 6.4.2. Condiciones de búsqueda
-
-Una vez comprobado que el árbol no está vacío, se realizan las siguientes comparaciones:
-
-**1. El elemento fue encontrado**
-
-```cpp
-else if (arbol->dato == n) {
-    return true;
-}
-```
-
-Si el dato almacenado en el nodo actual es igual al valor que buscamos, significa que encontramos el elemento y la función devuelve `true`.
-
-**2. Buscar en el subárbol izquierdo**
-
-```cpp
-else if (n < arbol->dato) {
-    return busqueda(arbol->izq, n);
-}
-```
-
-Si el valor buscado es menor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol izquierdo.
-
-La función se llama nuevamente a sí misma, pero ahora recibe como primer parámetro el puntero `arbol->izq`.
-
-**3. Buscar en el subárbol derecho**
-
-```cpp
-else {
-    return busqueda(arbol->der, n);
-}
-```
-
-Si el valor buscado es mayor que el dato del nodo actual, debemos continuar la búsqueda por el subárbol derecho.
-
-La función vuelve a llamarse, esta vez utilizando el puntero `arbol->der`.
-
-### 6.4.3. Ejemplo de búsqueda
-
-Consideremos el siguiente árbol binario de búsqueda:
-
-```text
-        5
-       / \
-      3   8
-```
-
-**Ejemplo 1: Buscar el valor 5**
-
-```cpp
-int n = 5;
-```
-
-1. Se recibe el árbol y se comprueba que no sea `NULL`.
-2. Se compara `arbol->dato` con `n`.
-3. Como `5 == 5`, el elemento fue encontrado.
-4. La función devuelve `true`.
-
-**Resultado:** `true`.
-
-**Ejemplo 2: Buscar el valor 3**
-
-```cpp
-int n = 3;
-```
-
-1. Se compara `3` con el nodo raíz `5`.
-2. Como `3 < 5`, se continúa por el subárbol izquierdo.
-3. Se llega al nodo `3`.
-4. Como `3 == 3`, la función devuelve `true`.
-
-**Resultado:** `true`.
-
-**Ejemplo 3: Buscar el valor 8**
-
-```cpp
-int n = 8;
-```
-
-1. Se compara `8` con el nodo raíz `5`.
-2. Como `8 > 5`, se continúa por el subárbol derecho.
-3. Se llega al nodo `8`.
-4. Como `8 == 8`, la función devuelve `true`.
-
-**Resultado:** `true`.
-
-### Código completo de la función
-
-```cpp
-bool busqueda(Nodo *arbol, int n) {
-
-    if (arbol == NULL) {
-        return false;
-    }
-    else if (arbol->dato == n) {
-        return true;
-    }
-    else if (n < arbol->dato) {
-        return busqueda(arbol->izq, n);
-    }
-    else {
-        return busqueda(arbol->der, n);
-    }
-
-}
-```
-
-### Resumen del funcionamiento
-
-| Condición | Acción | Resultado |
-|---|---|---|
-| `arbol == NULL` | No existe el elemento en esa rama. | `false` |
-| `arbol->dato == n` | Se encontró el elemento. | `true` |
-| `n < arbol->dato` | Buscar por la izquierda. | Llamada recursiva |
-| `n > arbol->dato` | Buscar por la derecha. | Llamada recursiva |
-
-**Complejidad temporal:**
-
-- Mejor caso: \(O(1)\), cuando el elemento está en la raíz.
-- Caso promedio: \(O(\log n)\), cuando el árbol está aproximadamente equilibrado.
-- Peor caso: \(O(n)\), cuando el árbol está degenerado.
-
-Donde `n` representa la cantidad de nodos del árbol.
