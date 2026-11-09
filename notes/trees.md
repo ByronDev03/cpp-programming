@@ -30,24 +30,35 @@
     - [3.3. Reglas de inserción]()
     - [3.4. Ejemplo de construcción de un árbol binario de búsqueda]()
     - [3.5. Operaciones en árboles binarios de búsqueda]()
-4. [Insertar un nodo en el árbol binario de búsqueda ABB]()
+4. [Insertar un nodo en el árbol]()
     - []()
     - []()
     - []()
 5. [Mostrar el árbol completo]()
-    - []()
-    - []()
-    - []()
+    - [5.1. Definición de la función]()
+    - [5.2. Comprobación de árbol vacío]()
+    - [5.3. Recorrido e impresión de los nodos]()
+    - [5.4. Ejemplo de ejecución]()
+    - [5.5. Código completo de la función]()
+    - [5.6. Resumen del funcionamiento]()
 6. [Búsqueda de un nodo en el árbol]()
     - [6.1. Definición de la función]()
     - [6.2. Condiciones de búsqueda]()
     - [6.3. Ejemplo de búsqueda]()
     - [6.4. Código completo de la función]()
     - [6.5. Resumen del funcionamiento]()
-[]()
-- []()
-- []()
-- []()
+7. [Recorrido de árboles - PreOrden]()
+    - []()
+    - []()
+    - []()
+8. [Recorrido de árboles - InOrden]()
+    - []()
+    - []()
+    - []()
+9. [Recorrido de árboles - PostOrden]()
+    - []()
+    - []()
+    - []()
 
 ---
 
@@ -168,7 +179,6 @@ En el siguiente árbol:
 Los nodos `3` y `13` son hermanos porque ambos tienen como padre al nodo `8`.
 
 **Características:**
-
 - Comparten el mismo nodo padre.
 - Pueden encontrarse en el mismo nivel.
 - No necesariamente tienen hijos.
@@ -183,13 +193,11 @@ En un árbol binario, el orden es 2, lo que significa que cada nodo puede tener:
 
 ## 1.9.1. Ejemplos de orden de un árbol
 **Nodo sin hijos:**
-
 ```text
    16
 ```
 
 **Nodo con un hijo:**
-
 ```text
     16
    /
@@ -197,7 +205,6 @@ En un árbol binario, el orden es 2, lo que significa que cada nodo puede tener:
 ```
 
 **Nodo con dos hijos:**
-
 ```text
      16
     /  \
@@ -505,10 +512,178 @@ Estas operaciones permiten administrar los elementos almacenados en un árbol bi
 
 ---
 
+
+
+---
+
+# 5. Mostrar el árbol completo
+Mostrar el árbol completo consiste en recorrer todos sus nodos e imprimir sus valores, procurando representar visualmente la estructura jerárquica del árbol.
+Para conseguirlo, se utiliza una función recursiva que recorre primero el subárbol derecho, imprime el nodo actual y finalmente recorre el subárbol izquierdo.
+De esta manera, el árbol se representa de forma vertical, colocando los nodos del subárbol derecho en la parte superior y los del subárbol izquierdo en la parte inferior.
+
+## 5.1. Definición de la función
+Primero definimos una función llamada `mostrarArbol()` que recibe dos parámetros:
+
+- `Nodo *arbol`: puntero al nodo actual del árbol.
+- `int contador`: variable que permite controlar la cantidad de espacios de indentación para representar los niveles del árbol.
+
+La función utiliza el tipo de retorno `void`, ya que su propósito es mostrar los elementos en pantalla y no devolver ningún valor.
+
+**Definición:**
+```cpp
+void mostrarArbol(Nodo *arbol, int contador) {
+
+}
+```
+
+## 5.2. Comprobación de árbol vacío
+Antes de comenzar a recorrer los nodos, debemos comprobar si el árbol está vacío o si se ha llegado a una posición sin elementos.
+
+```cpp
+if (arbol == NULL) {
+    return;
+}
+```
+
+**Explicación:**
+- Si el puntero `arbol` es igual a `NULL`, significa que no existe ningún nodo en esa posición.
+- En ese caso, la función ejecuta `return` y finaliza esa llamada recursiva sin realizar ninguna impresión.
+
+## 5.3. Recorrido e impresión de los nodos
+Si el árbol no está vacío, se ejecutan tres pasos:
+
+**1. Recorrer el subárbol derecho**
+```cpp
+mostrarArbol(arbol->der, contador + 1);
+```
+
+Se realiza una llamada recursiva para recorrer primero el subárbol derecho.
+
+El contador aumenta en uno para representar el siguiente nivel de profundidad.
+
+**2. Imprimir los espacios de indentación**
+```cpp
+for (int i = 0; i < contador; i++) {
+    cout << "    ";
+}
+```
+
+Se utiliza un ciclo `for` para imprimir espacios antes del valor del nodo.
+
+La cantidad de espacios depende del valor de `contador`:
+
+- `contador = 0`: nodo sin indentación.
+- `contador = 1`: un nivel de indentación.
+- `contador = 2`: dos niveles de indentación.
+- `contador = 3`: tres niveles de indentación.
+
+Esto permite distinguir visualmente los diferentes niveles del árbol.
+
+**3. Mostrar el dato del nodo actual**
+```cpp
+cout << arbol->dato << endl;
+```
+
+Se imprime el valor almacenado en el nodo actual y se realiza un salto de línea.
+
+**4. Recorrer el subárbol izquierdo**
+```cpp
+mostrarArbol(arbol->izq, contador + 1);
+```
+
+Finalmente, se realiza otra llamada recursiva para recorrer el subárbol izquierdo, aumentando nuevamente el contador.
+
+## 5.4. Ejemplo de ejecución
+Consideremos el siguiente árbol binario de búsqueda:
+
+```text
+             8
+           /   \
+          3     10
+         / \      \
+        1   6      14
+           / \    /
+          4   7  13
+```
+
+Al ejecutar la función `mostrarArbol(arbol, 0)`, el recorrido se realiza en el siguiente orden:
+
+1. Se recorre el subárbol derecho.
+2. Se imprime el nodo actual.
+3. Se recorre el subárbol izquierdo.
+
+**Orden de impresión:**
+```text
+8
+    10
+        14
+            13
+    3
+        6
+            7
+            4
+        1
+```
+
+**Interpretación:**
+- El nodo raíz `8` se imprime sin espacios de indentación.
+- Los nodos `10` y `3` pertenecen al segundo nivel.
+- Los nodos `14`, `6` y `1` pertenecen al siguiente nivel.
+- Los nodos `13`, `7` y `4` aparecen en el nivel más profundo.
+
+La representación obtenida permite visualizar la estructura del árbol de manera vertical.
+
+## 5.5. Código completo de la función
+```cpp
+void mostrarArbol(Nodo *arbol, int contador) {
+
+    if (arbol == NULL) {
+        return;
+    }
+    else {
+
+        // Recorrer el subárbol derecho
+        mostrarArbol(arbol->der, contador + 1);
+
+        // Imprimir espacios de indentación
+        for (int i = 0; i < contador; i++) {
+            cout << "    ";
+        }
+
+        // Mostrar el dato del nodo actual
+        cout << arbol->dato << endl;
+
+        // Recorrer el subárbol izquierdo
+        mostrarArbol(arbol->izq, contador + 1);
+    }
+}
+```
+
+**Llamada a la función:**
+
+```cpp
+mostrarArbol(arbol, 0);
+```
+
+Se utiliza `0` como valor inicial del contador porque el nodo raíz no necesita espacios de indentación.
+
+## 5.6. Resumen del funcionamiento
+| Paso | Operación                 | Propósito                                 |
+| ---  | ---                       | ---                                       |
+| 1    | Comprobar `arbol == NULL` | Evitar recorrer posiciones vacías.        |
+| 2    | Recorrer `arbol->der`     | Mostrar primero el subárbol derecho.      |
+| 3    | Ciclo `for`               | Aplicar la indentación correspondiente.   |
+| 4    | `cout << arbol->dato`     | Imprimir el nodo actual.                  |
+| 5    | Recorrer `arbol->izq`     | Mostrar finalmente el subárbol izquierdo. |
+
+- **Complejidad temporal:** \(O(n)\), porque se visitan todos los nodos del árbol.
+- **Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas almacenadas en la pila, donde `h` representa la altura del árbol.
+
+---
+
 # 6. Búsqueda de un nodo en el árbol
 La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
-Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho.
-La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
+Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho. La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
 
 ## 6.1. Definición de la función
 Primero definimos una función llamada `busqueda()` que recibe dos parámetros:
