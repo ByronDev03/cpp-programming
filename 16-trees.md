@@ -22,7 +22,7 @@ En esta unidad se estudian los árboles en C++, estructuras de datos no lineales
 Comprender cómo funcionan los árboles binarios de búsqueda en C++ y desarrollar operaciones para administrar sus nodos mediante punteros y recursividad, aplicando técnicas de inserción, búsqueda, recorrido y eliminación para organizar y consultar datos de forma jerárquica.
 
 ## Apuntes
-**Árboles Binario de Búsqueda** → [Ver apunte](/notes/trees.md) <br>
+**Árboles** → [Ver apunte](/notes/trees.md) <br>
 
 ## Ejercicios
 

@@ -1,7 +1,6 @@
 <h1 align="center">Árboles en C++</h1>
 
 ## Contenido
-
 1. [Concepto de árbol]()
     - [1.1. Elementos de un árbol]()
     - [1.2. Ejemplo de un árbol]()
@@ -31,9 +30,13 @@
     - [3.4. Ejemplo de construcción de un árbol binario de búsqueda]()
     - [3.5. Operaciones en árboles binarios de búsqueda]()
 4. [Insertar un nodo en el árbol]()
-    - []()
-    - []()
-    - []()
+    - [4.1. Creación de un nodo]()
+    - [4.2. Definición de la función insertar]()
+    - [4.3. Inserción en un árbol vacío]()
+    - [4.4. Inserción en un árbol con elementos]()
+    - [4.5. Ejemplo de inserción]()
+    - [4.6. Código completo de la función]()
+    - [4.7. Resumen del funcionamiento]()
 5. [Mostrar el árbol completo]()
     - [5.1. Definición de la función]()
     - [5.2. Comprobación de árbol vacío]()
@@ -512,7 +515,257 @@ Estas operaciones permiten administrar los elementos almacenados en un árbol bi
 
 ---
 
+# 4. Insertar un nodo en el árbol
+La inserción consiste en agregar un nuevo elemento a un árbol binario de búsqueda, respetando las reglas que determinan la ubicación de cada nodo.
 
+Para realizar esta operación debemos considerar dos situaciones:
+
+1. **El árbol está vacío:** el nuevo nodo se convierte en la raíz del árbol.
+2. **El árbol ya contiene elementos:** debemos comparar el valor que queremos insertar con los nodos existentes para encontrar su posición correspondiente.
+
+Recordemos las reglas de un árbol binario de búsqueda:
+
+- Los valores menores que un nodo se insertan en su subárbol izquierdo.
+- Los valores mayores o iguales se insertan en su subárbol derecho, de acuerdo con la implementación presentada en estos apuntes.
+
+## 4.1. Creación de un nodo
+Primero necesitamos una función que permita crear un nuevo nodo y asignarle el valor que queremos almacenar.
+
+Para ello utilizamos memoria dinámica mediante el operador `new`.
+
+**Estructura del nodo:**
+```cpp
+struct Nodo {
+    int dato;
+    Nodo *der;
+    Nodo *izq;
+};
+```
+
+Cada nodo contiene tres campos:
+
+- `dato`: almacena el valor del nodo.
+- `der`: apunta al hijo derecho.
+- `izq`: apunta al hijo izquierdo.
+
+**Función para crear un nodo:**
+```cpp
+Nodo *crearNodo(int n) {
+
+    Nodo *nuevo_nodo = new Nodo();
+
+    nuevo_nodo->dato = n;
+    nuevo_nodo->der = NULL;
+    nuevo_nodo->izq = NULL;
+
+    return nuevo_nodo;
+}
+```
+
+**Explicación paso a paso:**
+1. Se reserva memoria dinámica para un nuevo nodo utilizando `new Nodo()`.
+2. Se asigna el valor recibido en el parámetro `n` al campo `dato`.
+3. Se inicializan los punteros `der` e `izq` en `NULL`, porque el nuevo nodo todavía no tiene hijos.
+4. Finalmente, se devuelve el puntero `nuevo_nodo` para poder utilizarlo dentro del árbol.
+
+## 4.2. Definición de la función insertar
+Una vez que tenemos la función para crear nodos, definimos la función encargada de insertarlos en el árbol.
+
+```cpp
+void insertar(Nodo *&arbol, int n) {
+
+}
+```
+
+La función recibe dos parámetros:
+
+- `Nodo *&arbol`: referencia al puntero del árbol. Permite modificar directamente el puntero cuando sea necesario insertar la raíz o actualizar un enlace.
+- `int n`: valor que queremos insertar.
+
+El tipo de retorno es `void`, porque la función modifica directamente la estructura del árbol.
+
+## 4.3. Inserción en un árbol vacío
+Primero debemos comprobar si el árbol está vacío.
+```cpp
+if (arbol == NULL) {
+
+    Nodo *nuevo_nodo = crearNodo(n);
+
+    arbol = nuevo_nodo;
+
+}
+```
+
+**Explicación:**
+1. Se comprueba si el puntero `arbol` es igual a `NULL`.
+2. Si está vacío, se llama a la función `crearNodo(n)` para generar un nuevo nodo.
+3. El puntero `arbol` recibe la dirección del nuevo nodo.
+4. De esta manera, el nuevo nodo se convierte en la raíz del árbol o en el hijo correspondiente de otro nodo.
+
+**Ejemplo:**
+Si el árbol está vacío y queremos insertar el valor `10`, el resultado será:
+```text
+    10
+```
+
+## 4.4. Inserción en un árbol con elementos
+Si el árbol ya contiene uno o más nodos, necesitamos encontrar la posición correcta para insertar el nuevo elemento. Para ello utilizamos una condición que compara el valor que queremos insertar con el dato de la raíz actual.
+```cpp
+else {
+    int valorRaiz = arbol->dato;
+    if (n < valorRaiz) {
+        insertar(arbol->izq, n);
+    }
+    else {
+        insertar(arbol->der, n);
+    }
+}
+```
+
+**Explicación paso a paso:**
+
+**1. Obtener el valor de la raíz**
+```cpp
+int valorRaiz = arbol->dato;
+```
+
+Se obtiene el valor almacenado en el nodo actual y se guarda en la variable `valorRaiz`.
+
+**2. Comprobar si el valor es menor**
+```cpp
+if (n < valorRaiz) {
+    insertar(arbol->izq, n);
+}
+```
+
+Si el valor que queremos insertar es menor que el valor de la raíz actual, debemos continuar por el subárbol izquierdo.
+
+Se realiza una llamada recursiva a `insertar()`, pasando como primer parámetro el puntero `arbol->izq`.
+
+**3. Insertar en el subárbol derecho**
+```cpp
+else {
+    insertar(arbol->der, n);
+}
+```
+
+- Si el valor es mayor o igual que el valor de la raíz actual, debemos continuar por el subárbol derecho.
+- Nuevamente se realiza una llamada recursiva, pero ahora utilizando el puntero `arbol->der`.
+- Este proceso se repite hasta encontrar una posición vacía (`NULL`), donde se crea e inserta el nuevo nodo.
+
+## 4.5. Ejemplo de inserción
+Consideremos el siguiente árbol binario de búsqueda:
+```text
+        10
+       /  \
+      5    15
+```
+
+Queremos insertar los siguientes valores:
+```cpp
+insertar(arbol, 4);
+insertar(arbol, 8);
+insertar(arbol, 20);
+```
+
+**Ejemplo 1: Insertar el valor 4**
+1. Se compara `4` con la raíz `10`.
+2. Como `4` es menor que `10`, se continúa por la izquierda.
+3. Se compara `4` con el nodo `5`.
+4. Como `4` es menor que `5`, se continúa por la izquierda.
+5. Se encuentra una posición vacía (`NULL`) y se crea el nuevo nodo.
+
+Resultado:
+```text
+        10
+       /  \
+      5    15
+     /
+    4
+```
+
+**Ejemplo 2: Insertar el valor 8**
+1. Se compara `8` con la raíz `10`.
+2. Como `8` es menor que `10`, se continúa por la izquierda.
+3. Se compara `8` con el nodo `5`.
+4. Como `8` es mayor que `5`, se continúa por la derecha.
+5. Se encuentra una posición vacía y se inserta el nuevo nodo.
+
+Resultado:
+```text
+        10
+       /  \
+      5    15
+     / \
+    4   8
+```
+
+**Ejemplo 3: Insertar el valor 20**
+1. Se compara `20` con la raíz `10`.
+2. Como `20` es mayor que `10`, se continúa por la derecha.
+3. Se compara `20` con el nodo `15`.
+4. Como `20` es mayor que `15`, se continúa por la derecha.
+5. Se encuentra una posición vacía y se inserta el nuevo nodo.
+
+Resultado final:
+```text
+        10
+       /  \
+      5    15
+     / \     \
+    4   8     20
+```
+
+## 4.6. Código completo de la función
+Una vez comprendidos los pasos anteriores, podemos unirlos en una sola función:
+```cpp
+void insertar(Nodo *&arbol, int n) {
+
+    if (arbol == NULL) {
+
+        Nodo *nuevo_nodo = crearNodo(n);
+        arbol = nuevo_nodo;
+    }
+    else {
+
+        int valorRaiz = arbol->dato;
+
+        if (n < valorRaiz) {
+            insertar(arbol->izq, n);
+        }
+        else {
+            insertar(arbol->der, n);
+        }
+    }
+}
+```
+
+**Ejemplo de llamadas:**
+```cpp
+insertar(arbol, 10);
+insertar(arbol, 5);
+insertar(arbol, 15);
+insertar(arbol, 4);
+insertar(arbol, 8);
+insertar(arbol, 20);
+```
+
+## 4.7. Resumen del funcionamiento
+| Condición           | Acción                                  |
+| ---                 | ---                                     |
+| `arbol == NULL`     | Crear un nuevo nodo.                    |
+| `n < valorRaiz`     | Continuar por el subárbol izquierdo.    |
+| `n >= valorRaiz`    | Continuar por el subárbol derecho.      |
+| Se encuentra `NULL` | Insertar el nuevo nodo en esa posición. |
+
+**Complejidad temporal:**
+- Mejor caso: \(O(1)\), cuando se inserta directamente en la raíz de un árbol vacío.
+- Caso promedio: \(O(\log n)\), cuando el árbol está aproximadamente equilibrado.
+- Peor caso: \(O(n)\), cuando el árbol está degenerado.
+
+Donde `n` representa la cantidad de nodos que contiene el árbol antes de realizar la inserción.
+
+**Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas, donde `h` representa la altura del árbol.
 
 ---
 
