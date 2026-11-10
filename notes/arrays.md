@@ -1,6 +1,15 @@
 <h1 align="center">Vectores (arreglos unidimensionales) en C++</h1>
 
-## ¿Qué es un vector o arreglo?
+## Contenido
+1. [¿Qué es un vector o arreglo?]()
+    - [1.1. Declaración de un vector]()
+    - [1.2. Inicialización de un vector]()
+    - [1.3. Ejemplo 1: vector de números enteros]()
+    - [1.4. Ejemplo 2: vector de caracteres]()
+    - [1.5. Resumen]()
+    - [1.6. Ejemplo completo]()
+
+# 1. ¿Qué es un vector o arreglo?
 Un **vector** o *array unidimensional* es un tipo de dato que permite almacenar una secuencia de elementos del mismo tipo. Los elementos se almacenan en posiciones contiguas de memoria y se puede acceder a cada uno de ellos de manera directa mediante un **índice o posición**.
 
 Por ejemplo, el siguiente vector contiene cinco números:
@@ -14,7 +23,7 @@ Por ejemplo, el siguiente vector contiene cinco números:
 
 En C++, los índices de un vector comienzan en **0**, por lo que el primer elemento está en la posición `0` y el último en la posición `n - 1`, donde `n` es el número de elementos.
 
-## Declaración de un vector
+## 1.1. Declaración de un vector
 Para declarar un vector en C++ se utiliza la siguiente sintaxis:
 
 ```cpp
@@ -26,7 +35,6 @@ tipo nombre[tamaño];
 - `tamaño`: indica la cantidad de elementos que puede almacenar.
 
 **Ejemplos**
-
 ```cpp
 int numeros[10];
 char letras[5];
@@ -39,10 +47,10 @@ En estos ejemplos:
 - `letras` puede almacenar 5 caracteres.
 - `reales` puede almacenar 15 números de tipo `float`.
 
-## Inicialización de un vector
+## 1.2. Inicialización de un vector
 Un vector puede inicializarse al momento de declararlo, asignando sus valores entre llaves `{}` y separados por comas.
 
-## Ejemplo 1: vector de números enteros
+## 1.3. Ejemplo 1: vector de números enteros
 
 ```cpp
 int numero[] = {1, 4, 6, 7, 3};
@@ -70,7 +78,7 @@ numero[4] = 3;
 
 **Importante:** los índices permiten consultar o modificar los elementos del vector. Por ejemplo, `numero[2]` hace referencia al tercer elemento, cuyo valor es `6`.
 
-## Ejemplo 2: vector de caracteres
+## 1.4. Ejemplo 2: vector de caracteres
 
 ```cpp
 char letra[] = {'a', 'e', 'i', 'o', 'u'};
@@ -98,7 +106,7 @@ letra[4] = 'u';
 
 **Nota:** en C++, los valores de tipo `char` se escriben entre comillas simples, como `'a'`, mientras que las cadenas de texto se escriben entre comillas dobles, como `"Hola"`.
 
-## Resumen
+## 1.5. Resumen
 
 | Concepto       | Descripción                                       |
 | -------------- | ------------------------------------------------- |
@@ -109,7 +117,7 @@ letra[4] = 'u';
 | Primer índice  | `0`                                               |
 | Último índice  | `tamaño - 1`                                      |
 
-## Ejemplo completo
+## 1.6. Ejemplo completo
 ```cpp
 #include <iostream>
 using namespace std;
