@@ -1,13 +1,23 @@
-<h1 align="center">Arrays Bidimensionales (Matrices o Tablas) en C++</h1>
+<h1 align="center">Vectores Bidimensionales (Matrices o Tablas) en C++</h1>
 
-## ¿Qué es?
+## Contenido
+1. [1. ¿Qué es un vector bidimensional?]()
+    - [1.1. Declaración de una matriz en C++]()
+    - [1.2. Ejemplos de una matriz]()
+    - [1.3. Representación de una matriz]()
+    - [1.4. Agregar elementos a una matriz]()
+        - [1.4.1. Primera forma: inicialización sin separar las filas]()
+        - [1.4.2. Segunda forma: inicialización separando las filas]()
+    - [1.5. Acceder a los elementos de una matriz]()
+    - [1.6. Ejemplo completo]()
+    - [1.7. Resumen]()
+
+# 1. ¿Qué es un vector bidimensional?
 Una **matriz** es un arreglo de arreglos, también conocido como *array bidimensional*. Permite almacenar datos del mismo tipo organizados en filas y columnas.
-
 En C++, la forma de declarar una matriz es similar a la de un vector, pero se utilizan dos dimensiones: una para las filas y otra para las columnas.
 
-## Declarando una matriz en C++
+## 1.1. Declarando una matriz en C++
 Para declarar una matriz se utiliza la siguiente sintaxis:
-
 ```cpp
 tipo nombre[nfilas][ncolumnas];
 ```
@@ -17,7 +27,7 @@ tipo nombre[nfilas][ncolumnas];
 - `nfilas`: cantidad de filas.
 - `ncolumnas`: cantidad de columnas.
 
-### Ejemplos
+## 1.2. Ejemplos de una matriz
 ```cpp
 int numeros[2][3];
 char letras[3][2];
@@ -28,23 +38,23 @@ En estos ejemplos:
 - `numeros` tiene 2 filas y 3 columnas, por lo que puede almacenar 6 números enteros.
 - `letras` tiene 3 filas y 2 columnas, por lo que puede almacenar 6 caracteres.
 
-### Representación de una matriz
+## 1.3. Representación de una matriz
 Una matriz de \(n\) filas y \(m\) columnas se organiza de la siguiente manera:
 
-|  | Columna 0 | Columna 1 | Columna 2 | ... | Columna m-1 |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Fila 0** | | | | ... | |
-| **Fila 1** | | | | ... | |
-| **Fila 2** | | | | ... | |
-| **...** | | | | ... | |
-| **Fila n-1** | | | | ... | |
+|              | Columna 0 | Columna 1 | Columna 2 | ...   | Columna m-1 |
+| :---:        | :---:     | :---:     | :---:     | :---: | :---:       |
+| **Fila 0**   |           |           |           | ...   |             |
+| **Fila 1**   |           |           |           | ...   |             |
+| **Fila 2**   |           |           |           | ...   |             |
+| **...**      |           |           |           | ...   |             |
+| **Fila n-1** |           |           |           | ...   |             |
 
 Los índices de las filas y las columnas comienzan en `0`.
 
-## Agregar elementos a una matriz
+## 1.4. Agregar elementos a una matriz
 Podemos inicializar una matriz al momento de declararla, asignando los valores entre llaves `{}`.
 
-### Primera forma: inicialización sin separar las filas
+## 1.4.1. Primera forma: inicialización sin separar las filas
 ```cpp
 int numeros[2][3] = {1, 2, 3, 4, 5, 6};
 ```
@@ -58,7 +68,7 @@ La matriz resultante es:
 | **Fila 0**               | 1         | 2         | 3         |
 | **Fila 1**               | 4         | 5         | 6         |
 
-### Segunda forma: inicialización separando las filas
+## 1.4.2. Segunda forma: inicialización separando las filas
 También podemos utilizar llaves internas para agrupar los elementos de cada fila:
 
 ```cpp
@@ -74,7 +84,7 @@ La matriz resultante es la misma:
 | **Fila 0**               | 1         | 2         | 3         |
 | **Fila 1**               | 4         | 5         | 6         |
 
-## Acceder a los elementos de una matriz
+## 1.5. Acceder a los elementos de una matriz
 Para acceder a un elemento específico se utilizan dos índices:
 
 ```cpp
@@ -114,7 +124,7 @@ Por lo tanto:
 
 **Importante:** para acceder a un elemento, ambos índices deben estar dentro de los límites de la matriz. En `numeros[2][3]`, las filas válidas son `0` y `1`, mientras que las columnas válidas son `0`, `1` y `2`.
 
-## Ejemplo completo
+## 1.6. Ejemplo completo
 ```cpp
 #include <iostream>
 using namespace std;
@@ -136,13 +146,12 @@ int main() {
 ```
 
 **Salida esperada:**
-
 ```text
 Elemento en [1][2]: 6
 Elemento en [0][1]: 2
 ```
 
-## Resumen
+## 1.7. Resumen
 | Concepto                     | Descripción                                         |
 | ---                          | ---                                                 |
 | Matriz o array bidimensional | Estructura de datos organizada en filas y columnas. |
