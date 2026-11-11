@@ -49,19 +49,21 @@
     - [6.2. Condiciones de búsqueda]()
     - [6.3. Ejemplo de búsqueda]()
     - [6.4. Código completo de la función]()
-    - [6.5. Resumen del funcionamiento]()
-7. [Recorrido de árboles - PreOrden]()
-    - []()
-    - []()
-    - []()
-8. [Recorrido de árboles - InOrden]()
-    - []()
-    - []()
-    - []()
-9. [Recorrido de árboles - PostOrden]()
-    - []()
-    - []()
-    - []()
+    - [6.5. Resumen del funcionamiento]() 
+7. [Recorridos de árboles binarios]()
+    - [7.1. Recorrido de árboles - PreOrden]() 
+        - [7.1.1. Definición de la función PreOrden]() 
+        - [7.1.2. Ejemplo de ejecución]() 
+        - [7.1.3. Resumen del recorrido en PreOrden]() 
+    - [7.2. Recorrido de árboles - InOrden]()      
+        - [7.2.1. Definición de la función InOrden]() 
+        - [7.2.2. Ejemplo de ejecución]() 
+        - [7.2.3. Resumen del recorrido en InOrden]() 
+    - [7.3. Recorrido de árboles - PostOrden]()                            
+        - [7.3.1. Definición de la función PostOrden ]() 
+        - [7.3.2. Ejemplo de ejecución]() 
+        - [7.3.3. Resumen del recorrido en PostOrden]() 
+    - [7.4. Comparación de los tres recorridos]()
 
 ---
 
@@ -1076,3 +1078,408 @@ bool busqueda(Nodo *arbol, int n) {
 Donde `n` representa la cantidad de nodos del árbol.
 
 ---
+
+# 7. Recorridos de árboles binarios
+Los recorridos de árboles binarios son procedimientos que permiten visitar y procesar todos los nodos de un árbol siguiendo un orden determinado.
+Existen tres recorridos principales:
+- **PreOrden (PreOrder):** raíz, izquierdo, derecho.
+- **InOrden (InOrder):** izquierdo, raíz, derecho.
+- **PostOrden (PostOrder):** izquierdo, derecho, raíz.
+
+Cada recorrido utiliza recursividad para visitar los nodos de los subárboles izquierdo y derecho.
+
+## 7.1. Recorrido en PreOrden (PreOrder)
+El recorrido en PreOrden consiste en visitar los nodos de un árbol binario siguiendo este orden:
+
+1. Visitar la raíz.
+2. Recorrer el subárbol izquierdo.
+3. Recorrer el subárbol derecho.
+
+Su orden de ejecución se representa de la siguiente manera:
+
+\[\boxed{\text{Raíz} \rightarrow \text{Izquierdo} \rightarrow \text{Derecho}}\]
+
+**Ejemplo:**
+
+Consideremos el siguiente árbol binario:
+
+```text
+          8
+        /   \
+       3     10
+      / \      \
+     1   6      14
+        / \    /
+       4   7  13
+```
+
+Para recorrerlo en PreOrden seguimos estos pasos:
+
+1. Visitamos la raíz: `8`.
+2. Recorremos el subárbol izquierdo:
+   - Visitamos `3`.
+   - Visitamos su hijo izquierdo: `1`.
+   - Visitamos su hijo derecho: `6`.
+   - Visitamos el hijo izquierdo de `6`: `4`.
+   - Visitamos el hijo derecho de `6`: `7`.
+3. Recorremos el subárbol derecho:
+   - Visitamos `10`.
+   - Visitamos su hijo derecho: `14`.
+   - Visitamos el hijo izquierdo de `14`: `13`.
+
+**Secuencia del recorrido:**
+
+```text
+8 - 3 - 1 - 6 - 4 - 7 - 10 - 14 - 13
+```
+
+## 7.1.1. Definición de la función PreOrden
+Para implementar este recorrido en C++ utilizamos una función recursiva llamada `preOrden()`.
+```cpp
+void preOrden(Nodo *arbol) {
+
+    if (arbol == NULL) {
+        return;
+    }
+    else {
+
+        cout << arbol->dato << " - ";
+        preOrden(arbol->izq);
+        preOrden(arbol->der);
+    }
+}
+```
+
+**Explicación paso a paso:**
+
+**1. Comprobar si el árbol está vacío**
+```cpp
+if (arbol == NULL) {
+    return;
+}
+```
+
+Se verifica si el puntero recibido es igual a `NULL`.
+
+- Si es `NULL`, significa que no existe ningún nodo que visitar y la función termina.
+- Si no es `NULL`, continúa con el recorrido.
+
+**2. Visitar la raíz**
+```cpp
+cout << arbol->dato << " - ";
+```
+
+Se muestra el valor almacenado en el nodo actual.
+
+Esta instrucción se ejecuta antes de recorrer sus hijos, por lo que primero se visita la raíz.
+
+**3. Recorrer el subárbol izquierdo**
+```cpp
+preOrden(arbol->izq);
+```
+
+Se realiza una llamada recursiva para recorrer todos los nodos del subárbol izquierdo.
+
+**4. Recorrer el subárbol derecho**
+```cpp
+preOrden(arbol->der);
+```
+
+Finalmente, se realiza otra llamada recursiva para recorrer todos los nodos del subárbol derecho.
+
+## 7.1.2. Ejemplo de ejecución
+Si utilizamos el árbol anterior, podemos llamar a la función de la siguiente manera:
+
+```cpp
+preOrden(arbol);
+```
+
+La salida obtenida será:
+
+```text
+8 - 3 - 1 - 6 - 4 - 7 - 10 - 14 - 13 -
+```
+
+## 7.1.3. Resumen del recorrido en PreOrden
+| Paso | Operación                                      |
+| ---  | ---                                            |
+| 1    | Visitar el nodo raíz.                          |
+| 2    | Recorrer recursivamente el subárbol izquierdo. |
+| 3    | Recorrer recursivamente el subárbol derecho.   |
+
+**Complejidad temporal:** \(O(n)\), porque cada nodo se visita exactamente una vez.
+**Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas, donde `h` representa la altura del árbol.
+- Árbol equilibrado: \(O(\log n)\).
+- Árbol degenerado: \(O(n)\).
+
+> [!IMPORTANT]
+> En un árbol binario de búsqueda, el recorrido en PreOrden no necesariamente muestra los valores ordenados de menor a mayor. Su finalidad es visitar primero cada raíz y después sus subárboles.
+
+---
+
+## 7.2. Recorrido en InOrden (InOrder)
+El recorrido en InOrden consiste en visitar los nodos de un árbol binario siguiendo un orden específico:
+
+1. Recorrer el subárbol izquierdo.
+2. Visitar la raíz.
+3. Recorrer el subárbol derecho.
+
+Su orden de ejecución se representa de la siguiente manera:
+
+\[\boxed{\text{Izquierdo} \rightarrow \text{Raíz} \rightarrow \text{Derecho}}\]
+
+**Ejemplo:**
+Consideremos el siguiente árbol binario:
+```text
+          8
+        /   \
+       3     10
+      / \      \
+     1   6      14
+        / \    /
+       4   7  13
+```
+
+Para recorrerlo en InOrden seguimos estos pasos:
+
+1. Recorremos el subárbol izquierdo de la raíz:
+   - Visitamos el hijo izquierdo de `3`: `1`.
+   - Visitamos el nodo `3`.
+   - Recorremos el subárbol derecho de `3`:
+     - Visitamos el hijo izquierdo de `6`: `4`.
+     - Visitamos el nodo `6`.
+     - Visitamos el hijo derecho de `6`: `7`.
+
+2. Visitamos la raíz principal: `8`.
+
+3. Recorremos el subárbol derecho:
+   - Visitamos el nodo `10`.
+   - Recorremos su hijo derecho: `14`.
+   - Visitamos el hijo izquierdo de `14`: `13`.
+   - Finalmente, visitamos `14`.
+
+**Secuencia del recorrido:**
+```text
+1 - 3 - 4 - 6 - 7 - 8 - 10 - 13 - 14
+```
+
+## 7.2.1. Definición de la función InOrden
+Para implementar este recorrido en C++ utilizamos una función recursiva llamada `inOrden()`.
+```cpp
+void inOrden(Nodo *arbol) {
+
+    if (arbol == NULL) {
+        return;
+    }
+    else {
+        inOrden(arbol->izq);
+        cout << arbol->dato << " - ";
+        inOrden(arbol->der);
+    }
+}
+```
+
+**Explicación paso a paso:**
+
+**1. Comprobar si el árbol está vacío**
+```cpp
+if (arbol == NULL) {
+    return;
+}
+```
+
+Se verifica si el puntero recibido es igual a `NULL`.
+
+- Si es `NULL`, significa que no existe ningún nodo que visitar y la función termina.
+- Si no es `NULL`, continúa con el recorrido.
+
+**2. Recorrer el subárbol izquierdo**
+```cpp
+inOrden(arbol->izq);
+```
+
+Se realiza una llamada recursiva para visitar todos los nodos del subárbol izquierdo antes de procesar el nodo actual.
+
+**3. Visitar la raíz**
+```cpp
+cout << arbol->dato << " - ";
+```
+
+Se muestra el valor almacenado en el nodo actual después de recorrer su subárbol izquierdo.
+
+**4. Recorrer el subárbol derecho**
+```cpp
+inOrden(arbol->der);
+```
+
+Finalmente, se realiza otra llamada recursiva para recorrer todos los nodos del subárbol derecho.
+
+## 7.2.2. Ejemplo de ejecución
+Si utilizamos el árbol anterior, podemos llamar a la función de la siguiente manera:
+```cpp
+inOrden(arbol);
+```
+
+La salida obtenida será:
+
+```text
+1 - 3 - 4 - 6 - 7 - 8 - 10 - 13 - 14 -
+```
+
+## 7.2.3. Resumen del recorrido en InOrden
+| Paso | Operación                                      |
+| ---  | ---                                            |  
+| 1    | Recorrer recursivamente el subárbol izquierdo. |
+| 2    | Visitar el nodo raíz.                          |
+| 3    | Recorrer recursivamente el subárbol derecho.   |
+
+**Complejidad temporal:** \(O(n)\), porque cada nodo se visita exactamente una vez.
+
+**Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas, donde `h` representa la altura del árbol.
+
+- Árbol equilibrado: \(O(\log n)\).
+- Árbol degenerado: \(O(n)\).
+
+**Importante:** Cuando se aplica el recorrido InOrden a un árbol binario de búsqueda (ABB), los elementos se muestran en orden ascendente, ya que todos los valores del subárbol izquierdo son menores que la raíz y los del subárbol derecho son mayores.
+
+---
+
+## 7.3. Recorrido en PostOrden (PostOrder)
+El recorrido en PostOrden consiste en visitar los nodos de un árbol binario siguiendo un orden específico:
+
+1. Recorrer el subárbol izquierdo.
+2. Recorrer el subárbol derecho.
+3. Visitar la raíz.
+
+Su orden de ejecución se representa de la siguiente manera:
+
+\[\boxed{\text{Izquierdo} \rightarrow \text{Derecho} \rightarrow \text{Raíz}}\]
+
+**Ejemplo:**
+Consideremos el siguiente árbol binario:
+```text
+          8
+        /   \
+       3     10
+      / \      \
+     1   6      14
+        / \    /
+       4   7  13
+```
+
+Para recorrerlo en PostOrden seguimos estos pasos:
+
+1. Recorremos el subárbol izquierdo de la raíz:
+   - Visitamos el nodo `1`.
+   - Recorremos el subárbol de `6`:
+     - Visitamos su hijo izquierdo: `4`.
+     - Visitamos su hijo derecho: `7`.
+     - Visitamos el nodo `6`.
+   - Finalmente, visitamos el nodo `3`.
+
+2. Recorremos el subárbol derecho:
+   - Visitamos el hijo izquierdo de `14`: `13`.
+   - Visitamos el nodo `14`.
+   - Visitamos el nodo `10`.
+
+3. Finalmente, visitamos la raíz principal: `8`.
+
+**Secuencia del recorrido:**
+```text
+1 - 4 - 7 - 6 - 3 - 13 - 14 - 10 - 8
+```
+
+## 7.3.1. Definición de la función PostOrden
+Para implementar este recorrido en C++ utilizamos una función recursiva llamada `postOrden()`.
+```cpp
+void postOrden(Nodo *arbol) {
+
+    if (arbol == NULL) {
+        return;
+    }
+    else {
+        postOrden(arbol->izq);
+        postOrden(arbol->der);
+        cout << arbol->dato << " - ";
+    }
+}
+```
+
+**Explicación paso a paso:**
+
+**1. Comprobar si el árbol está vacío**
+```cpp
+if (arbol == NULL) {
+    return;
+}
+```
+
+Se verifica si el puntero recibido es igual a `NULL`.
+
+- Si es `NULL`, significa que no existe ningún nodo que visitar y la función termina.
+- Si no es `NULL`, continúa con el recorrido.
+
+**2. Recorrer el subárbol izquierdo**
+```cpp
+postOrden(arbol->izq);
+```
+
+Se realiza una llamada recursiva para recorrer todos los nodos del subárbol izquierdo.
+
+**3. Recorrer el subárbol derecho**
+```cpp
+postOrden(arbol->der);
+```
+
+Después, se realiza otra llamada recursiva para recorrer todos los nodos del subárbol derecho.
+
+**4. Visitar la raíz**
+```cpp
+cout << arbol->dato << " - ";
+```
+
+Finalmente, se muestra el valor almacenado en el nodo actual, después de haber recorrido sus dos subárboles.
+
+## 7.3.2. Ejemplo de ejecución
+Si utilizamos el árbol anterior, podemos llamar a la función de la siguiente manera:
+```cpp
+postOrden(arbol);
+```
+
+La salida obtenida será:
+
+```text
+1 - 4 - 7 - 6 - 3 - 13 - 14 - 10 - 8 -
+```
+
+## 7.3.3. Resumen del recorrido en PostOrden
+| Paso | Operación                                      |
+| ---  | ---                                            |
+| 1    | Recorrer recursivamente el subárbol izquierdo. |
+| 2    | Recorrer recursivamente el subárbol derecho.   |
+| 3    | Visitar el nodo raíz.                          |
+
+**Complejidad temporal:** \(O(n)\), porque cada nodo se visita exactamente una vez.
+
+**Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas, donde `h` representa la altura del árbol.
+
+- Árbol equilibrado: \(O(\log n)\).
+- Árbol degenerado: \(O(n)\).
+
+**Importante:** En PostOrden, la raíz siempre se procesa después de sus dos subárboles. Este recorrido resulta especialmente útil para eliminar árboles o liberar memoria, ya que permite procesar primero los nodos hijos y después sus respectivos padres.
+
+---
+
+## 7.4. Comparación de los tres recorridos
+| Recorrido | Orden              | Secuencia                    |
+| ---       | ---                | ---                          |
+| PreOrden  | Raíz → Izq. → Der. | 8, 3, 1, 6, 4, 7, 10, 14, 13	|
+| InOrden   | Izq. → Raíz → Der. | 1, 3, 4, 6, 7, 8, 10, 13, 14 |
+| PostOrden | Izq. → Der. → Raíz | 1, 4, 7, 6, 3, 13, 14, 10, 8 |		
+
+**Truco para recordar los recorridos**
+- PreOrden: la raíz va primero.
+- InOrden: la raíz va en medio.
+- PostOrden: la raíz va al final.
+
+La estructura de las tres funciones es prácticamente idéntica. Lo que cambia es la posición de la instrucción cout respecto a las llamadas recursivas.
