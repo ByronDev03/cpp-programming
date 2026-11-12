@@ -1,7 +1,7 @@
 <h1 align="center">Vectores Bidimensionales (Matrices o Tablas) en C++</h1>
 
 ## Contenido
-1. [1. ¿Qué es un vector bidimensional?]()
+1. [¿Qué es un vector bidimensional?]()
     - [1.1. Declaración de una matriz en C++]()
     - [1.2. Ejemplos de una matriz]()
     - [1.3. Representación de una matriz]()
