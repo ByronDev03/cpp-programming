@@ -75,6 +75,7 @@ Como `4 > 3`, intercambiamos sus posiciones.
 Al finalizar esta pasada, el número `4` queda en su posición correcta.
 
 **Pasada 3**
+
 **Comparación 1:** `2` y `1`
 Como `2 > 1`, intercambiamos sus posiciones.
 ```text
