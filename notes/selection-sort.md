@@ -1,18 +1,18 @@
 <h1 align="center">Ordenamiento por Selección (Selection Sort) en C++</h1>
 
-## ¿Qué es?
-<p align="justify">Es un algoritmo de ordenamiento que requiere \(O(n^2)\) operaciones para ordenar una lista de \(n\) números. Su funcionamiento consiste en buscar el elemento mínimo de la parte no ordenada de la lista e intercambiarlo con el primer elemento de esa parte. Este proceso se repite hasta que todos los elementos quedan ordenados.</p>
+## Contenido
+1. [¿Qué es el método burbuja?]()
+    - [1.1. Ejemplo]()
+    - [1.2. ¿Cómo funciona el algoritmo?]()
+    - [1.3. Complejidad temporal]()
+    - [1.4. Características]()
+    - [1.5. Resumen]()
 
-### Funcionamiento
-1. Buscar el elemento mínimo de la lista.
-2. Intercambiarlo con el primer elemento.
-3. Buscar el mínimo del resto de la lista.
-4. Intercambiarlo con el segundo elemento.
-5. Repetir el proceso sucesivamente hasta ordenar la lista.
+## 1. ¿Qué es el ordenamiento por selección?
+Es un algoritmo de ordenamiento que requiere \(O(n^2)\) operaciones para ordenar una lista de \(n\) números. Su funcionamiento consiste en buscar el elemento mínimo de la parte no ordenada de la lista e intercambiarlo con el primer elemento de esa parte. Este proceso se repite hasta que todos los elementos quedan ordenados.
 
-## Ejemplo
+## 1.1. Ejemplo
 Partimos de la siguiente lista desordenada:
-
 ```text
 [4, 3, 1, 5, 2]
 ```
@@ -23,7 +23,7 @@ Los índices de los elementos comienzan en `0`:
 | ---    | ---: | ---: | ---: | ---: |---: |
 | Valor  | 4    | 3    | 1    | 5    | 2   |
 
-### Pasada 1: buscar el mínimo de toda la lista
+**Pasada 1: buscar el mínimo de toda la lista**
 Buscamos el menor elemento entre `4`, `3`, `1`, `5` y `2`.
 
 El mínimo es `1`, ubicado en el índice `2`.
@@ -37,7 +37,7 @@ Después: [1, 3, 4, 5, 2]
 
 El primer elemento ya está ordenado.
 
-### Pasada 2: buscar el mínimo del resto de la lista
+**Pasada 2: buscar el mínimo del resto de la lista**
 Ignoramos el primer elemento, porque ya está en su posición correcta.
 
 Buscamos el mínimo entre `3`, `4`, `5` y `2`.
@@ -53,7 +53,7 @@ Después: [1, 2, 4, 5, 3]
 
 Los dos primeros elementos ya están ordenados.
 
-### Pasada 3: buscar el mínimo del resto de la lista
+**Pasada 3: buscar el mínimo del resto de la lista**
 Buscamos el mínimo entre `4`, `5` y `3`.
 
 El mínimo es `3`, ubicado en el índice `4`.
@@ -67,7 +67,7 @@ Después: [1, 2, 3, 5, 4]
 
 Los tres primeros elementos ya están ordenados.
 
-### Pasada 4: buscar el mínimo del resto de la lista
+**Pasada 4: buscar el mínimo del resto de la lista**
 Buscamos el mínimo entre `5` y `4`.
 
 El mínimo es `4`, ubicado en el índice `4`.
@@ -81,13 +81,19 @@ Después: [1, 2, 3, 4, 5]
 
 La lista ya está ordenada.
 
-### Resultado final
-
+**Resultado final**
 ```text
 [1, 2, 3, 4, 5]
 ```
 
-## Complejidad temporal
+## 1.2. ¿Cómo funciona el algoritmo?
+1. Buscar el elemento mínimo de la lista.
+2. Intercambiarlo con el primer elemento.
+3. Buscar el mínimo del resto de la lista.
+4. Intercambiarlo con el segundo elemento.
+5. Repetir el proceso sucesivamente hasta ordenar la lista.
+
+## 1.3. Complejidad temporal
 | Caso          | Complejidad |
 | ---           | ---         |
 | Mejor caso    | \(O(n^2)\)  |
@@ -96,7 +102,7 @@ La lista ya está ordenada.
 
 El algoritmo sigue buscando el mínimo en la parte no ordenada, incluso si los elementos ya están ordenados.
 
-## Características
+## 1.4. Características
 - Es sencillo de comprender e implementar.
 - Busca el elemento mínimo en cada pasada.
 - Realiza, como máximo, \(n-1\) intercambios.
@@ -104,7 +110,7 @@ El algoritmo sigue buscando el mínimo en la parte no ordenada, incluso si los e
 - Ordena los elementos en el mismo arreglo, sin necesitar otro arreglo de tamaño proporcional a la lista.
 - En su implementación habitual, no es estable cuando intercambia elementos directamente.
 
-## Resumen
+## 1.5. Resumen
 La idea principal del ordenamiento por selección es **encontrar el elemento más pequeño de la parte no ordenada y colocarlo al principio de esa parte**.
 
 En cada pasada, la sección ordenada aumenta en un elemento, mientras que la sección no ordenada disminuye, hasta completar el ordenamiento.
