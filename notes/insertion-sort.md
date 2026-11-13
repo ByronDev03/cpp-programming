@@ -95,7 +95,7 @@ Resultado:
 
 La lista ya está ordenada.
 
-## 1.3. ¿Cómo funciona el algoritmo?
+## 1.2. ¿Cómo funciona el algoritmo?
 1. Se considera que el primer elemento está ordenado.
 2. Se selecciona el siguiente elemento de la lista, llamado **elemento actual** o `key`.
 3. Se compara con los elementos anteriores.
@@ -103,14 +103,14 @@ La lista ya está ordenada.
 5. Se inserta el elemento actual en la posición que le corresponde.
 6. Se repite el proceso hasta recorrer toda la lista.
 
-## 1.4. Complejidad temporal
+## 1.3. Complejidad temporal
 | Caso                               | Complejidad |
 | ---                                | ---         |
 | Mejor caso (lista ordenada)        | \(O(n)\)    |
 | Caso promedio                      | \(O(n^2)\)  |
 | Peor caso (lista en orden inverso) | \(O(n^2)\)  |
 
-## 1.5. Características
+## 1.4. Características
 - Es un algoritmo sencillo de implementar.
 - Es eficiente para listas pequeñas o casi ordenadas.
 - Es un algoritmo de ordenamiento estable.
