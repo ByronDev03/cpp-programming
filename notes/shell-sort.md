@@ -1,22 +1,16 @@
 <h1 align="center">Ordenación Shell en C++</h1>
 
-## ¿Qué es?
-<p align="justify">
-La ordenación Shell debe su nombre a su inventor, Donald L. Shell. También se suele denominar ordenación por inserción con incrementos decrecientes, ya que se considera una mejora del método de inserción directa. En el algoritmo de inserción directa, cada elemento se compara con los elementos contiguos de su izquierda, uno tras otro. Si el elemento que se desea insertar es el más pequeño, pueden ser necesarias muchas comparaciones antes de colocarlo en su posición definitiva. El algoritmo de Shell modifica los saltos contiguos por saltos de mayor tamaño. De esta manera, los elementos pueden desplazarse más rápidamente hacia su posición correcta. Generalmente, se toma como salto inicial la mitad del número de elementos (n / 2) y, en cada iteración, se reduce el salto a la mitad hasta llegar a 1. </p>
+## Contenido
+1. [¿Qué es el ordenamiento shell?]()
+    - [1.1. Ejemplo]()
+    - [1.2. ¿Cómo funciona el algoritmo?]()
+    - [1.3. Complejidad temporal]()
+    - [1.4. Características]()
 
-## Algoritmo de ordenación Shell
-Los pasos generales del algoritmo para una lista de `n` elementos son:
-1.  Se divide la lista original en grupos cuyos elementos están separados por un incremento o salto inicial de aproximadamente `n / 2`.
-2.  Se compara cada pareja de elementos separados por ese salto. Si no están en orden ascendente, se intercambian o se reubican.
-3.  Se reduce el salto a la mitad y se vuelve a recorrer la lista, comparando los elementos que ahora quedan separados por el nuevo salto.
-4.  Se repite el proceso, disminuyendo el salto en cada pasada.
-5.  El algoritmo termina después de completar la pasada con salto `1`.
+## 1. ¿Qué es el ordenamiento shell?
+La ordenación Shell debe su nombre a su inventor, Donald L. Shell. También se suele denominar ordenación por inserción con incrementos decrecientes, ya que se considera una mejora del método de inserción directa. En el algoritmo de inserción directa, cada elemento se compara con los elementos contiguos de su izquierda, uno tras otro. Si el elemento que se desea insertar es el más pequeño, pueden ser necesarias muchas comparaciones antes de colocarlo en su posición definitiva. El algoritmo de Shell modifica los saltos contiguos por saltos de mayor tamaño. De esta manera, los elementos pueden desplazarse más rápidamente hacia su posición correcta. Generalmente, se toma como salto inicial la mitad del número de elementos (n / 2) y, en cada iteración, se reduce el salto a la mitad hasta llegar a 1.
 
-> [!NOTE]
-> Cuando el número de elementos no permite una división exacta, se utiliza normalmente la división entera para calcular el salto. Por ejemplo, con siete elementos, el primer salto es `7 // 2 = 3`.
-
-## Ejemplo paso a paso
-
+## 1.1. Ejemplo
 Se desea ordenar de menor a mayor el siguiente arreglo:
 
 ``` text
@@ -31,7 +25,7 @@ salto = 7 // 2
 salto = 3
 ```
 
-## Primera pasada: salto = 3
+**Primera pasada: salto = 3**
 
 Se comparan los elementos que están separados por tres posiciones.
 
@@ -107,7 +101,7 @@ El arreglo queda:
 
 Al finalizar esta pasada, los elementos separados por tres posiciones han quedado ordenados.
 
-## Segunda pasada: salto = 1
+**Segunda pasada: salto = 1**
 
 Se reduce el salto a la mitad mediante división entera:
 
@@ -173,7 +167,7 @@ Se comprueba que los elementos consecutivos restantes están en orden:
 
 El arreglo ya se encuentra ordenado de menor a mayor.
 
-## Condición de comparación
+**Condición de comparación**
 
 Durante el ejemplo se utiliza la siguiente condición:
 
@@ -189,7 +183,7 @@ Sino
 
 En las imágenes, `a[j]` representa el elemento que se está evaluando y `a[k]` el elemento con el que se compara, separado por el salto vigente.
 
-## Resultado final
+**Resultado final**
 
 Arreglo original:
 
@@ -205,14 +199,25 @@ Arreglo ordenado:
 
 El algoritmo termina cuando el salto llega a `1` y se completa la pasada final. En este ejemplo, los intercambios permiten colocar los elementos en orden ascendente.
 
-## Complejidad temporal
+## 1.2. ¿Cómo funciona el algoritmo?
+Los pasos generales del algoritmo para una lista de `n` elementos son:
+1. Se divide la lista original en grupos cuyos elementos están separados por un incremento o salto inicial de aproximadamente `n / 2`.
+2. Se compara cada pareja de elementos separados por ese salto. Si no están en orden ascendente, se intercambian o se reubican.
+3. Se reduce el salto a la mitad y se vuelve a recorrer la lista, comparando los elementos que ahora quedan separados por el nuevo salto.
+4. Se repite el proceso, disminuyendo el salto en cada pasada.
+5. El algoritmo termina después de completar la pasada con salto `1`.
+
+> [!NOTE]
+> Cuando el número de elementos no permite una división exacta, se utiliza normalmente la división entera para calcular el salto. Por ejemplo, con siete elementos, el primer salto es `7 // 2 = 3`.
+
+## 1.3. Complejidad temporal
 | Caso          | Complejidad                            |
 | ---           | ---                                    |
 | Mejor caso    | \(O(n \log n)\)                        |
 | Caso promedio | Depende de la secuencia de incrementos |
 | Peor caso     | \(O(n^2)\)                             |
 
-## Características
+## 1.4. Características
 - Es una mejora del algoritmo de inserción directa.
 - Utiliza saltos decrecientes para comparar elementos alejados entre sí.
 - Reduce progresivamente la distancia entre los elementos comparados.

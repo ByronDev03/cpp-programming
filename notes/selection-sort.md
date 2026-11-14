@@ -1,7 +1,7 @@
 <h1 align="center">Ordenamiento por Selección (Selection Sort) en C++</h1>
 
 ## Contenido
-1. [¿Qué es el método burbuja?]()
+1. [¿Qué es el ordenamiento por selección?]()
     - [1.1. Ejemplo]()
     - [1.2. ¿Cómo funciona el algoritmo?]()
     - [1.3. Complejidad temporal]()
