@@ -1,11 +1,20 @@
 <h1 align="center">Estructuras en C++ </h1>
 
-## ¿Qué es una estructura?
+## Contenido
+1. [¿Qué es una estructura?]()
+    - [1.1. Ejemplo de una estructura]()
+    - [1.2. Declaración de una estructura]()
+        - [1.2.1. Declarando variables de tipo struct]()
+        - [1.2.2. Declaración dentro de main()]() 
+        - [1.2.3. Declaración al finalizar la estructura]()
+    - [1.3. Resumen]()
+    
+## 1. ¿Qué es una estructura?
 Una estructura es una colección de uno o más elementos denominados **campos**, cada uno de los cuales puede ser de un tipo de dato diferente.
 
 Las estructuras permiten agrupar datos relacionados bajo un mismo nombre, aunque sus tipos sean distintos.
 
-## Ejemplo de una estructura
+## 1.1. Ejemplo de una estructura
 Supongamos que se desea almacenar los datos de una colección de discos compactos (CD) de música. Estos datos pueden ser:
 
 - Título
@@ -36,7 +45,7 @@ En este ejemplo, la estructura contiene cinco campos:
 | `precio`       | `float`      | Almacena el precio del CD.              |
 | `fecha_compra` | `char[20]`   | Almacena la fecha de compra como texto. |
 
-## Declaración de una estructura
+## 1.2. Declaración de una estructura
 La sintaxis general para declarar una estructura en C++ es la siguiente:
 
 ```cpp
@@ -55,7 +64,7 @@ struct <nombreDeLaEstructura> {
 - `<nombreDeCampo>`: nombre de la variable que pertenece a la estructura.
 - `;`: indica el final de la declaración.
 
-### Ejemplo
+**Ejemplo**
 
 ```cpp
 struct coleccion_CD {
@@ -69,11 +78,10 @@ struct coleccion_CD {
 
 **Importante:** la declaración de la estructura define un nuevo tipo de dato, pero por sí sola no crea variables individuales de ese tipo.
 
-## Declarando variables de tipo `struct`
+## 1.2.1. Declarando variables de tipo `struct`
 Una vez definida la estructura, podemos declarar variables que utilicen ese tipo.
 
-### Declaración dentro de `main()`
-
+## 1.2.2. Declaración dentro de `main()`
 ```cpp
 struct coleccion_CD {
     char titulo[30];
@@ -96,7 +104,7 @@ En este caso, se declaran tres variables de tipo `coleccion_CD`:
 
 Cada variable dispone de sus propios campos para almacenar los datos de un CD.
 
-### Declaración al finalizar la estructura
+## 1.2.3. Declaración al finalizar la estructura
 También es posible declarar las variables inmediatamente después de cerrar la definición de la estructura:
 
 ```cpp
@@ -112,3 +120,16 @@ struct coleccion_CD {
 En este caso, `CD1`, `CD2` y `CD3` se declaran al mismo tiempo que se define la estructura.
 
 Ambas formas permiten crear variables que almacenan los campos definidos en `coleccion_CD`.
+
+## 1.3. Resumen
+Las estructuras (`struct`) en C++ permiten agrupar diferentes datos relacionados bajo un mismo nombre, incluso cuando estos pertenecen a distintos tipos de datos. Cada elemento de una estructura se denomina campo.
+
+Sus principales características son:
+
+- Permiten almacenar diferentes tipos de datos dentro de una misma estructura.
+- Se declaran utilizando la palabra reservada `struct`.
+- Cada campo tiene su propio nombre y tipo de dato.
+- Se pueden crear múltiples variables a partir de una misma estructura.
+- Las variables pueden declararse dentro de `main()` o inmediatamente después de definir la estructura.
+
+Son especialmente útiles para organizar información relacionada y representar entidades con varias propiedades dentro de un programa.

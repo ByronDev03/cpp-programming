@@ -1,9 +1,15 @@
 <h1 align="center">Estructuras anidadas en C++ </h1>
 
-### ¿Qué es una estructura anidada?
+## Contenido
+1. [¿Qué es una estructura anidada?]()
+    - [1.1. Ejemplo de una estructura anidada]()
+    - [1.2. Representación de la estructura]()
+    - [1.3. Resumen]()
+
+## 1. ¿Qué es una estructura anidada?
 Una **estructura anidada** es una estructura definida dentro de otra estructura. Permite agrupar información relacionada y organizar datos complejos en campos más específicos.
 
-### Ejemplo de una estructura anidada
+## 1.1. Ejemplo de una estructura anidada
 Supongamos que se desea almacenar la información de un empleado, incluyendo su nombre, dirección, ciudad, provincia y salario.
 
 Primero, se define una estructura llamada `info_direccion` para almacenar los datos de la dirección:
@@ -40,7 +46,7 @@ A su vez, el campo `dir_empleado` contiene los siguientes datos:
 - `ciudad`: ciudad donde reside.
 - `provincia`: provincia correspondiente.
 
-### Representación de la estructura
+## 1.2. Representación de la estructura
 
 La organización de los campos puede representarse de la siguiente manera:
 
@@ -56,7 +62,7 @@ empleado
 
 Esta representación muestra que `dir_empleado` agrupa tres campos dentro de la estructura principal `empleado`.
 
-### Acceso a los campos de una estructura anidada
+## Acceso a los campos de una estructura anidada
 Para acceder a los campos de una estructura anidada, se utiliza el operador punto (`.`) de manera consecutiva.
 
 Por ejemplo, si declaramos una variable de tipo `empleado`:
@@ -77,4 +83,5 @@ trabajador.salario;
 
 Observa que para acceder a `ciudad`, primero se indica la variable `trabajador`, después el campo `dir_empleado` y finalmente el campo `ciudad`.
 
-**En resumen:** las estructuras anidadas permiten organizar información relacionada en diferentes niveles, facilitando la representación y administración de datos complejos.
+## 1.3. Resumen
+Las estructuras anidadas permiten organizar información relacionada en diferentes niveles, facilitando la representación y administración de datos complejos.
