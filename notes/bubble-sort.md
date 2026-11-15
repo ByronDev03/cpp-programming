@@ -6,6 +6,7 @@
     - [1.2. ¿Cómo funciona el algoritmo?]()
     - [1.3. Complejidad temporal]()
     - [1.4. Características]()
+    - [1.5. Resumen]()
 
 ## 1. ¿Qué es el método burbuja?
 Es un sencillo algoritmo de ordenamiento que funciona revisando cada elemento de una lista y comparándolo con el siguiente. Si ambos elementos están en el orden equivocado, se intercambian de posición. Es necesario revisar la lista varias veces hasta que ya no se necesiten más intercambios, lo cual significa que la lista está ordenada.
@@ -120,3 +121,15 @@ Las siguientes pasadas no producen intercambios porque la lista ya está ordenad
 - Es un algoritmo estable si solo intercambia elementos cuando el primero es estrictamente mayor que el segundo.
 - No necesita un arreglo auxiliar de tamaño proporcional a la lista.
 - Es poco eficiente para listas grandes debido a su complejidad cuadrática.
+
+## 1.5. Resumen
+El método burbuja (*Bubble Sort*) es un algoritmo de ordenamiento que compara elementos adyacentes e intercambia sus posiciones cuando se encuentran en el orden equivocado. Este proceso se repite mediante varias pasadas hasta que la lista queda ordenada.
+
+Sus principales características son:
+
+- Es sencillo de comprender e implementar.
+- Tiene una complejidad temporal de \(O(n^2)\) en el caso promedio y peor caso.
+- Puede alcanzar \(O(n)\) en el mejor caso si se implementa con optimización.
+- Es estable y trabaja directamente sobre el arreglo original (*in-place*).
+
+Aunque es útil para aprender los fundamentos de los algoritmos de ordenamiento, no es recomendable para listas grandes debido a su baja eficiencia.

@@ -5,7 +5,8 @@
     - [1.1. Ejemplo]()
     - [1.2. ¿Cómo funciona el algoritmo?]()
     - [1.3. Complejidad temporal]()
-    - [1.4. Resumen]()
+    - [1.4. Características]()
+    - [1.5. Resumen]()
 
 ## 1. ¿Qué es la ordenación rápida?
 Es un método de ordenación basado en la técnica divide y vencerás. Su funcionamiento consiste en dividir una lista de elementos en particiones más pequeñas para ordenarlas de manera independiente. Es un algoritmo conocido por su eficiencia en la práctica, su implementación relativamente compacta y su uso de la recursividad. El algoritmo divide los \(n\) elementos de la lista en dos particiones separadas por un elemento denominado pivote:
@@ -225,7 +226,17 @@ Los pasos que sigue el algoritmo QuickSort son:
 
 El peor caso puede presentarse cuando el pivote divide repetidamente el arreglo de forma muy desigual. La elección del pivote influye considerablemente en el rendimiento del algoritmo.
 
-## 1.4. Resumen
+## 1.4. Características
+- Es un algoritmo basado en la técnica de divide y vencerás.
+- Utiliza un pivote para dividir el arreglo en particiones izquierda y derecha.
+- Emplea recursividad para ordenar cada partición de manera independiente.
+- Es eficiente en la práctica, especialmente para conjuntos de datos grandes.
+- Su rendimiento depende de la elección del pivote y de cómo se dividen las particiones.
+- Trabaja directamente sobre el arreglo original (*in-place*), aunque utiliza memoria adicional para las llamadas recursivas.
+- No es un algoritmo estable, ya que puede modificar el orden relativo de elementos con valores iguales.
+- Su complejidad temporal promedio es \(O(n \log n)\), pero puede alcanzar \(O(n^2)\) en el peor caso.
+
+## 1.5. Resumen
 El funcionamiento de QuickSort puede resumirse en los siguientes pasos:yy
 1. Seleccionar un pivote.
 2. Recorrer el arreglo mediante los índices `i` y `j`.

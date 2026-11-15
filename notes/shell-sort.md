@@ -6,6 +6,7 @@
     - [1.2. ¿Cómo funciona el algoritmo?]()
     - [1.3. Complejidad temporal]()
     - [1.4. Características]()
+    - [1.5. Resumen]()
 
 ## 1. ¿Qué es el ordenamiento shell?
 La ordenación Shell debe su nombre a su inventor, Donald L. Shell. También se suele denominar ordenación por inserción con incrementos decrecientes, ya que se considera una mejora del método de inserción directa. En el algoritmo de inserción directa, cada elemento se compara con los elementos contiguos de su izquierda, uno tras otro. Si el elemento que se desea insertar es el más pequeño, pueden ser necesarias muchas comparaciones antes de colocarlo en su posición definitiva. El algoritmo de Shell modifica los saltos contiguos por saltos de mayor tamaño. De esta manera, los elementos pueden desplazarse más rápidamente hacia su posición correcta. Generalmente, se toma como salto inicial la mitad del número de elementos (n / 2) y, en cada iteración, se reduce el salto a la mitad hasta llegar a 1.
@@ -223,3 +224,16 @@ Los pasos generales del algoritmo para una lista de `n` elementos son:
 - Reduce progresivamente la distancia entre los elementos comparados.
 - Su rendimiento depende de la secuencia de saltos utilizada.
 - La ordenación termina cuando se procesa el salto de tamaño 1.
+
+## 1.5. Resumen
+La ordenación Shell (*Shell Sort*) es una mejora del algoritmo de inserción directa que utiliza incrementos o saltos decrecientes para comparar y reubicar elementos que se encuentran alejados entre sí. Comienza con un salto inicial y lo reduce progresivamente hasta llegar a 1, momento en el que realiza una última pasada para completar el ordenamiento.
+
+Sus principales características son:
+
+- Permite mover elementos grandes distancias en menos comparaciones que la inserción directa.
+- Utiliza una secuencia de saltos decrecientes.
+- Su rendimiento depende de la secuencia de incrementos utilizada.
+- Trabaja directamente sobre el arreglo original (*in-place*).
+- Su complejidad temporal puede variar según la secuencia de saltos, llegando a \(O(n^2)\) en el peor caso con secuencias sencillas.
+
+Es una alternativa más eficiente que la inserción directa para conjuntos de datos de tamaño mediano, aunque su rendimiento depende de cómo se seleccionen los incrementos.
