@@ -3,8 +3,9 @@
 ## Contenido
 1. [¿Qué es una estructura anidada?]()
     - [1.1. Ejemplo de una estructura anidada]()
-    - [1.2. Representación de la estructura]()
-    - [1.3. Resumen]()
+    - [1.2. Representación de la estructura]() 
+    - [1.3. Acceso a los campos de una estructura anidada]()
+    - [1.4. Resumen]()
 
 ## 1. ¿Qué es una estructura anidada?
 Una **estructura anidada** es una estructura definida dentro de otra estructura. Permite agrupar información relacionada y organizar datos complejos en campos más específicos.
@@ -47,9 +48,7 @@ A su vez, el campo `dir_empleado` contiene los siguientes datos:
 - `provincia`: provincia correspondiente.
 
 ## 1.2. Representación de la estructura
-
 La organización de los campos puede representarse de la siguiente manera:
-
 ```text
 empleado
 ├── nombre
@@ -62,17 +61,15 @@ empleado
 
 Esta representación muestra que `dir_empleado` agrupa tres campos dentro de la estructura principal `empleado`.
 
-## Acceso a los campos de una estructura anidada
+## 1.3. Acceso a los campos de una estructura anidada
 Para acceder a los campos de una estructura anidada, se utiliza el operador punto (`.`) de manera consecutiva.
 
 Por ejemplo, si declaramos una variable de tipo `empleado`:
-
 ```cpp
 struct empleado trabajador;
 ```
 
 Podemos acceder a sus campos de la siguiente manera:
-
 ```cpp
 trabajador.nombre;
 trabajador.dir_empleado.direccion;
@@ -83,5 +80,5 @@ trabajador.salario;
 
 Observa que para acceder a `ciudad`, primero se indica la variable `trabajador`, después el campo `dir_empleado` y finalmente el campo `ciudad`.
 
-## 1.3. Resumen
+## 1.4. Resumen
 Las estructuras anidadas permiten organizar información relacionada en diferentes niveles, facilitando la representación y administración de datos complejos.
