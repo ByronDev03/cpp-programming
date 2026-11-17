@@ -23,7 +23,6 @@ Un **algoritmo** es un método, proceso o conjunto de instrucciones utilizadas p
 La ventaja de conocer varias soluciones a un problema es que las diferentes soluciones pueden ser más eficientes para variaciones específicas del problema, o para diferentes entradas del mismo problema.
 
 **Por ejemplo:**
-
 - Un algoritmo de ordenación puede ser el mejor para ordenar conjuntos pequeños de números.
 - Otro puede ser el mejor para ordenar conjuntos grandes de números.
 - Un tercero puede ser el mejor para ordenar cadenas de caracteres de longitud variable.
