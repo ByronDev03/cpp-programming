@@ -6,8 +6,8 @@
     - [1.2. Inicialización de un vector]()
         - [1.2.1. Ejemplo 1: vector de números enteros]()
         - [1.2.2. Ejemplo 2: vector de caracteres]()
-    - [1.3. Resumen]()
-    - [1.4. Ejemplo completo]()
+    - [1.3. Ejemplo completo]()
+    - [1.4. Resumen]()
 
 # 1. ¿Qué es un vector unidimensional
 Un **vector** o *array unidimensional* es un tipo de dato que permite almacenar una secuencia de elementos del mismo tipo. Los elementos se almacenan en posiciones contiguas de memoria y se puede acceder a cada uno de ellos de manera directa mediante un **índice o posición**.
@@ -106,17 +106,7 @@ letra[4] = 'u';
 
 **Nota:** en C++, los valores de tipo `char` se escriben entre comillas simples, como `'a'`, mientras que las cadenas de texto se escriben entre comillas dobles, como `"Hola"`.
 
-## 1.3. Resumen
-| Concepto       | Descripción                                       |
-| -------------- | ------------------------------------------------- |
-| Vector o array | Estructura que almacena elementos del mismo tipo. |
-| Índice         | Posición que permite acceder a un elemento.       |
-| Declaración    | Define el tipo, nombre y tamaño del vector.       |
-| Inicialización | Asigna valores iniciales a los elementos.         |
-| Primer índice  | `0`                                               |
-| Último índice  | `tamaño - 1`                                      |
-
-## 1.4. Ejemplo completo
+## 1.3. Ejemplo completo
 ```cpp
 #include <iostream>
 using namespace std;
@@ -140,3 +130,13 @@ Ultimo elemento: 3
 ```
 
 **Recuerda:** acceder a un índice fuera de los límites del vector produce un comportamiento indefinido en C++. Para un vector de cinco elementos, los índices válidos son del `0` al `4`.
+
+## 1.4. Resumen
+| Concepto       | Descripción                                       |
+| -------------- | ------------------------------------------------- |
+| Vector o array | Estructura que almacena elementos del mismo tipo. |
+| Índice         | Posición que permite acceder a un elemento.       |
+| Declaración    | Define el tipo, nombre y tamaño del vector.       |
+| Inicialización | Asigna valores iniciales a los elementos.         |
+| Primer índice  | `0`                                               |
+| Último índice  | `tamaño - 1`                                      |
