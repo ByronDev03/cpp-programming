@@ -6,7 +6,7 @@
    - [1.2. Bucles lineales]()
    - [1.3. Bucles algorítmicos]()
    - [1.4. Bucles anidados]()
-2. [Resumen]()
+   - [1.5. Resumen]()
 
 # 1. Eficiencia de bucles
 En general, el formato de la eficiencia se puede expresar mediante una función:
@@ -129,7 +129,7 @@ Existen tres tipos de bucles anidados: **lineal logarítmico, cuadráticos depen
 | Dependiente cuadrática | \(f(n) = \frac{n(n+1)}{2}\) |
 | Cuadrática             | \(f(n) = n^2\)              |
 
-# 2. Resumen
+## 1.5. Resumen
 La **eficiencia de los bucles** se determina principalmente por la cantidad de veces que se ejecuta el cuerpo del bucle en función del tamaño de la entrada `n`.
 
 Los principales tipos estudiados son:
