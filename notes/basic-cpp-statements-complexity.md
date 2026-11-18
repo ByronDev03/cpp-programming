@@ -8,7 +8,7 @@
    - [1.4. Sentencias de repetición]()
    - [1.5. Bloques de instrucciones]()
    - [1.6. Llamadas a funciones]()
-2. [Resumen]()
+   - [1.7. Resumen]()
 
 # 1. Complejidad de las sentencias básicas de C++
 Al analizar la complejidad de un método no recursivo, se han de aplicar las propiedades de la notación **O** y las siguientes consideraciones relativas al orden que tienen las sentencias, fundamentalmente a las estructuras de control.
@@ -45,7 +45,7 @@ La complejidad de la llamada a una función es de **orden 1**, es decir, complej
 
 Sin embargo, es necesario considerar la complejidad de la función llamada para determinar el costo real de ejecución.
 
-# 2. Resumen
+## 1.7. Resumen
 La complejidad de las sentencias básicas de C++ permite analizar el costo de ejecución de un programa utilizando la notación **O**.
 
 Las reglas principales son:
