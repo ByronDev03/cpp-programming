@@ -65,8 +65,6 @@
         - [7.3.3. Resumen del recorrido en PostOrden]() 
     - [7.4. Comparación de los tres recorridos]()
 
----
-
 # 1. Concepto de árbol
 Un **árbol** es una estructura de datos no lineal que consta de un conjunto finito de elementos, denominados **nodos**, y un conjunto finito de líneas dirigidas, denominadas **ramas**, que conectan los nodos.
 Los árboles permiten representar relaciones jerárquicas entre sus elementos.
