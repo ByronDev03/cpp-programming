@@ -6,7 +6,7 @@
    - [1.2. Complejidad del tiempo]()
    - [1.3. Ejemplo de análisis del tiempo de ejecución]()
    - [1.4. Casos de análisis]()
-2. [Resumen]()
+   - [1.5. Resumen]()
 
 # 1. Análisis de rendimiento
 La medida del rendimiento de un programa se consigue mediante la **complejidad del espacio** y la **complejidad del tiempo** de un programa.
@@ -59,7 +59,7 @@ Considerando todas las reflexiones anteriores, si **T(n)** es el tiempo de ejecu
 - **Mejor caso:** indica el tiempo mejor que podemos tener.
 - **Caso medio:** se puede computar T(n) como el tiempo medio de ejecución del programa sobre todas las posibles ejecuciones de entradas de tamaño `n`. El tiempo de ejecución medio es a veces una medida más realista de lo que el rendimiento será en la práctica, pero es, normalmente, mucho más difícil de calcular que el tiempo de ejecución en el peor caso.
 
-# 2. Resumen
+## 1.5. Resumen
 El **análisis de rendimiento** permite evaluar la eficiencia de un programa mediante dos aspectos: la complejidad del espacio, que representa la memoria necesaria para su ejecución, y la complejidad del tiempo, que representa cuánto tiempo necesita para ejecutarse.
 
 La función **T(n)** expresa el tiempo de ejecución de un algoritmo en función del tamaño de su entrada. Para analizar su comportamiento se consideran tres escenarios:
