@@ -6,7 +6,7 @@
    - [1.2. Eficiencia de un algoritmo]()
    - [1.3. ¿Qué es la eficiencia?]()
    - [1.4. Medición de la eficiencia]()
-2. [Resumen]()
+   - [1.5. Resumen]()
 
 # 1. Eficiencia y exactitud
 De las características que deben cumplir los algoritmos, destacan dos por su importancia en el desarrollo de algoritmos y en la construcción de programas: **eficiencia y exactitud**.
@@ -41,13 +41,5 @@ Uno de los métodos más sobresalientes es el **análisis de algoritmos**.
 
 El análisis de algoritmos permite medir la dificultad inherente de un problema.
 
-# 2. Resumen
-La **eficiencia y la exactitud** son dos características importantes que deben considerarse durante el desarrollo de algoritmos y la construcción de programas.
-
-Al diseñar un algoritmo se busca que sea fácil de entender, codificar y depurar, además de utilizar eficientemente los recursos de la computadora.
-
-La eficiencia representa la capacidad de un algoritmo para resolver un problema en el menor tiempo posible y/o utilizando la menor cantidad de recursos físicos.
-
-Cuando existen varios algoritmos que resuelven un mismo problema, es importante compararlos y elegir el más eficiente. Para ello se utiliza el **análisis de algoritmos**, que permite medir la dificultad inherente de un problema.
-
-Un programa que combina facilidad de comprensión y eficiencia en el uso de recursos se considera un programa **elegante**.
+## 1.5. Resumen
+La **eficiencia y la exactitud** son dos características importantes que deben considerarse durante el desarrollo de algoritmos y la construcción de programas. Al diseñar un algoritmo se busca que sea fácil de entender, codificar y depurar, además de utilizar eficientemente los recursos de la computadora. La eficiencia representa la capacidad de un algoritmo para resolver un problema en el menor tiempo posible y/o utilizando la menor cantidad de recursos físicos. Cuando existen varios algoritmos que resuelven un mismo problema, es importante compararlos y elegir el más eficiente. Para ello se utiliza el **análisis de algoritmos**, que permite medir la dificultad inherente de un problema. Un programa que combina facilidad de comprensión y eficiencia en el uso de recursos se considera un programa **elegante**.
