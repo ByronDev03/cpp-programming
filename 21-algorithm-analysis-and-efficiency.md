@@ -26,7 +26,7 @@ Con el estudio de este capitulo
 
 ## Ejercicios
 
-##### Determinar la complejidad de la siguiente función: 1. Función mayor
+##### 1. Determinar la complejidad de la siguiente función: Función mayor
 ```cpp
 double mayor(double x, double y) {
     if (x > y) { //O(1)
@@ -70,7 +70,7 @@ Por lo tanto, se considera la complejidad máxima entre ambos bloques:
 **Interpretación:** La función tiene complejidad constante porque realiza una cantidad fija de operaciones, independientemente de los valores recibidos.
 </details>
 
-##### 2. Mostrar arreglo
+##### 2. Determinar la complejidad de la siguiente función: Mostrar arreglo
 ```cpp
 void mostrarArreglo(double x[], int n) {
     int j;
@@ -115,12 +115,12 @@ Cada iteración realiza operaciones de costo constante:
 **Interpretación:** La complejidad es lineal porque el tiempo de ejecución aumenta proporcionalmente al número de elementos del arreglo.
 </details>
 
-##### 3. Suma con bucle logarítmico
+##### 3. Determinar la complejidad de la siguiente función: Suma con bucle logarítmico
 ```cpp
 double suma(double d[], int n) {
     int k = 0, s = 0; //O(1)
 
-    while (k < n) { //O(log2n)
+    while (k < n) { //O(log₂ n)
         s += d[k];  //O(1)
 
         if (k == 0) { //O(1)
@@ -201,7 +201,7 @@ El cuerpo del ciclo tiene complejidad constante:
 
 </details>
 
-##### 4. Transpuesta de una matriz
+##### 4. Determinar la complejidad de la siguiente función: Transpuesta de una matriz
 ```cpp
 void traspuesta(float d[][M], int n) {
     int i, j;
