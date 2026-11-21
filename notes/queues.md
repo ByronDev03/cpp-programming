@@ -16,8 +16,8 @@
     - [3.1. Caso 1. La cola tiene un solo nodo]()
     - [3.2. Caso 2. La cola tiene más de un nodo]()
     - [3.3. Código completo de la operación Quitar]()
-4. [Resumen de las operaciones de una cola]()
-5. [Conceptos importantes]() 
+4. [Conceptos importantes]() 
+5. [Resumen de las operaciones de una cola]()
 
 # 1. ¿Qué es una cola en C++?
 Una **cola** es una estructura de datos lineal caracterizada por ser una secuencia de elementos en la que la operación de inserción se realiza por un extremo y la extracción por el otro. Las colas siguen el principio **FIFO** (*First In, First Out*), que significa: *el primero en entrar es el primero en salir*. Un ejemplo cotidiano es una fila de personas: quien llega primero a la fila es atendido primero.
@@ -492,16 +492,7 @@ void suprimirCola(Nodo *&frente, Nodo *&fin, int &n) {
 
 La eliminación tiene una complejidad temporal constante **O(1)**, porque únicamente se accede al primer nodo y se actualizan los punteros, sin recorrer toda la cola.
 
-# 4. Resumen de las operaciones de una cola
-| Operación            | Descripción                     | Complejidad temporal |
-| ---                  | ---                             | ---                  |
-| Insertar (`enqueue`) | Agrega un elemento al final.    | O(1)                 |
-| Quitar (`dequeue`)   | Elimina el elemento del frente. | O(1)                 |
- 
-> [!IMPORTANT]
-> Estas complejidades corresponden a una cola implementada mediante una lista enlazada que mantiene los punteros `frente` y `fin`. Esto permite insertar y eliminar elementos sin recorrer la estructura.
-
-# 5. Conceptos importantes
+# 4. Conceptos importantes
 | Concepto  | Significado                                                                       |
 | ---       | ---                                                                               |
 | FIFO      | Primero en entrar, primero en salir.                                              |
@@ -514,3 +505,12 @@ La eliminación tiene una complejidad temporal constante **O(1)**, porque única
 | `aux`     | Puntero auxiliar utilizado para conservar la dirección del nodo que se eliminará. |
 | `enqueue` | Operación de inserción.                                                           |
 | `dequeue` | Operación de eliminación.                                                         |
+
+# 5. Resumen de las operaciones de una cola
+| Operación            | Descripción                     | Complejidad temporal |
+| ---                  | ---                             | ---                  |
+| Insertar (`enqueue`) | Agrega un elemento al final.    | O(1)                 |
+| Quitar (`dequeue`)   | Elimina el elemento del frente. | O(1)                 |
+ 
+> [!IMPORTANT]
+> Estas complejidades corresponden a una cola implementada mediante una lista enlazada que mantiene los punteros `frente` y `fin`. Esto permite insertar y eliminar elementos sin recorrer la estructura.
