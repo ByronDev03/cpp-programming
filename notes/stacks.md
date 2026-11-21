@@ -13,6 +13,7 @@
 3. [Quitar elementos de una pila]()
     - [3.1. Código completo de la función sacarPila()]() 
     - [3.2. Ejemplo del proceso]()
+4. [Resumen]()
 
 # 1. Concepto de pila
 Una **pila** es una estructura de datos lineal en la que los elementos se introducen y eliminan por un único extremo, llamado **cima** (*top*).
@@ -92,8 +93,6 @@ Una secuencia de nodos se enlaza mediante el puntero `siguiente`. El último nod
 
 En una implementación de pila con lista enlazada, normalmente se mantiene un puntero llamado `cima` que apunta al primer nodo. Las inserciones y 
 eliminaciones se realizan en ese extremo.
-
----
 
 # 2. Insertar elementos en una pila
 Para insertar un elemento en una pila implementada mediante una lista enlazada, se siguen **cuatro pasos**:
@@ -185,8 +184,6 @@ pila
 +------+-----------+
 ```
 
----
-
 # 3. Quitar elementos de una pila
 Para quitar un elemento de una pila implementada mediante una lista enlazada, se siguen **cuatro pasos**. La operación elimina siempre el nodo que se encuentra en la cima.
 
@@ -272,3 +269,23 @@ pila
 ```
 
 El valor eliminado se conserva en `n`, mientras que la cima de la pila ahora apunta al elemento `10`.
+
+# 4. Resumen
+Una **pila** es una estructura de datos lineal que sigue el principio **LIFO (Last In, First Out)**, donde el último elemento que se inserta es el primero en eliminarse. Todas las operaciones se realizan desde un único extremo denominado **cima (top)**.
+
+Una pila puede implementarse mediante una lista enlazada, utilizando nodos que almacenan un dato y un puntero al siguiente nodo. El puntero `pila` mantiene la dirección del nodo que se encuentra en la cima.
+
+Las dos operaciones fundamentales son:
+
+- **Insertar (`push`):** crea un nuevo nodo, almacena el dato, lo enlaza con la cima anterior y actualiza el puntero `pila` para que apunte al nuevo nodo.
+- **Quitar (`pop`):** utiliza un puntero auxiliar para guardar el nodo de la cima, recupera su dato, actualiza `pila` para apuntar al siguiente nodo y libera la memoria con `delete`.
+
+**Complejidad de las operaciones:**
+| Operación         | Complejidad |
+| ---               | ---         |
+| Insertar (`push`) | O(1)        |
+| Quitar (`pop`)    | O(1)        |
+
+Ambas operaciones tienen complejidad constante porque únicamente modifican el nodo que se encuentra en la cima, sin necesidad de recorrer toda la estructura.
+
+**En conclusión**, las pilas permiten almacenar y administrar elementos siguiendo el orden LIFO. Su implementación mediante listas enlazadas facilita el crecimiento dinámico de la estructura y permite realizar inserciones y eliminaciones de manera eficiente. Es importante comprobar que la pila no esté vacía antes de quitar un elemento, para evitar accesos inválidos a memoria.
