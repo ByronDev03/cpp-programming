@@ -216,8 +216,6 @@ En un árbol binario, el orden es 2, lo que significa que cada nodo puede tener:
 
 Por lo tanto, en un árbol binario ningún nodo puede tener más de dos hijos.
 
----
-
 # 2. Concepto de árbol binario
 Un **árbol binario** es un árbol de orden 2, es decir, cada nodo puede tener como máximo dos hijos:
 - **Hijo izquierdo:** nodo que se encuentra en la rama izquierda.
@@ -346,8 +344,6 @@ Los punteros pueden contener la dirección de otro nodo o `NULL` cuando no exist
 ```
 
 Cada nodo almacena su dato y las direcciones de sus respectivos hijos. Los nodos que no tienen hijos apuntan a `NULL`.
-
----
 
 # 3. Árbol binario de búsqueda
 Un **árbol binario de búsqueda (ABB)** es un tipo de árbol binario que organiza sus elementos siguiendo una regla de ordenamiento:
@@ -512,8 +508,6 @@ Las principales operaciones que se pueden realizar sobre un árbol binario de b�
 5. **Borrar:** eliminar un nodo del árbol y reorganizar los enlaces necesarios para conservar sus propiedades.
 
 Estas operaciones permiten administrar los elementos almacenados en un árbol binario de búsqueda de manera organizada.
-
----
 
 # 4. Insertar un nodo en el árbol
 La inserción consiste en agregar un nuevo elemento a un árbol binario de búsqueda, respetando las reglas que determinan la ubicación de cada nodo.
@@ -767,8 +761,6 @@ Donde `n` representa la cantidad de nodos que contiene el árbol antes de realiz
 
 **Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas, donde `h` representa la altura del árbol.
 
----
-
 # 5. Mostrar el árbol completo
 Mostrar el árbol completo consiste en recorrer todos sus nodos e imprimir sus valores, procurando representar visualmente la estructura jerárquica del árbol.
 Para conseguirlo, se utiliza una función recursiva que recorre primero el subárbol derecho, imprime el nodo actual y finalmente recorre el subárbol izquierdo.
@@ -932,8 +924,6 @@ Se utiliza `0` como valor inicial del contador porque el nodo raíz no necesita 
 - **Complejidad temporal:** \(O(n)\), porque se visitan todos los nodos del árbol.
 - **Complejidad espacial:** \(O(h)\), debido a las llamadas recursivas almacenadas en la pila, donde `h` representa la altura del árbol.
 
----
-
 # 6. Búsqueda de un nodo en el árbol
 La búsqueda permite determinar si un valor específico se encuentra almacenado dentro de un árbol binario de búsqueda.
 Para realizarla, se compara el valor que buscamos con el dato del nodo actual. Dependiendo del resultado de la comparación, se continúa la búsqueda por el subárbol izquierdo o derecho. La búsqueda aprovecha la organización del árbol binario de búsqueda para evitar recorrer todos sus nodos.
@@ -1075,8 +1065,6 @@ bool busqueda(Nodo *arbol, int n) {
 
 Donde `n` representa la cantidad de nodos del árbol.
 
----
-
 # 7. Recorridos de árboles binarios
 Los recorridos de árboles binarios son procedimientos que permiten visitar y procesar todos los nodos de un árbol siguiendo un orden determinado.
 Existen tres recorridos principales:
@@ -1213,8 +1201,6 @@ La salida obtenida será:
 > [!IMPORTANT]
 > En un árbol binario de búsqueda, el recorrido en PreOrden no necesariamente muestra los valores ordenados de menor a mayor. Su finalidad es visitar primero cada raíz y después sus subárboles.
 
----
-
 ## 7.2. Recorrido en InOrden (InOrder)
 El recorrido en InOrden consiste en visitar los nodos de un árbol binario siguiendo un orden específico:
 
@@ -1340,8 +1326,6 @@ La salida obtenida será:
 
 **Importante:** Cuando se aplica el recorrido InOrden a un árbol binario de búsqueda (ABB), los elementos se muestran en orden ascendente, ya que todos los valores del subárbol izquierdo son menores que la raíz y los del subárbol derecho son mayores.
 
----
-
 ## 7.3. Recorrido en PostOrden (PostOrder)
 El recorrido en PostOrden consiste en visitar los nodos de un árbol binario siguiendo un orden específico:
 
@@ -1465,8 +1449,6 @@ La salida obtenida será:
 - Árbol degenerado: \(O(n)\).
 
 **Importante:** En PostOrden, la raíz siempre se procesa después de sus dos subárboles. Este recorrido resulta especialmente útil para eliminar árboles o liberar memoria, ya que permite procesar primero los nodos hijos y después sus respectivos padres.
-
----
 
 ## 7.4. Comparación de los tres recorridos
 | Recorrido | Orden              | Secuencia                    |
