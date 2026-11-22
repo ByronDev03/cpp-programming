@@ -11,9 +11,33 @@
     - [2.4. Lista circular doblemente enlazada]()
 3. [Operaciones en listas enlazadas]()
     - [3.1. Insertar elementos en una lista enlazada]()
+      - [3.1.1 Pasos para insertar elementos en una lista]()
+      - [3.1.2. Crear un nuevo nodo]()
+      - [3.1.3. Asignar el dato al nuevo nodo]()
+      - [3.1.4. Crear nodos auxiliares]()
+      - [3.1.5. Insertar el elemento en la lista]()
+      - [3.1.6. Insertar al principio]()
+      - [3.1.7. Insertar en medio o al final]()
+      - [3.1.8. Actualizar los enlaces de la lista]()
+      - [3.1.9. Código completo de insertarLista()]()
     - [3.2. Mostrar los elementos de una lista enlazada]()
+      - [3.2.1. Pasos para mostrar los elementos de una lista]()
+      - [3.2.2. Crear un nuevo nodo (actual)]()
+      - [3.2.3. Igualar actual a lista]()
+      - [3.2.4. Recorrer la lista de inicio a fin]()
+      - [3.2.5. Código completo de mostrarLista()]()
     - [3.3. Buscar un elemento en una lista enlazada]()
+      - []()
+      - []()
+      - []()
+      - []()
+      - []()
     - [3.4. Eliminar un elemento en una lista enlazada]()
+      - []()
+      - []()
+      - []()
+      - []()
+      - []()
 4. [Resumen]()
 
 # 1. ¿Qué es una lista enlazada?
@@ -165,7 +189,7 @@ Las operaciones principales que se pueden realizar en una lista enlazada son:
 ## 3.1. Insertar elementos en una lista enlazada
 La inserción consiste en crear un nuevo nodo, almacenar un dato en él y establecer los enlaces necesarios para incorporarlo a la lista. Dependiendo de la implementación, se puede insertar un nodo al inicio, al final o en una posición determinada.
 
-# 1. Pasos para insertar elementos en una lista
+## 3.1.1. Pasos para insertar elementos en una lista
 Para insertar elementos en una lista enlazada se deben seguir **cuatro pasos**:
 
 1. Crear un nuevo nodo.
@@ -173,7 +197,7 @@ Para insertar elementos en una lista enlazada se deben seguir **cuatro pasos**:
 3. Crear dos nodos auxiliares y asignar `lista` al primero de ellos.
 4. Insertar el elemento en la lista.
 
-## 1.1. Crear un nuevo nodo
+## 3.1.2. Crear un nuevo nodo
 Primero, se crea un nuevo nodo utilizando el operador `new`, que reserva espacio en memoria dinámica.
 
 Antes de insertar el primer elemento, la lista se encuentra vacía:
@@ -192,7 +216,7 @@ void insertarLista(Nodo *&lista, int n) {
 
 En este momento, el nuevo nodo todavía no contiene un dato asignado y su campo `siguiente` debe apuntar a `NULL` cuando se inicialice.
 
-## 1.2. Asignar el dato al nuevo nodo
+## 3.1.3. Asignar el dato al nuevo nodo
 Se asigna al campo `dato` del nuevo nodo el elemento que queremos insertar en la lista.
 
 Por ejemplo, si queremos insertar el número `10`:
@@ -214,7 +238,7 @@ struct Nodo {
 
 El operador `->` permite acceder a los miembros de una estructura o clase mediante un puntero.
 
-## 1.3. Crear nodos auxiliares
+## 3.1.4. Crear nodos auxiliares
 Se crean dos punteros auxiliares:
 
 ```cpp
@@ -234,7 +258,7 @@ lista -> NULL
 
 El puntero `aux2` todavía no tiene una dirección asignada. Se utilizará durante el recorrido de la lista.
 
-## 1.4. Insertar el elemento en la lista
+## 3.1.5. Insertar el elemento en la lista
 Existen diferentes situaciones al insertar un elemento:
 
 - Lista vacía.
@@ -247,7 +271,7 @@ Además, se consideran dos posiciones posibles para insertar:
 
 El procedimiento utiliza dos punteros auxiliares para encontrar la posición correcta.
 
-## 1.4.1. Insertar al principio
+## 3.1.6. Insertar al principio
 Cuando la lista está vacía o el nuevo elemento es menor que el primer elemento, se inserta al principio.
 
 Por ejemplo, si queremos insertar el valor `10` en una lista vacía:
@@ -270,7 +294,7 @@ lista
 +------+-----------+
 ```
 
-## 1.4.2. Insertar en medio o al final
+## 3.1.7. Insertar en medio o al final
 Para encontrar la posición de inserción, se utiliza un ciclo `while` que recorre la lista mientras existan nodos y el dato del nodo actual sea menor que el nuevo valor:
 
 ```cpp
@@ -354,7 +378,7 @@ lista
 +------+-----------+     +------+-----------+
 ```
 
-## 1.4.3. Actualizar los enlaces de la lista
+## 3.1.8. Actualizar los enlaces de la lista
 Una vez encontrado el lugar donde se insertará el nuevo nodo, se comprueba si debe colocarse al principio o después de otro nodo:
 
 ```cpp
@@ -372,7 +396,7 @@ nuevo_nodo->siguiente = aux1;
 - **En caso contrario:** se enlaza el nodo anterior (`aux2`) con el nuevo nodo.
 - Finalmente, `nuevo_nodo->siguiente = aux1` enlaza el nuevo nodo con el siguiente elemento de la lista.
 
-# 2. Código completo de insertarLista()
+## 3.1.9. Código completo de insertarLista()
 Integrando los cuatro pasos, la función queda de la siguiente manera:
 
 ```cpp
@@ -408,21 +432,17 @@ void insertarLista(Nodo *&lista, int n) {
 
 La función contempla la inserción al principio, en medio o al final de la lista, actualizando los enlaces correspondientes.
 
-
-
 ## 3.2. Mostrar los elementos de una lista enlazada
 Consiste en recorrer los nodos de la lista desde el primero hasta el último, mostrando el dato almacenado en cada uno. En una lista simplemente enlazada, el recorrido termina cuando el puntero llega a `NULL`.
 
-# 1. Pasos para mostrar los elementos de una lista
-
+## 3.2.1. Pasos para mostrar los elementos de una lista
 Para mostrar los elementos de una lista enlazada solo hay que seguir **tres pasos**:
 
 1. Crear un nuevo nodo (`actual`).
 2. Igualar ese nuevo nodo (`actual`) a `lista`.
 3. Recorrer la lista de inicio a fin.
 
-## 1.1. Crear un nuevo nodo (`actual`)
-
+## 3.2.2. Crear un nuevo nodo (`actual`)
 Primero, se declara un puntero llamado `actual`, que permitirá recorrer los nodos de la lista.
 
 En la diapositiva se muestra la siguiente instrucción:
@@ -435,8 +455,7 @@ void mostrarLista(Nodo *lista) {
 
 El puntero `actual` se utilizará para desplazarse por los diferentes nodos de la lista.
 
-## 1.2. Igualar `actual` a `lista`
-
+## 3.2.3. Igualar `actual` a `lista`
 Después, se asigna al puntero `actual` la dirección del primer nodo de la lista:
 
 ```cpp
@@ -459,8 +478,7 @@ actual
 
 De esta manera, `actual` comienza el recorrido desde el inicio de la lista.
 
-## 1.3. Recorrer la lista de inicio a fin
-
+## 3.2.4. Recorrer la lista de inicio a fin
 Para recorrer todos los elementos, se utiliza un ciclo `while` que se ejecuta mientras `actual` sea diferente de `NULL`.
 
 ```cpp
@@ -513,10 +531,7 @@ La salida será:
 5 -> 10 ->
 ```
 
----
-
-# 2. Código completo de `mostrarLista()`
-
+## 3.2.5. Código completo de `mostrarLista()`
 Integrando los tres pasos, la función queda de la siguiente manera:
 
 ```cpp
@@ -537,8 +552,6 @@ void mostrarLista(Nodo *lista) {
 - `Nodo *lista`: recibe un puntero al primer nodo de la lista. Se pasa por valor porque la función únicamente necesita recorrerla, sin modificar el puntero original.
 
 **Importante:** la condición `actual != NULL` permite comprobar que todavía existe un nodo por recorrer. Cuando el puntero llega a `NULL`, significa que se alcanzó el final de la lista y el ciclo termina.
-
-
 
 ## 3.3. Buscar un elemento en una lista enlazada
 Consiste en recorrer los nodos de la lista comparando el dato almacenado en cada uno con el valor que se desea encontrar. Si el valor coincide, significa que el elemento fue encontrado. Si se llega al final de la lista sin encontrarlo, significa que el elemento no existe.
