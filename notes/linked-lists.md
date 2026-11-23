@@ -27,18 +27,29 @@
       - [3.2.4. Recorrer la lista de inicio a fin]()
       - [3.2.5. Código completo de mostrarLista()]()
     - [3.3. Buscar un elemento en una lista enlazada]()
-      - []()
-      - []()
-      - []()
-      - []()
-      - []()
+      - [3.3.1. Pasos para buscar un elemento en una lista]()
+      - [3.3.2. Crear un nuevo nodo (actual)]()
+      - [3.3.3. Igualar actual a lista]()
+      - [3.3.4. Recorrer la lista]()
+      - [3.3.5. Determinar si el elemento existe en la lista]()
+      - [3.3.6. Código completo de buscarLista()]()
     - [3.4. Eliminar un elemento en una lista enlazada]()
-      - []()
-      - []()
-      - []()
-      - []()
-      - []()
-4. [Resumen]()
+      - [3.4.1. Pasos para eliminar un nodo de la lista]()
+      - [3.4.2. Comprobar que la lista no esté vacía]()
+      - [3.4.3. Crear los punteros auxiliares]()
+      - [3.4.4. Igualar aux_borrar al inicio de la lista]()
+      - [3.4.5. Recorrer la lista]()
+      - [3.4.6. Eliminar el elemento]()
+      - [3.4.7. Código completo de eliminarNodo()]() 
+    - [3.5. Dejar vacia la lista enlazada]()
+      - [3.5.1. Pasos para eliminar todos los elementos de la lista]()
+      - [3.5.2. Crear un nodo auxiliar e igualarlo al inicio de la lista]()
+      - [3.5.3. Guardar el dato del nodo auxiliar]()
+      - [3.5.4. Pasar la lista al siguiente nodo]()
+      - [3.5.5. Eliminar el nodo auxiliar]()
+      - [3.5.6. Código completo de eliminarLista()]()
+4. [Conceptos importantes]()
+5. [Resumen]()
 
 # 1. ¿Qué es una lista enlazada?
 Una **lista enlazada** es una estructura de datos que consta de un número de nodos. Cada nodo contiene dos componentes (campos):
@@ -556,8 +567,7 @@ void mostrarLista(Nodo *lista) {
 ## 3.3. Buscar un elemento en una lista enlazada
 Consiste en recorrer los nodos de la lista comparando el dato almacenado en cada uno con el valor que se desea encontrar. Si el valor coincide, significa que el elemento fue encontrado. Si se llega al final de la lista sin encontrarlo, significa que el elemento no existe.
 
-# 1. Pasos para buscar un elemento en una lista
-
+## 3.3.1. Pasos para buscar un elemento en una lista
 Para buscar un elemento en una lista enlazada solo hay que seguir **cuatro pasos**:
 
 1. Crear un nuevo nodo (`actual`).
@@ -565,8 +575,7 @@ Para buscar un elemento en una lista enlazada solo hay que seguir **cuatro pasos
 3. Recorrer la lista.
 4. Determinar si el elemento existe o no en la lista.
 
-## 1.1. Crear un nuevo nodo (`actual`)
-
+## 3.3.2. Crear un nuevo nodo (`actual`)
 Primero, se declara un puntero llamado `actual`, que permitirá recorrer los nodos de la lista.
 
 ```cpp
@@ -577,8 +586,7 @@ void buscarLista(Nodo *lista, int n) {
 
 El puntero `actual` se utilizará para desplazarse por los diferentes nodos de la lista.
 
-## 1.2. Igualar `actual` a `lista`
-
+## 3.3.3. Igualar `actual` a `lista`
 Después, se asigna al puntero `actual` la dirección del primer nodo de la lista:
 
 ```cpp
@@ -601,8 +609,7 @@ actual
 
 De esta manera, `actual` comienza el recorrido desde el inicio de la lista.
 
-## 1.3. Recorrer la lista
-
+## 3.3.4. Recorrer la lista
 Para recorrer los nodos se utiliza un ciclo `while` con dos condiciones:
 
 ```cpp
@@ -642,8 +649,7 @@ actual
 
 El ciclo comprueba las condiciones y permite recorrer la lista mientras se cumplan.
 
-## 1.4. Determinar si el elemento existe en la lista
-
+## 3.3.5. Determinar si el elemento existe en la lista
 Dentro del ciclo `while`, se utiliza una condición `if` para comparar el dato del nodo actual con el elemento que se está buscando.
 
 ```cpp
@@ -722,10 +728,7 @@ else {
 }
 ```
 
----
-
-# 2. Código completo de `buscarLista()`
-
+## 3.3.6. Código completo de `buscarLista()`
 Integrando los cuatro pasos, la función queda de la siguiente manera:
 
 ```cpp
@@ -764,12 +767,10 @@ void buscarLista(Nodo *lista, int n) {
 
 **Importante:** la condición `actual->dato <= n` supone que la lista está ordenada de menor a mayor. Esto permite detener la búsqueda cuando se encuentra un valor superior al buscado, evitando recorrer innecesariamente el resto de los nodos.
 
-
 ## 3.4. Eliminar un nodo en una lista enlazada
 Consiste en localizar el nodo que contiene el dato que se desea eliminar, modificar los enlaces de los nodos involucrados y liberar la memoria ocupada por el nodo eliminado. Es importante actualizar correctamente los punteros para mantener la conexión entre los nodos restantes.
 
-# 1. Pasos para eliminar un nodo de la lista
-
+## 3.4.1. Pasos para eliminar un nodo de la lista
 Para eliminar un elemento `n` de una lista enlazada, hay que seguir **cinco pasos**:
 
 1. Comprobar que la lista no esté vacía.
@@ -778,8 +779,7 @@ Para eliminar un elemento `n` de una lista enlazada, hay que seguir **cinco paso
 4. Recorrer la lista.
 5. Eliminar el elemento.
 
-## 1.1. Comprobar que la lista no esté vacía
-
+## 3.4.2. Comprobar que la lista no esté vacía
 Antes de realizar cualquier operación, se debe comprobar que la lista contenga al menos un nodo.
 
 Para ello, se utiliza una condición `if`:
@@ -804,8 +804,7 @@ void eliminarNodo(Nodo *&lista, int n) {
 }
 ```
 
-## 1.2. Crear los punteros auxiliares
-
+## 3.4.3. Crear los punteros auxiliares
 Se declaran dos punteros auxiliares:
 
 ```cpp
@@ -818,8 +817,7 @@ Nodo *anterior = NULL;
 
 Inicialmente, `anterior` se establece en `NULL` porque todavía no se ha recorrido ningún nodo y, por lo tanto, no existe un nodo anterior.
 
-## 1.3. Igualar `aux_borrar` al inicio de la lista
-
+## 3.4.4. Igualar `aux_borrar` al inicio de la lista
 Se asigna al puntero `aux_borrar` la dirección del primer nodo de la lista:
 
 ```cpp
@@ -842,8 +840,7 @@ lista
 aux_borrar
 ```
 
-## 1.4. Recorrer la lista
-
+## 3.4.5. Recorrer la lista
 Para encontrar el nodo que contiene el elemento que se desea eliminar, se utiliza un ciclo `while`:
 
 ```cpp
@@ -890,8 +887,7 @@ Como ninguno de los nodos contiene el número `12`, el recorrido continúa hasta
 
 En ese momento, significa que el elemento no existe en la lista.
 
-## 1.5. Eliminar el elemento
-
+## 3.4.6. Eliminar el elemento
 Una vez terminado el recorrido, se presentan **tres situaciones**:
 
 **Caso 1. El elemento no existe en la lista**
@@ -1008,10 +1004,7 @@ lista
 +------+-----------+
 ```
 
----
-
-# 2. Código completo de `eliminarNodo()`
-
+## 3.4.7. Código completo de `eliminarNodo()`
 Integrando los cinco pasos, la función queda de la siguiente manera:
 
 ```cpp
@@ -1054,13 +1047,9 @@ void eliminarNodo(Nodo *&lista, int n) {
 
 **Importante:** antes de eliminar un nodo, se debe actualizar el enlace correspondiente para no perder el acceso al resto de la lista. Después, se utiliza `delete` para liberar la memoria dinámica que ocupaba el nodo eliminado.
 
-
 ## 3.5 Dejar vacia la lista enlazada
 
-# Eliminar todos los elementos de una lista enlazada
-
-# 1. Pasos para eliminar todos los elementos de la lista
-
+## 3.5.1. Pasos para eliminar todos los elementos de la lista
 Para dejar vacía una lista enlazada, solamente hay que seguir **cuatro pasos**:
 
 1. Crear un nodo auxiliar (`aux`) e igualarlo al inicio de la lista.
@@ -1068,8 +1057,7 @@ Para dejar vacía una lista enlazada, solamente hay que seguir **cuatro pasos**:
 3. Pasar `lista` al siguiente nodo.
 4. Eliminar `aux`.
 
-## 1.1. Crear un nodo auxiliar e igualarlo al inicio de la lista
-
+## 3.5.2. Crear un nodo auxiliar e igualarlo al inicio de la lista
 Primero, se declara un puntero auxiliar llamado `aux` y se le asigna la dirección del primer nodo de la lista.
 
 ```cpp
@@ -1100,8 +1088,7 @@ void eliminarLista(Nodo *&lista, int &n) {
 }
 ```
 
-## 1.2. Guardar el dato del nodo auxiliar
-
+## 3.5.3. Guardar el dato del nodo auxiliar
 Se guarda en la variable `n` el valor almacenado en el campo `dato` del nodo al que apunta `aux`.
 
 ```cpp
@@ -1120,8 +1107,7 @@ n = aux->dato;
 
 El valor de `n` será `5`.
 
-## 1.3. Pasar la lista al siguiente nodo
-
+## 3.5.4. Pasar la lista al siguiente nodo
 Se actualiza el puntero `lista` para que apunte al siguiente nodo de la lista.
 
 ```cpp
@@ -1165,8 +1151,7 @@ aux
                           lista
 ```
 
-## 1.4. Eliminar el nodo auxiliar
-
+## 3.5.5. Eliminar el nodo auxiliar
 Finalmente, se utiliza el operador `delete` para liberar la memoria dinámica que ocupaba el nodo apuntado por `aux`.
 
 ```cpp
@@ -1209,10 +1194,7 @@ lista
 
 Este procedimiento se repite hasta que todos los nodos hayan sido eliminados y `lista` apunte a `NULL`.
 
----
-
-# 2. Código completo de `eliminarLista()`
-
+## 3.5.6. Código completo de `eliminarLista()`
 Integrando los cuatro pasos, la función queda de la siguiente manera:
 
 ```cpp
@@ -1233,16 +1215,7 @@ void eliminarLista(Nodo *&lista, int &n) {
 
 **Importante:** el procedimiento mostrado elimina un solo nodo por llamada. Para eliminar todos los elementos, se debe repetir mientras la lista no esté vacía, comprobando que `lista != NULL` antes de acceder a `aux->dato`.
 
-
-# 4. Resumen
-| Tipo de lista                 | Número de enlaces por nodo | Recorrido                           |
-| ---                           | ---                        | ---                                 |
-| Simplemente enlazada          | 1                          | Directo                             |
-| Doblemente enlazada           | 2                          | Directo e inverso                   |
-| Circular simplemente enlazada | 1                          | Directo y circular                  |
-| Circular doblemente enlazada  | 2                          | Directo e inverso, ambos circulares |
-
-### Conceptos importantes
+## 4. Conceptos importantes
 | Concepto   | Significado                                           |
 | ---        | ---                                                   |
 | Nodo       | Elemento que almacena un dato y uno o más punteros.   |
@@ -1255,3 +1228,11 @@ void eliminarLista(Nodo *&lista, int &n) {
 | NULL       | Indica que un puntero no apunta a ningún nodo.        |
 | Predecesor | Nodo que se encuentra antes del nodo actual.          |
 | Sucesor    | Nodo que se encuentra después del nodo actual.        |
+
+## 5. Resumen
+| Tipo de lista                 | Número de enlaces por nodo | Recorrido                           |
+| ---                           | ---                        | ---                                 |
+| Simplemente enlazada          | 1                          | Directo                             |
+| Doblemente enlazada           | 2                          | Directo e inverso                   |
+| Circular simplemente enlazada | 1                          | Directo y circular                  |
+| Circular doblemente enlazada  | 2                          | Directo e inverso, ambos circulares |
