@@ -7,6 +7,7 @@
 4. [Algoritmo recursivo]()
     - [4.1. Implementación en C++]()
     - [4.2. Número de movimientos]()
+5. [Resumen]()
 
 # 1. Descripción del problema
 Este juego (un algoritmo clásico) tiene sus orígenes en la cultura oriental y en una leyenda sobre el Templo de Brahma, cuya estructura simulaba una plataforma metálica con tres varillas y discos en su interior.
@@ -87,12 +88,18 @@ void hanoi(char varInicial, char varCentral, char varFinal, int n) {
 ## 4.2. Número de movimientos
 Para resolver las Torres de Hanói con \(n\) discos, el número mínimo de movimientos necesarios es:
 
-\[
-M(n) = 2^n - 1
-\]
+\[M(n) = 2^n - 1\]
 
 Por ejemplo, para 3 discos:
 
-\[
-M(3) = 2^3 - 1 = 7
-\]
+\[M(3) = 2^3 - 1 = 7\]
+
+# 5. Resumen
+El problema de las Torres de Hanói consiste en trasladar un conjunto de discos desde una varilla inicial hasta una varilla final, utilizando una tercera varilla como auxiliar y respetando las reglas de movimiento: trasladar un solo disco a la vez, mover únicamente el disco superior y nunca colocar un disco más grande sobre uno más pequeño.
+
+Para resolverlo se utiliza un algoritmo recursivo que contempla dos casos:
+
+- **Caso base:** cuando existe un solo disco, se mueve directamente desde la varilla inicial hasta la varilla final.
+- **Caso recursivo:** cuando hay más de un disco, se trasladan primero los \(n-1\) discos a la varilla auxiliar, después se mueve el disco más grande al destino y, finalmente, se trasladan los \(n-1\) discos restantes a la varilla final.
+
+El número mínimo de movimientos necesarios para resolver el problema con \(n\) discos se calcula mediante la fórmula \(M(n) = 2^n - 1\). Por lo tanto, la cantidad de movimientos aumenta exponencialmente conforme se incrementa el número de discos.
