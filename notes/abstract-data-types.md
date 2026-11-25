@@ -5,6 +5,7 @@
 2. [Implementación de un TAD en C++]() 
     - [2.1. Ejemplo: TAD PuntoTres]()
     - [2.2. Elementos de la clase]() 
+3. [Resumen]()
 
 # 1. ¿Qué es un TAD?
 Un **Tipo Abstracto de Datos (TAD)** es un conjunto de valores y de operaciones definidos mediante una especificación independiente de cualquier representación.
@@ -37,3 +38,6 @@ public:
 - **Métodos (`public`):** representan las operaciones que se pueden realizar sobre los valores. En este ejemplo, el constructor `PuntoTres()` y el método `distancia()`.
 
 De esta manera, la clase encapsula los datos y las operaciones que conforman el Tipo Abstracto de Datos.
+
+# 3. Resumen
+Un **Tipo Abstracto de Datos (TAD)** define un conjunto de valores y las operaciones que se pueden realizar sobre ellos, independientemente de su representación interna. En C++, los TAD se implementan mediante **clases**, que permiten encapsular los datos mediante atributos y definir sus operaciones mediante métodos. Esta organización facilita la abstracción y mantiene separados los detalles internos de implementación de las operaciones disponibles.
