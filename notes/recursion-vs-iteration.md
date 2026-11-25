@@ -4,6 +4,7 @@
 1. [Introducción]()
 2. [Ejemplo: Suma de los dígitos de un número]()
 3. [Directrices para elegir entre iteración y recursión]()
+4. [Resumen]()
 
 # 1. Introducción
 En las secciones anteriores se han estudiado varios algoritmos que se pueden implementar fácilmente de modo recursivo, o bien de modo iterativo. En este apartado se comparan los dos enfoques y se examinan las razones por las que el programador puede elegir un enfoque u otro según la situación específica.
@@ -24,3 +25,10 @@ Presentar un algoritmo recursivo y otro iterativo.
 - Utilícese una solución recursiva sólo cuando la ejecución y eficiencia de la memoria de la solución estén dentro de límites aceptables considerando las limitaciones del sistema.
 - Si son posibles las dos soluciones, iterativa y recursiva, la solución recursiva siempre requerirá más tiempo y espacio debido a las llamadas adicionales a las funciones.
 - En ciertos problemas, la recursión conduce naturalmente a soluciones que son mucho más fáciles de leer y comprender que su correspondiente iterativa. En estos casos los beneficios obtenidos con la claridad de la solución suelen compensar el coste extra (en tiempo y memoria) de la ejecución de un programa recursivo.
+
+# 4. Resumen
+La recursión y la iteración son dos enfoques que permiten resolver problemas mediante la repetición de instrucciones. La recursión utiliza llamadas repetidas a una función para resolver versiones más pequeñas de un problema, mientras que la iteración permite repetir instrucciones mediante estructuras como ciclos.
+
+La recursión puede facilitar la implementación de problemas que poseen una naturaleza recursiva, produciendo soluciones más sencillas de leer y comprender. Sin embargo, cada llamada adicional a una función requiere tiempo y espacio de memoria, por lo que puede resultar menos eficiente que una solución iterativa.
+
+Para elegir entre ambos enfoques, se deben considerar la complejidad del problema, la claridad del código y los recursos disponibles. Si ambas soluciones son posibles, conviene valorar si la simplicidad de la recursión justifica el coste adicional de ejecución y memoria.
