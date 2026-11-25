@@ -7,6 +7,7 @@
 4. [Aplicación del algoritmo de vuelta atrás]()
 5. [Algoritmo recursivo]() 
     - [5.1. Funcionamiento del algoritmo]()
+5. [Resumen]() 
 
 # 1. Planteamiento del problema
 En un tablero de ajedrez de `n x n` casillas, se tiene un caballo situado en la posición inicial de coordenadas \((x_0,y_0)\). El problema consiste en encontrar, si existe, un camino que permita al caballo pasar exactamente una vez por cada una de las casillas del tablero, teniendo en cuenta los movimientos (saltos) permitidos a un caballo de ajedrez.
@@ -111,3 +112,6 @@ void saltoCaballo(int i, int x, int y, bool &exito) {
 - **Recursividad:** si todavía faltan casillas por recorrer, se llama nuevamente a `saltoCaballo()` desde la nueva posición.
 - **Vuelta atrás:** si la llamada recursiva no encuentra una solución, se borra la anotación y se prueba otro movimiento.
 - **Finalización:** cuando se han recorrido todas las casillas, la variable `exito` cambia a `true`.
+
+# 6. Resumen
+El **problema del salto del caballo** consiste en encontrar un recorrido que permita visitar exactamente una vez cada casilla de un tablero de ajedrez. Para resolverlo se utiliza el algoritmo de **vuelta atrás (Backtracking)**, que prueba los ocho movimientos posibles del caballo y verifica que cada destino esté dentro del tablero y no haya sido visitado. Si un movimiento no conduce a una solución, se deshace y se intenta otra alternativa. El algoritmo finaliza cuando el caballo ha recorrido las \(n^2\) casillas o cuando se agotan todas las posibilidades.
