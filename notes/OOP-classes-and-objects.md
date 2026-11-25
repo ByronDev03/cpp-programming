@@ -13,6 +13,7 @@
     - [4.1. Ejemplo: Crear una clase Coche]() 
     - [4.2. Explicación del código]()
 5. [Diferencias entre clases y objetos]()
+6. [Resumen]()
 
 # 1. Introducción
 La Programación Orientada a Objetos (POO) es un paradigma de programación que organiza el código mediante clases y objetos. Permite representar elementos del mundo real dentro de un programa, agrupando sus características y comportamientos.
@@ -261,8 +262,11 @@ Se utiliza el operador punto para llamar al método `encender()` del objeto `miC
 | Establecen una estructura común. | Utilizan la estructura definida por la clase. |
 | Se definen mediante `class`.     | Se crean utilizando el nombre de la clase.    |
 
-**En conclusión:**
+# 6. Resumen
+La Programación Orientada a Objetos (POO) es un paradigma que permite organizar el código mediante clases y objetos, representando elementos del mundo real a través de sus características y comportamientos.
 
-Una clase define cómo serán los objetos, mientras que un objeto es una instancia concreta de esa clase.
+Una **clase** es una plantilla o modelo que define los atributos y métodos que tendrán los objetos. Los **objetos** son instancias creadas a partir de una clase y cada uno puede tener valores propios para sus atributos, aunque compartan la misma estructura y comportamiento.
 
-Por ejemplo, `Coche` es la clase, mientras que `miCoche1` y `miCoche2` son objetos creados a partir de ella.
+En C++, las clases se definen mediante la palabra reservada `class`. Sus atributos representan las características de los objetos y sus métodos representan las acciones que pueden realizar. Para crear objetos se utiliza el nombre de la clase y, mediante el operador punto (`.`), se puede acceder a sus atributos y métodos públicos.
+
+En conclusión, una clase establece cómo serán los objetos, mientras que un objeto es una instancia concreta que utiliza la estructura y los comportamientos definidos por ella.
