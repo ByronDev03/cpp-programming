@@ -5,6 +5,7 @@
 2. [Caso base]()
 3. [Funcionamiento del algoritmo]()
 4. [Ejemplo: Dibujar un segmento]()
+5. [Resumen]()
 
 # 1. Concepto de Divide y Vencerás
 Una de las técnicas más importantes para la resolución de muchos problemas de computadora es la denominada **divide y vencerás**. El diseño de algoritmos basados en esta técnica consiste en transformar (dividir) un problema de tamaño \(n\) en problemas más pequeños, de tamaño menor que \(n\), pero similares al problema original. De modo que, resolviendo los **subproblemas** y combinando las soluciones, se pueda construir fácilmente una solución del problema completo (vencerás).
@@ -26,3 +27,5 @@ Se plantea el problema de dibujar un segmento que está conectado por los puntos
 (x1,y1)  ●──────●──────●──────●  (x2,y2)
 ```
 
+# 5. Resumen
+El método **Divide y Vencerás** es una técnica de diseño de algoritmos que consiste en dividir un problema en subproblemas más pequeños y similares al original. Estos se resuelven recursivamente hasta alcanzar un **caso base**, cuya solución es inmediata. Finalmente, se combinan las soluciones de los subproblemas para obtener la solución del problema original.
