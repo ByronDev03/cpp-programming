@@ -10,6 +10,7 @@
     - [4.1. Planteamiento]()
     - [4.2. Definición recursiva]()
     - [4.3. Implementación en C++]() 
+5. [Resumen]()
 
 # 1. Introducción
 La **recursividad (recursión)** es aquella propiedad que posee una función por la cual puede llamarse a sí misma. Aunque la recursividad se puede utilizar como una alternativa a la iteración, una solución recursiva es normalmente menos eficiente, en términos de tiempo de computadora, que una solución iterativa, debido a las operaciones auxiliares que llevan consigo las invocaciones suplementarias a las funciones. Sin embargo, en muchas circunstancias el uso de la recursión permite a los programadores especificar soluciones naturales, sencillas, que serían, en caso contrario, difíciles de resolver. Por esta causa, la recursión es una herramienta poderosa e importante en la resolución de problemas y en la programación. Diversas técnicas algorítmicas utilizan la recursión, como los algoritmos **divide y vence** y los algoritmos de **vuelta atrás**.
@@ -133,3 +134,12 @@ long fibonacci(int n) {
 
 - **Casos base:** cuando `n` es `0` o `1`, la función devuelve `n`.
 - **Caso recursivo:** cuando `n` es mayor o igual que `2`, devuelve la suma de las llamadas recursivas `fibonacci(n - 1)` y `fibonacci(n - 2)`.
+
+# 5. Resumen
+La recursividad es una propiedad de las funciones que les permite llamarse a sí mismas, directa o indirectamente, para resolver un problema mediante versiones más pequeñas del mismo. Toda función recursiva debe contar con un caso base, que detiene las llamadas, y un caso recursivo, que permite continuar el proceso.
+
+En la suma de los N primeros números enteros, la función utiliza la expresión \(S(n) = S(n-1) + n\), hasta llegar al caso base \(S(1) = 1\).
+
+En la serie Fibonacci, cada término se obtiene sumando los dos anteriores, utilizando los casos base \(fibonacci(0) = 0\) y \(fibonacci(1) = 1\). Su definición recursiva es \(fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)\).
+
+La recursividad permite expresar soluciones de forma natural y sencilla, y es utilizada en técnicas algorítmicas como Divide y Vencerás y Vuelta Atrás.
