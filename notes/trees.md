@@ -64,6 +64,7 @@
         - [7.3.2. Ejemplo de ejecución]() 
         - [7.3.3. Resumen del recorrido en PostOrden]() 
     - [7.4. Comparación de los tres recorridos]()
+8. [Resumen general]()
 
 # 1. Concepto de árbol
 Un **árbol** es una estructura de datos no lineal que consta de un conjunto finito de elementos, denominados **nodos**, y un conjunto finito de líneas dirigidas, denominadas **ramas**, que conectan los nodos.
@@ -1463,3 +1464,33 @@ La salida obtenida será:
 - PostOrden: la raíz va al final.
 
 La estructura de las tres funciones es prácticamente idéntica. Lo que cambia es la posición de la instrucción cout respecto a las llamadas recursivas.
+
+# 8. Resumen general
+Los **árboles** son estructuras de datos no lineales que permiten organizar y representar información de manera jerárquica mediante nodos conectados por ramas. Entre sus elementos principales se encuentran la raíz, los nodos padre e hijo, las hojas y los nodos hermanos. También es importante comprender propiedades como la altura, profundidad, nivel y longitud de camino, que permiten describir la posición y organización de los nodos dentro del árbol.
+
+Un **árbol binario** es una estructura en la que cada nodo puede tener como máximo dos hijos: uno izquierdo y otro derecho. Su naturaleza recursiva permite dividirlo en tres componentes: un nodo raíz, un subárbol izquierdo y un subárbol derecho. Dependiendo de la distribución de sus nodos, puede clasificarse como lleno, completo o degenerado.
+
+En C++, un árbol binario puede implementarse mediante una estructura `struct`, en la que cada nodo almacena un dato y dos punteros (`izq` y `der`) que permiten establecer las conexiones con sus hijos. Los punteros pueden contener la dirección de otro nodo o `NULL` cuando no existe un hijo correspondiente.
+
+El **árbol binario de búsqueda (ABB)** es una variante que organiza sus elementos mediante una regla de ordenamiento: los valores menores que un nodo se ubican en su subárbol izquierdo y los valores mayores o iguales en su subárbol derecho, de acuerdo con la implementación utilizada en estos apuntes. Esta organización facilita operaciones como la inserción y búsqueda de elementos.
+
+Las principales operaciones implementadas son:
+
+- **Insertar:** crea un nuevo nodo y lo coloca en la posición correspondiente, utilizando comparaciones y llamadas recursivas hasta encontrar una posición vacía.
+- **Mostrar:** recorre el árbol para representar visualmente su estructura, utilizando la indentación para distinguir los diferentes niveles.
+- **Buscar:** compara el valor solicitado con el nodo actual y continúa por el subárbol izquierdo o derecho hasta encontrarlo o llegar a una posición vacía.
+- **Recorrer:** visita todos los nodos siguiendo un orden específico.
+
+Los tres recorridos principales de un árbol binario son:
+
+| Recorrido     | Orden de visita            |
+| :---          | :---                       |
+| **PreOrden**  | Raíz → Izquierdo → Derecho |
+| **InOrden**   | Izquierdo → Raíz → Derecho |
+| **PostOrden** | Izquierdo → Derecho → Raíz |
+
+Cada recorrido utiliza llamadas recursivas para procesar los subárboles. En particular, cuando se aplica InOrden a un árbol binario de búsqueda, los elementos se muestran en orden ascendente.
+
+Finalmente, la eficiencia de las operaciones de inserción y búsqueda depende de la altura y distribución del árbol. Cuando está aproximadamente equilibrado, estas operaciones pueden tener una complejidad temporal promedio de \(O(\log n)\); cuando está degenerado, pueden alcanzar \(O(n)\). Por otra parte, los recorridos y la visualización completa requieren \(O(n)\), porque deben visitar todos los nodos.
+
+En conclusión, los árboles binarios y los árboles binarios de búsqueda permiten organizar, almacenar, buscar y recorrer información de forma jerárquica, aprovechando la recursividad para simplificar la implementación de sus operaciones.
