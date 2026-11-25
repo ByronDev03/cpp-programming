@@ -7,7 +7,7 @@
 4. [Aplicación del algoritmo de vuelta atrás]()
 5. [Algoritmo recursivo]() 
     - [5.1. Funcionamiento del algoritmo]()
-5. [Resumen]() 
+6. [Resumen]() 
 
 # 1. Planteamiento del problema
 En un tablero de ajedrez de `n x n` casillas, se tiene un caballo situado en la posición inicial de coordenadas \((x_0,y_0)\). El problema consiste en encontrar, si existe, un camino que permita al caballo pasar exactamente una vez por cada una de las casillas del tablero, teniendo en cuenta los movimientos (saltos) permitidos a un caballo de ajedrez.
