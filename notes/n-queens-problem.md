@@ -9,6 +9,7 @@
     - [4.1. Ejemplo de representación]()
 5. [Algoritmo para colocar las reinas]()
     - [5.1. Funcionamiento del algoritmo]()
+6. [Resumen]()
 
 # 1. Planteamiento del problema
 El juego de colocar ocho reinas en un tablero de ajedrez sin que se ataquen entre sí es otro de los ejemplos del uso de los métodos de búsqueda exhaustiva, sistemática, de los algoritmos de vuelta atrás. El problema se plantea de la forma siguiente:
@@ -104,3 +105,10 @@ void ponerReina(int i, bool &solucion) {
 6. Si no se consigue una solución, se aplica la vuelta atrás y se elimina la ubicación de la reina actual.
 7. Si todas las reinas se han colocado correctamente, `solucion` toma el valor `true`.
 8. El proceso continúa mientras no se encuentre una solución y todavía existan filas por probar.
+
+# 6. Resumen
+El problema de las N-Reinas consiste en colocar ocho reinas en un tablero de ajedrez de 8 × 8, de manera que ninguna pueda atacar a otra. Para resolverlo se utiliza el algoritmo de vuelta atrás (*Backtracking*), que intenta colocar una reina en cada columna, probando las diferentes filas disponibles.
+
+La solución se representa mediante el arreglo `reinas[]`, donde cada índice indica una columna y su valor representa la fila en la que se encuentra la reina. Antes de avanzar, el algoritmo verifica que la posición seleccionada sea válida, comprobando que no existan otras reinas en la misma fila o diagonal.
+
+Si no es posible completar la colocación, se aplica la vuelta atrás: se elimina la posición actual y se prueba con otra fila. El proceso continúa hasta encontrar una distribución válida de las ocho reinas o agotar las alternativas disponibles.
