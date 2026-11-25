@@ -11,6 +11,7 @@
     - [4.1. Proceso de mezcla]() 
     - [4.2. Implementación del algoritmo de mezcla]()
 5. [Implementación en C++]()
+6. [Resumen]()
 
 # 1. Concepto de MergeSort
 La idea básica de este algoritmo de ordenación es la mezcla (*merge*) de listas ya ordenadas. El algoritmo sigue la típica estrategia **divide y vencerás**. Cada paso se basa en dividir el problema de ordenar \(n\) elementos en dos subproblemas más pequeños, de tamaño mitad, de tal forma que una vez ordenada cada mitad se mezclan para así resolver el problema original.
@@ -175,3 +176,17 @@ Para utilizar MergeSort se necesitan dos funciones:
 
 - `mergesort()`: divide recursivamente el arreglo en dos mitades hasta obtener sublistas de un solo elemento y después invoca la función de mezcla.
 - `mezcla()`: combina las dos sublistas ordenadas en un arreglo auxiliar y devuelve los elementos ordenados al arreglo original.
+
+# 6. Resumen
+**MergeSort (ordenación por mezclas)** es un algoritmo de ordenamiento que utiliza la estrategia **Divide y Vencerás**. Consiste en dividir recursivamente un arreglo en sublistas más pequeñas hasta obtener elementos individuales. Posteriormente, mediante el proceso de mezcla (*merge*), combina las sublistas ordenándolas hasta obtener el arreglo completo ordenado.
+
+El algoritmo utiliza dos funciones principales: `mergesort()`, que realiza la división recursiva, y `mezcla()`, que combina las sublistas utilizando un arreglo auxiliar.
+
+**Complejidad:**
+
+- **Mejor caso:** \(O(n \log n)\).
+- **Caso promedio:** \(O(n \log n)\).
+- **Peor caso:** \(O(n \log n)\).
+- **Espacio auxiliar:** \(O(n)\).
+
+En conclusión, MergeSort es un algoritmo eficiente y estable para ordenar grandes cantidades de elementos, aunque requiere memoria adicional para realizar el proceso de mezcla.
