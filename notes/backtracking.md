@@ -6,6 +6,7 @@
     - [2.1. Proceso de búsqueda]()
 3. [Características y aplicaciones]() 
     - [3.1. Ejemplos de aplicación]()
+4. [Resumen]()
 
 # 1. Concepto de Backtracking
 Se trata de una estrategia normalmente recursiva para resolver problemas como los de los laberintos, la colocación de piezas y similares, en los que mediante una **búsqueda en profundidad** se puede dar con la solución.
@@ -42,3 +43,5 @@ Algunos ejemplos típicos en los que se puede aplicar este método son:
   - Problema de las ocho damas.
 - **Problema de la mochila:** seleccionar elementos para obtener una solución óptima respetando determinadas restricciones.
 
+# 4. Resumen
+El **Backtracking (vuelta atrás)** es una estrategia de búsqueda en profundidad, generalmente recursiva, que permite resolver problemas probando diferentes alternativas. Cuando una opción no conduce a la solución, el algoritmo regresa a un punto anterior para intentar otro camino. Este proceso continúa hasta encontrar una solución o agotar todas las posibilidades. Se utiliza en problemas como laberintos, Sudoku, recorrido del caballo, ocho reinas y el problema de la mochila.
