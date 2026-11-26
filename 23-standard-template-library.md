@@ -17,8 +17,13 @@ En esta unidad se estudia la Biblioteca Estándar de Plantillas (STL) de C++, un
 - **Contenedores asociativos:** utilización de `set` y `multiset` para almacenar conjuntos ordenados, con o sin elementos duplicados.
 - **Contenedores de pares clave-valor:** uso de `map` y `multimap` para relacionar claves con valores, permitiendo realizar búsquedas, inserciones y eliminaciones.
 
-## Objetivo
-Comprender y aplicar los componentes fundamentales de la Biblioteca Estándar de Plantillas (STL) en C++, utilizando contenedores, iteradores y algoritmos genéricos para almacenar, recorrer, buscar, ordenar, transformar y procesar colecciones de datos, así como administrar información mediante contenedores asociativos.
+## Objetivos
+- Conocer el concepto de biblioteca de plantillas.
+- Generalizar el concepto de apuntador mediante iteradores.
+- Aplicar los iteradores a los contenedores.
+- Conocer las funciones miembro más importante de los contenedores.
+- Conocer los algoritmos de la STL.
+- Implementar vectores listas, colas, set (conjuntos), multiset (Multiconjuntos), map (Mapas), multimap (Multimapas).
 
 ## Ejercicios
 
