@@ -25,6 +25,13 @@ En esta unidad se estudia la Biblioteca Estándar de Plantillas (STL) de C++, un
 - Conocer los algoritmos de la STL.
 - Implementar vectores listas, colas, set (conjuntos), multiset (Multiconjuntos), map (Mapas), multimap (Multimapas).
 
+## Apuntes
+- **Biblioteca Estándar de Plantillas (STL)** → [Ver apunte](/notes/standard-template-library-stl.md) 
+- **Contenedores (Containers)** → [Ver apunte](/notes/stl-containers.md)
+- **Iteradores** → [Ver apunte](/notes/stl-iterators.md)
+- **Algoritmos** → [Ver apunte](/notes/stl-algorithms.md)
+- **Contenedores Asociativos** → [Ver apunte](/notes/stl-associative-containers.md)
+
 ## Ejercicios
 
 ##### 1. Contenedor lineal - vector
