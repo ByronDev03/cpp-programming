@@ -17,7 +17,11 @@ En esta unidad se estudian los algoritmos recursivos en C++, una técnica de pro
 - **Problemas de recorrido y colocación:** aplicación de la recursividad y la vuelta atrás en el recorrido del caballo y la colocación de reinas en un tablero de ajedrez.
 
 ## Objetivo
-Comprender y aplicar la recursividad en C++, identificando los casos base y recursivos para resolver problemas mediante la descomposición de tareas, implementar algoritmos de búsqueda y ordenamiento, y utilizar la técnica de vuelta atrás para explorar posibles soluciones en problemas de mayor complejidad.
+- Conocer el funcionamiento de la recursividad.
+- Distinguir entre recursividad y recursividad indirecta.
+- Resolver problemas numéricos sencillos mediante funciones recursivas.
+- Aplicar la técnica algorítmica *divide y vencerás* para la resolución de problemas.
+- Conocer la técnica algoritmica de resolución de problemas vuelta atrás: *backtracking*.
 
 ## Apuntes
 - **Algoritmos Recursivos** → [Ver apunte](/notes/.md) 
