@@ -16,7 +16,7 @@ En esta unidad se estudian los algoritmos recursivos en C++, una técnica de pro
 - **Backtracking (vuelta atrás):** exploración de posibles soluciones, retrocediendo cuando un camino no permite alcanzar el objetivo.
 - **Problemas de recorrido y colocación:** aplicación de la recursividad y la vuelta atrás en el recorrido del caballo y la colocación de reinas en un tablero de ajedrez.
 
-## Objetivo
+## Objetivos
 - Conocer el funcionamiento de la recursividad.
 - Distinguir entre recursividad y recursividad indirecta.
 - Resolver problemas numéricos sencillos mediante funciones recursivas.
@@ -24,7 +24,16 @@ En esta unidad se estudian los algoritmos recursivos en C++, una técnica de pro
 - Conocer la técnica algoritmica de resolución de problemas vuelta atrás: *backtracking*.
 
 ## Apuntes
-- **Algoritmos Recursivos** → [Ver apunte](/notes/.md) 
+- **La Naturaleza de la Recursividad** → [Ver apunte](/notes/recursion-fundamentals.md) 
+- **Recursividad Indirecta** → [Ver apunte](/notes/indirect-recursion.md) 
+- **Recursión vs Iteración** → [Ver apunte](/notes/recursion-vs-iteration.md) 
+- **Algoritmos Divide y Vencerás** → [Ver apunte](/notes/divide-and-conquer.md) 
+- **Torres de Hanoi Recursiva** → [Ver apunte](/notes/recursive-tower-of-hanoi.md) 
+- **Búsqueda Binaria Recursiva** → [Ver apunte](/notes/recursive-binary-search.md) 
+- **Ordenación por Mezclas (MergeSort)** → [Ver apunte](/notes/merge-sort.md) 
+- **Algoritmos de Vuelta Atrás (Backtracking)** → [Ver apunte](/notes/backtracking.md) 
+- **Problema del Salto del Caballo** → [Ver apunte](/notes/knight-tour-problem.md) 
+- **Problema de las N-Reinas** → [Ver apunte](/notes/n-queens-problem.md) 
 
 ## Ejercicios
 
