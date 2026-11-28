@@ -7,8 +7,7 @@
 
 
 
-## Objetivos
-Con el estudio de este capitulo 
+## Objetivos 
 - Revisar los conceptos básicos de tipos de datos.
 - Introducirse en las ideas fundamentales de estructuras de datos.
 - Revisar el concepto de algoritmo y programa. 
@@ -18,6 +17,7 @@ Con el estudio de este capitulo
 
 ## Apuntes
 - **Algoritmos y Programas** → [Ver apunte](/notes/algorithms-and-programs.md) 
+- **Análisis de Rendimiento** → [Ver apunte](/notes/performance-analysis.md) 
 - **Eficiencia y Exactitud** → [Ver apunte](/notes/efficiency-and-correctness.md)
 - **Eficiencia de Bucles** → [Ver apunte](/notes/loop-efficiency.md)
 - **Notación O-Grande** → [Ver apunte](/notes/big-o-notation.md)
